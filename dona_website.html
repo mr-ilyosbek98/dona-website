@@ -248,45 +248,45 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
 <body>
 
 <!-- ADMIN TRIGGER -->
-<button class="admin-trigger" onclick="openAdmin()">⚙️ Admin</button>
+<button class="admin-trigger" onclick="openAdmin()">âï¸ Admin</button>
 
 <!-- ADMIN PANEL -->
 <div class="admin-overlay" id="adminOverlay">
   <div class="admin-panel">
     <div class="admin-header">
-      <h2>⚙️ DONA Admin Panel</h2>
-      <button class="admin-close" onclick="closeAdmin()">✕</button>
+      <h2>âï¸ DONA Admin Panel</h2>
+      <button class="admin-close" onclick="closeAdmin()">â</button>
     </div>
     <!-- LOGIN -->
     <div id="adminLogin" class="admin-login">
-      <h3>🔐 Admin Kirish</h3>
+      <h3>ð Admin Kirish</h3>
       <p>Admin paneliga kirish uchun parol kiriting</p>
       <div class="afield">
         <label>Parol</label>
         <input type="password" id="adminPass" placeholder="Parol..." onkeydown="if(event.key==='Enter')checkAdmin()">
       </div>
-      <button class="asave" onclick="checkAdmin()">Kirish →</button>
-      <div id="adminLoginErr" class="status-msg status-err" style="display:none">❌ Parol noto'g'ri!</div>
+      <button class="asave" onclick="checkAdmin()">Kirish â</button>
+      <div id="adminLoginErr" class="status-msg status-err" style="display:none">â Parol noto'g'ri!</div>
     </div>
     <!-- PANEL -->
     <div id="adminContent" style="display:none">
       <div class="admin-tabs">
-        <button class="atab active" onclick="showATab('prods',this)">🛍️ Mahsulot</button>
-        <button class="atab" onclick="showATab('cats',this)">📂 Katalog</button>
-        <button class="atab" onclick="showATab('texts',this)">✏️ Matnlar</button>
-        <button class="atab" onclick="showATab('pay',this)">💳 To'lov</button>
-        <button class="atab" onclick="showATab('sett',this)">⚙️ Sozlama</button>
+        <button class="atab active" onclick="showATab('prods',this)">ðï¸ Mahsulot</button>
+        <button class="atab" onclick="showATab('cats',this)">ð Katalog</button>
+        <button class="atab" onclick="showATab('texts',this)">âï¸ Matnlar</button>
+        <button class="atab" onclick="showATab('pay',this)">ð³ To'lov</button>
+        <button class="atab" onclick="showATab('sett',this)">âï¸ Sozlama</button>
       </div>
 
       <!-- MAHSULOTLAR -->
       <div class="atab-c active" id="atab-prods">
         <div class="token-field">
-          <label>⚠️ GitHub Token (bir marta kiriting)</label>
+          <label>â ï¸ GitHub Token (bir marta kiriting)</label>
           <input type="password" id="ghToken" placeholder="ghp_..." value="">
         </div>
         <button class="a-add-prod" onclick="openAddProd()">+ Yangi Mahsulot Qo'shish</button>
         <div id="adminProdList"></div>
-        <button class="asave" onclick="saveToGitHub()" id="saveProdBtn">💾 GitHub ga Saqlash</button>
+        <button class="asave" onclick="saveToGitHub()" id="saveProdBtn">ð¾ GitHub ga Saqlash</button>
         <div id="saveProdStatus"></div>
       </div>
 
@@ -296,31 +296,31 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
         <div style="background:#fafafa;border:1.5px solid var(--border);border-radius:10px;padding:0.8rem;margin-bottom:0.8rem;">
           <div style="font-size:0.75rem;font-weight:700;margin-bottom:0.7rem">+ Yangi Katalog</div>
           <div class="afield-3">
-            <div class="afield"><label>Emoji</label><input id="ncEmoji" placeholder="🥟" maxlength="4"></div>
+            <div class="afield"><label>Emoji</label><input id="ncEmoji" placeholder="ð¥" maxlength="4"></div>
             <div class="afield"><label>O'zbek</label><input id="ncUz" placeholder="Hamirli"></div>
-            <div class="afield"><label>Rus</label><input id="ncRu" placeholder="Мучные"></div>
+            <div class="afield"><label>Rus</label><input id="ncRu" placeholder="ÐÑÑÐ½ÑÐµ"></div>
           </div>
           <div class="afield-2">
-            <div class="afield"><label>Koreys</label><input id="ncKo" placeholder="밀가루"></div>
+            <div class="afield"><label>Koreys</label><input id="ncKo" placeholder="ë°ê°ë£¨"></div>
             <div class="afield"><label>ID</label><input id="ncId" placeholder="hamirli"></div>
           </div>
           <button class="asave" onclick="addCat()" style="margin-top:0">+ Qo'shish</button>
         </div>
-        <button class="asave" onclick="saveToGitHub()">💾 GitHub ga Saqlash</button>
+        <button class="asave" onclick="saveToGitHub()">ð¾ GitHub ga Saqlash</button>
         <div id="saveCatStatus"></div>
       </div>
 
       <!-- MATNLAR -->
       <div class="atab-c" id="atab-texts">
         <div class="alang-tabs">
-          <button class="alang-tab active" onclick="showALang('uz',this)">🇺🇿 UZ</button>
-          <button class="alang-tab" onclick="showALang('ru',this)">🇷🇺 RU</button>
-          <button class="alang-tab" onclick="showALang('ko',this)">🇰🇷 KO</button>
+          <button class="alang-tab active" onclick="showALang('uz',this)">ðºð¿ UZ</button>
+          <button class="alang-tab" onclick="showALang('ru',this)">ð·ðº RU</button>
+          <button class="alang-tab" onclick="showALang('ko',this)">ð°ð· KO</button>
         </div>
         <div id="textsEditorUz" class="alang-c active"></div>
         <div id="textsEditorRu" class="alang-c"></div>
         <div id="textsEditorKo" class="alang-c"></div>
-        <button class="asave" onclick="saveTextsAndGitHub()">💾 GitHub ga Saqlash</button>
+        <button class="asave" onclick="saveTextsAndGitHub()">ð¾ GitHub ga Saqlash</button>
         <div id="saveTextsStatus"></div>
       </div>
 
@@ -329,21 +329,21 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
         <div class="afield">
           <label>Bank Nomi</label>
           <select id="aBank">
-            <option>카카오뱅크 (Kakao Bank)</option>
-            <option>국민은행 (KB Bank)</option>
-            <option>신한은행 (Shinhan)</option>
-            <option>우리은행 (Woori)</option>
-            <option>하나은행 (Hana)</option>
-            <option>기업은행 (IBK)</option>
-            <option>농협은행 (NH)</option>
+            <option>ì¹´ì¹´ì¤ë±í¬ (Kakao Bank)</option>
+            <option>êµ­ë¯¼ìí (KB Bank)</option>
+            <option>ì íìí (Shinhan)</option>
+            <option>ì°ë¦¬ìí (Woori)</option>
+            <option>íëìí (Hana)</option>
+            <option>ê¸°ììí (IBK)</option>
+            <option>ëíìí (NH)</option>
           </select>
         </div>
         <div class="afield-2">
           <div class="afield"><label>Hisob Raqami</label><input id="aAcc" placeholder="000-0000-0000"></div>
-          <div class="afield"><label>Hisob Egasi</label><input id="aOwner" placeholder="홍길동"></div>
+          <div class="afield"><label>Hisob Egasi</label><input id="aOwner" placeholder="íê¸¸ë"></div>
         </div>
         <div class="afield"><label>Mijozga Xabar</label><textarea id="aPayMsg">Buyurtmangiz uchun rahmat! To'lovni hisob raqamiga o'tkazing va chekni @mr_yigitaliev ga yuboring.</textarea></div>
-        <button class="asave" onclick="savePayAndGitHub()">💾 GitHub ga Saqlash</button>
+        <button class="asave" onclick="savePayAndGitHub()">ð¾ GitHub ga Saqlash</button>
         <div id="savePayStatus"></div>
       </div>
 
@@ -360,7 +360,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
           <div class="afield"><label>Yangi Parol</label><input type="password" id="aNewPass" placeholder="Yangi parol..."></div>
           <div class="afield"><label>Tasdiqlash</label><input type="password" id="aConfPass" placeholder="Qayta kiriting..."></div>
         </div>
-        <button class="asave" onclick="saveSettAndGitHub()">💾 GitHub ga Saqlash</button>
+        <button class="asave" onclick="saveSettAndGitHub()">ð¾ GitHub ga Saqlash</button>
         <div id="saveSettStatus"></div>
       </div>
     </div>
@@ -372,56 +372,56 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
   <div class="admin-panel">
     <div class="admin-header">
       <h2 id="prodEditTitle">Yangi Mahsulot</h2>
-      <button class="admin-close" onclick="closeProdEdit()">✕</button>
+      <button class="admin-close" onclick="closeProdEdit()">â</button>
     </div>
     <div style="padding:1rem;max-height:80vh;overflow-y:auto">
       <input type="hidden" id="peIdx">
       <div class="admin-tabs" style="margin:-1rem -1rem 1rem">
-        <button class="atab active" onclick="showPETab('basic',this)">📋 Asosiy</button>
-        <button class="atab" onclick="showPETab('desc',this)">📝 Tavsif</button>
-        <button class="atab" onclick="showPETab('steps',this)">👨‍🍳 Yo'riq</button>
+        <button class="atab active" onclick="showPETab('basic',this)">ð Asosiy</button>
+        <button class="atab" onclick="showPETab('desc',this)">ð Tavsif</button>
+        <button class="atab" onclick="showPETab('steps',this)">ð¨âð³ Yo'riq</button>
       </div>
       <div class="atab-c active" id="petab-basic">
         <div class="afield"><label>Rasm URL</label><input id="peImg" placeholder="https://i.imgur.com/..."></div>
         <div class="afield-3">
-          <div class="afield"><label>Emoji</label><input id="peEmoji" placeholder="🥟" maxlength="4"></div>
+          <div class="afield"><label>Emoji</label><input id="peEmoji" placeholder="ð¥" maxlength="4"></div>
           <div class="afield"><label>Narx (won)</label><input type="number" id="pePrice" placeholder="10000"></div>
           <div class="afield"><label>Eski Narx</label><input type="number" id="peOldPrice" placeholder="(ixtiyoriy)"></div>
         </div>
         <div class="afield-3">
           <div class="afield"><label>Nomi UZ</label><input id="peUz" placeholder="Manti"></div>
-          <div class="afield"><label>Nomi RU</label><input id="peRu" placeholder="Манты"></div>
-          <div class="afield"><label>Nomi KO</label><input id="peKo" placeholder="만티"></div>
+          <div class="afield"><label>Nomi RU</label><input id="peRu" placeholder="ÐÐ°Ð½ÑÑ"></div>
+          <div class="afield"><label>Nomi KO</label><input id="peKo" placeholder="ë§í°"></div>
         </div>
         <div class="afield-2">
           <div class="afield"><label>Katalog</label><select id="peCat"></select></div>
           <div class="afield"><label>Holat</label>
             <select id="peStatus">
-              <option value="active">✅ Faol</option>
-              <option value="new">🆕 Yangi</option>
-              <option value="sold">❌ Tugadi</option>
+              <option value="active">â Faol</option>
+              <option value="new">ð Yangi</option>
+              <option value="sold">â Tugadi</option>
             </select>
           </div>
         </div>
         <div class="afield" style="display:flex;align-items:center;gap:0.5rem">
           <input type="checkbox" id="pePopular" style="width:auto">
-          <label style="display:inline;font-size:0.85rem;font-weight:600;text-transform:none;letter-spacing:0">⭐ Mashhur mahsulot</label>
+          <label style="display:inline;font-size:0.85rem;font-weight:600;text-transform:none;letter-spacing:0">â­ Mashhur mahsulot</label>
         </div>
       </div>
       <div class="atab-c" id="petab-desc">
         <div class="afield"><label>Tavsif UZ</label><textarea id="peDUz" placeholder="O'zbek tilida tavsif..."></textarea></div>
-        <div class="afield"><label>Таvsif RU</label><textarea id="peDRu" placeholder="Описание на русском..."></textarea></div>
-        <div class="afield"><label>설명 KO</label><textarea id="peDKo" placeholder="한국어 설명..."></textarea></div>
+        <div class="afield"><label>Ð¢Ð°vsif RU</label><textarea id="peDRu" placeholder="ÐÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð½Ð° ÑÑÑÑÐºÐ¾Ð¼..."></textarea></div>
+        <div class="afield"><label>ì¤ëª KO</label><textarea id="peDKo" placeholder="íêµ­ì´ ì¤ëª..."></textarea></div>
       </div>
       <div class="atab-c" id="petab-steps">
         <p style="font-size:0.78rem;color:var(--muted);margin-bottom:0.8rem">Har qator = 1 qadam</p>
         <div class="afield"><label>Qadamlar UZ</label><textarea id="peSUz" rows="4" placeholder="Muzlatgichdan oling&#10;Qaynoq suvga soling&#10;15 daqiqa pishiring"></textarea></div>
-        <div class="afield"><label>Шаги RU</label><textarea id="peSRu" rows="4" placeholder="Достаньте из морозилки&#10;..."></textarea></div>
-        <div class="afield"><label>단계 KO</label><textarea id="peSKo" rows="4" placeholder="냉동실에서 꺼내세요&#10;..."></textarea></div>
+        <div class="afield"><label>Ð¨Ð°Ð³Ð¸ RU</label><textarea id="peSRu" rows="4" placeholder="ÐÐ¾ÑÑÐ°Ð½ÑÑÐµ Ð¸Ð· Ð¼Ð¾ÑÐ¾Ð·Ð¸Ð»ÐºÐ¸&#10;..."></textarea></div>
+        <div class="afield"><label>ë¨ê³ KO</label><textarea id="peSKo" rows="4" placeholder="ëëì¤ìì êº¼ë´ì¸ì&#10;..."></textarea></div>
       </div>
       <div class="m-btns" style="display:flex;gap:0.7rem;margin-top:1rem">
         <button style="flex:1;background:transparent;border:1.5px solid var(--border);color:var(--muted);padding:0.75rem;border-radius:8px;cursor:pointer;font-family:Inter,sans-serif" onclick="closeProdEdit()">Bekor</button>
-        <button class="asave" style="flex:2;margin:0" onclick="saveProdEdit()">💾 Saqlash</button>
+        <button class="asave" style="flex:2;margin:0" onclick="saveProdEdit()">ð¾ Saqlash</button>
       </div>
     </div>
   </div>
@@ -443,7 +443,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
       <button class="lb" onclick="setLang('ko')">KO</button>
     </div>
     <button class="cart-btn" onclick="openCart()">
-      🛒 <span id="cartBtnTxt">Savatcha</span>
+      ð <span id="cartBtnTxt">Savatcha</span>
       <span class="cart-count" id="cartBadge" style="display:none">0</span>
     </button>
   </div>
@@ -454,30 +454,30 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
   <div class="banner-track" id="bannerTrack">
     <div class="banner-slide b1">
       <div class="banner-text">
-        <div class="banner-badge" id="b1badge">🔥 CHEGIRMA</div>
+        <div class="banner-badge" id="b1badge">ð¥ CHEGIRMA</div>
         <div class="banner-title" id="b1title">O'zbek taomlari endi Koreyada!</div>
         <div class="banner-sub" id="b1sub">Muzlatilgan, sifatli, tez pishadi</div>
-        <a href="#products" class="banner-btn" id="b1btn">Buyurtma berish →</a>
+        <a href="#products" class="banner-btn" id="b1btn">Buyurtma berish â</a>
       </div>
-      <div class="banner-emoji">🥟</div>
+      <div class="banner-emoji">ð¥</div>
     </div>
     <div class="banner-slide b2">
       <div class="banner-text">
-        <div class="banner-badge" id="b2badge">🚚 YETKAZISH</div>
+        <div class="banner-badge" id="b2badge">ð YETKAZISH</div>
         <div class="banner-title" id="b2title">Butun Koreya bo'yicha yetkazish</div>
         <div class="banner-sub" id="b2sub">Seuldan Busangacha</div>
-        <a href="https://t.me/Donafood_bot" class="banner-btn" id="b2btn" target="_blank">Bot orqali →</a>
+        <a href="https://t.me/Donafood_bot" class="banner-btn" id="b2btn" target="_blank">Bot orqali â</a>
       </div>
-      <div class="banner-emoji">🚚</div>
+      <div class="banner-emoji">ð</div>
     </div>
     <div class="banner-slide b3">
       <div class="banner-text">
-        <div class="banner-badge" id="b3badge">🍱 7 TAOM</div>
+        <div class="banner-badge" id="b3badge">ð± 7 TAOM</div>
         <div class="banner-title" id="b3title">7 xil milliy taom siz uchun!</div>
         <div class="banner-sub" id="b3sub">Manti, Somsa, Kotlet va boshqalar</div>
-        <a href="#products" class="banner-btn" id="b3btn">Ko'rish →</a>
+        <a href="#products" class="banner-btn" id="b3btn">Ko'rish â</a>
       </div>
-      <div class="banner-emoji">🥐</div>
+      <div class="banner-emoji">ð¥</div>
     </div>
   </div>
   <div class="banner-dots" id="bannerDots"></div>
@@ -486,28 +486,28 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
 <div class="cats-scroll" id="catScroll"></div>
 <div class="promo-row">
   <button class="promo-tag all active" onclick="filterPromo('all',this)" id="pt_all">Barchasi</button>
-  <button class="promo-tag sale" onclick="filterPromo('sale',this)">🔥 Chegirma</button>
-  <button class="promo-tag new-t" onclick="filterPromo('new',this)">🆕 Yangi</button>
-  <button class="promo-tag pop" onclick="filterPromo('pop',this)">⭐ Mashhur</button>
+  <button class="promo-tag sale" onclick="filterPromo('sale',this)">ð¥ Chegirma</button>
+  <button class="promo-tag new-t" onclick="filterPromo('new',this)">ð Yangi</button>
+  <button class="promo-tag pop" onclick="filterPromo('pop',this)">â­ Mashhur</button>
 </div>
 
 <div id="popularSection">
-  <div class="sec-row"><div class="sec-title" id="popTitle">⭐ Mashhur Taomlar</div></div>
+  <div class="sec-row"><div class="sec-title" id="popTitle">â­ Mashhur Taomlar</div></div>
   <div class="h-scroll" id="popularGrid"></div>
 </div>
 
 <div id="products">
-  <div class="sec-row"><div class="sec-title" id="mainTitle">🍱 Barcha Mahsulotlar</div></div>
+  <div class="sec-row"><div class="sec-title" id="mainTitle">ð± Barcha Mahsulotlar</div></div>
   <div class="prod-grid" id="prodGrid"></div>
 </div>
 
 <div class="tg-banner">
-  <div class="tg-icon">✈️</div>
+  <div class="tg-icon">âï¸</div>
   <div class="tg-text">
     <h3 id="tgTitle">Telegram botimiz orqali buyurtma bering!</h3>
-    <p id="tgSub">24/7 ishlaydi • 3 tilda • Tez va qulay</p>
+    <p id="tgSub">24/7 ishlaydi â¢ 3 tilda â¢ Tez va qulay</p>
   </div>
-  <a href="https://t.me/Donafood_bot" class="tg-btn" target="_blank" id="tgBtn">Bot →</a>
+  <a href="https://t.me/Donafood_bot" class="tg-btn" target="_blank" id="tgBtn">Bot â</a>
 </div>
 
 <div class="footer">
@@ -515,9 +515,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
     <img id="footerLogo" src="" alt="DONA">
     <span id="bizNameFooter">DONA Uzbek Frozen Food</span>
   </div>
-  <p>🤖 <a href="https://t.me/Donafood_bot" id="botLink">@Donafood_bot</a></p>
-  <p>📱 <a href="https://t.me/mr_yigitaliev" id="adminLink">@mr_yigitaliev</a></p>
-  <p style="margin-top:0.4rem">🇺🇿 Butun Koreya bo'yicha yetkazib berish 🇰🇷</p>
+  <p>ð¤ <a href="https://t.me/Donafood_bot" id="botLink">@Donafood_bot</a></p>
+  <p>ð± <a href="https://t.me/mr_yigitaliev" id="adminLink">@mr_yigitaliev</a></p>
+  <p style="margin-top:0.4rem">ðºð¿ Butun Koreya bo'yicha yetkazib berish ð°ð·</p>
 </div>
 
 <!-- PRODUCT MODAL -->
@@ -527,7 +527,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
     <div class="pm-img" id="pmImg"></div>
     <div class="pm-content">
       <div class="pm-name" id="pmName"></div>
-      <div class="pm-stars" id="pmStars">★★★★★</div>
+      <div class="pm-stars" id="pmStars">âââââ</div>
       <div class="pm-price" id="pmPrice"></div>
       <div class="pm-sec" id="pmDescSec">Tavsif</div>
       <p class="pm-desc-t" id="pmDesc"></p>
@@ -538,19 +538,19 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
       <div class="wr">
         <div class="wr-title" id="wrTitle">Sharh Yozing</div>
         <div class="star-row">
-          <button class="sb on" data-v="1" onclick="setStar(1)">★</button>
-          <button class="sb on" data-v="2" onclick="setStar(2)">★</button>
-          <button class="sb on" data-v="3" onclick="setStar(3)">★</button>
-          <button class="sb on" data-v="4" onclick="setStar(4)">★</button>
-          <button class="sb on" data-v="5" onclick="setStar(5)">★</button>
+          <button class="sb on" data-v="1" onclick="setStar(1)">â</button>
+          <button class="sb on" data-v="2" onclick="setStar(2)">â</button>
+          <button class="sb on" data-v="3" onclick="setStar(3)">â</button>
+          <button class="sb on" data-v="4" onclick="setStar(4)">â</button>
+          <button class="sb on" data-v="5" onclick="setStar(5)">â</button>
         </div>
         <input class="wr-inp" id="revName" placeholder="Ismingiz...">
         <textarea class="wr-inp" id="revText" rows="2" placeholder="Sharhingiz..."></textarea>
-        <button class="wr-sub" onclick="submitRev()" id="wrSub">📩 Yuborish</button>
+        <button class="wr-sub" onclick="submitRev()" id="wrSub">ð© Yuborish</button>
       </div>
     </div>
     <div class="pm-add-wrap">
-      <button class="pm-add-btn" id="pmAddBtn" onclick="addFromPM()">🛒 Savatchaga</button>
+      <button class="pm-add-btn" id="pmAddBtn" onclick="addFromPM()">ð Savatchaga</button>
     </div>
   </div>
 </div>
@@ -559,17 +559,17 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
 <div class="cart-overlay" id="cartOverlay">
   <div class="cart-sheet">
     <div class="cart-hdr">
-      <div class="cart-title-t" id="cartTitleT">🛒 Savatcha</div>
-      <button class="cart-close" onclick="closeCart()">✕</button>
+      <div class="cart-title-t" id="cartTitleT">ð Savatcha</div>
+      <button class="cart-close" onclick="closeCart()">â</button>
     </div>
     <div class="cart-items" id="cartItemsList"></div>
     <div class="cart-total-wrap">
       <div class="cart-total-row"><span id="totalLabel">Jami:</span><span id="totalAmt"></span></div>
       <div class="pay-info" id="payInfoBox" style="display:none">
-        <div class="pay-info-title" id="payInfoTitle">💳 TO'LOV</div>
-        <div class="pay-row-i"><span class="pay-lbl">Bank:</span><span class="pay-val" id="dBank">—</span></div>
-        <div class="pay-row-i"><span class="pay-lbl">Hisob:</span><span class="pay-val" id="dAcc">—</span></div>
-        <div class="pay-row-i"><span class="pay-lbl">Egasi:</span><span class="pay-val" id="dOwn">—</span></div>
+        <div class="pay-info-title" id="payInfoTitle">ð³ TO'LOV</div>
+        <div class="pay-row-i"><span class="pay-lbl">Bank:</span><span class="pay-val" id="dBank">â</span></div>
+        <div class="pay-row-i"><span class="pay-lbl">Hisob:</span><span class="pay-val" id="dAcc">â</span></div>
+        <div class="pay-row-i"><span class="pay-lbl">Egasi:</span><span class="pay-val" id="dOwn">â</span></div>
         <p style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;line-height:1.6" id="dMsg"></p>
       </div>
       <div class="form-2">
@@ -578,7 +578,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
       </div>
       <div class="fg"><label id="lAddr">Manzil</label><input id="fAddr" placeholder="Seoul, Gangnam-gu..."></div>
       <div class="fg"><label id="lNote">Izoh</label><textarea id="fNote" rows="2" placeholder="..."></textarea></div>
-      <button class="submit-btn" id="submitBtn" onclick="submitOrder()">✅ Buyurtma Berish</button>
+      <button class="submit-btn" id="submitBtn" onclick="submitOrder()">â Buyurtma Berish</button>
     </div>
   </div>
 </div>
@@ -586,49 +586,49 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
 <!-- SUCCESS -->
 <div class="success-overlay" id="doneOverlay">
   <div class="success-box">
-    <div class="success-icon">✅</div>
+    <div class="success-icon">â</div>
     <div class="success-title" id="doneTitle">Buyurtma Qabul!</div>
-    <div class="success-sub" id="doneSub">Tez orada siz bilan bog'lanamiz. Rahmat! 🙏</div>
+    <div class="success-sub" id="doneSub">Tez orada siz bilan bog'lanamiz. Rahmat! ð</div>
     <button class="submit-btn" onclick="document.getElementById('doneOverlay').classList.remove('show')" id="doneBtn">Yaxshi</button>
   </div>
 </div>
 
 <script>
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // CONFIG
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 const TG_TOKEN="8944732139:AAG5ONRQCyGsKkre6vSxdyODUC_vPR8eVaY";
 const TG_CHAT="-1003984119169";
 const GH_USER="mr-ilyosbek98";
 const GH_REPO="dona-website";
 const GH_FILE="dona_website.html";
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // STATE
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 let ADMIN_PASS = localStorage.getItem('dona_admin_pass')||'dona2024';
 let LOGO_URL = localStorage.getItem('dona_logo')||'https://i.imgur.com/aAIrsYR.png';
 
 let PRODS = JSON.parse(localStorage.getItem('dona_products')||'null')||[
-  {id:"manti",emoji:"🥟",price:10000,oldPrice:null,uz:"Manti",ru:"Манты",ko:"만티",cat:"hamirli",img:"",status:"active",isPopular:true,desc_uz:"Yumshoq xamirga o'ralgan mazali go'sht.",desc_ru:"Сочное мясо в нежном тесте.",desc_ko:"부드러운 반죽에 싸인 고기.",steps_uz:["Muzlatgichdan oling","Qaynoq suvga soling","15-20 daqiqa pishiring","Qaymoq bilan torting"],steps_ru:["Достаньте","В кипящую воду","15-20 минут","Со сметаной"],steps_ko:["꺼내세요","끓는 물에","15-20분","사워크림과"],reviews:[{name:"Dilnoza",text_uz:"Juda mazali!",stars:5,status:"approved"}]},
-  {id:"somsa",emoji:"🥐",price:10000,oldPrice:12000,uz:"Somsa",ru:"Самса",ko:"삼사",cat:"hamirli",img:"",status:"new",isPopular:true,desc_uz:"Tandirda pishirilgan xushbo'y somsa.",desc_ru:"Ароматная самса.",desc_ko:"향긋한 삼사.",steps_uz:["Muzlatgichdan oling","180°C pechka","20-25 daqiqa","Issiq torting"],steps_ru:["Достаньте","Духовку 180°C","20-25 минут","Горячим"],steps_ko:["꺼내세요","오븐 180°C","20-25분","뜨겁게"],reviews:[{name:"Kamola",text_uz:"Har hafta buyurtma beraman!",stars:5,status:"approved"}]},
-  {id:"kotlet",emoji:"🍖",price:10000,oldPrice:null,uz:"Kotlet",ru:"Котлеты",ko:"커틀릿",cat:"goshtli",img:"",status:"active",isPopular:false,desc_uz:"Qo'lda tayyorlangan yumshoq kotlet.",desc_ru:"Домашние котлеты.",desc_ko:"수제 커틀릿.",steps_uz:["Yog'da qoving","Har tomoni 5-7 min","Sabzavotlar bilan"],steps_ru:["Жарьте","5-7 мин","С овощами"],steps_ko:["구우세요","5-7분","채소와"],reviews:[]},
-  {id:"blinchik",emoji:"🌯",price:10000,oldPrice:11000,uz:"Blinchik",ru:"Блинчики",ko:"블린치크",cat:"hamirli",img:"",status:"active",isPopular:true,desc_uz:"Nozik blinchalarga o'ralgan go'sht.",desc_ru:"Мясо в блинчиках.",desc_ko:"블린에 싸인 고기.",steps_uz:["Yog'ga soling","2-3 min har tomoni","Oltin rang bo'lguncha"],steps_ru:["На масло","2-3 мин","До золота"],steps_ko:["기름에","2-3분","노릇하게"],reviews:[]},
-  {id:"varenik",emoji:"🥟",price:10000,oldPrice:null,uz:"Varenik",ru:"Вареники",ko:"바레닉",cat:"hamirli",img:"",status:"active",isPopular:false,desc_uz:"Yumshoq xamirda go'sht.",desc_ru:"Вареники с мясом.",desc_ko:"바레닉.",steps_uz:["Qaynoq suvga soling","10-12 daqiqa","Sariyog' bilan"],steps_ru:["В кипящую воду","10-12 мин","Со маслом"],steps_ko:["끓는 물에","10-12분","버터와"],reviews:[]},
-  {id:"honim",emoji:"🫔",price:10000,oldPrice:null,uz:"Honim",ru:"Хоним",ko:"호님",cat:"hamirli",img:"",status:"active",isPopular:false,desc_uz:"Bug'langan go'sht ruleti.",desc_ru:"Паровой рулет.",desc_ko:"찐 롤.",steps_uz:["Bug'da 30-35 min","Tilim-tilim qilib torting"],steps_ru:["Пар 30-35 мин","Нарежьте"],steps_ko:["30-35분","슬라이스"],reviews:[]},
-  {id:"frikadelka",emoji:"🍡",price:10000,oldPrice:null,uz:"Frikadelka",ru:"Фрикадельки",ko:"미트볼",cat:"goshtli",img:"",status:"active",isPopular:false,desc_uz:"Yumaloq go'sht kotletlar.",desc_ru:"Мясные шарики.",desc_ko:"미트볼.",steps_uz:["Sho'rvaga soling","10-15 daqiqa"],steps_ru:["В суп","10-15 мин"],steps_ko:["수프에","10-15분"],reviews:[]},
+  {id:"manti",emoji:"ð¥",price:10000,oldPrice:null,uz:"Manti",ru:"ÐÐ°Ð½ÑÑ",ko:"ë§í°",cat:"hamirli",img:"",status:"active",isPopular:true,desc_uz:"Yumshoq xamirga o'ralgan mazali go'sht.",desc_ru:"Ð¡Ð¾ÑÐ½Ð¾Ðµ Ð¼ÑÑÐ¾ Ð² Ð½ÐµÐ¶Ð½Ð¾Ð¼ ÑÐµÑÑÐµ.",desc_ko:"ë¶ëë¬ì´ ë°ì£½ì ì¸ì¸ ê³ ê¸°.",steps_uz:["Muzlatgichdan oling","Qaynoq suvga soling","15-20 daqiqa pishiring","Qaymoq bilan torting"],steps_ru:["ÐÐ¾ÑÑÐ°Ð½ÑÑÐµ","Ð ÐºÐ¸Ð¿ÑÑÑÑ Ð²Ð¾Ð´Ñ","15-20 Ð¼Ð¸Ð½ÑÑ","Ð¡Ð¾ ÑÐ¼ÐµÑÐ°Ð½Ð¾Ð¹"],steps_ko:["êº¼ë´ì¸ì","ëë ë¬¼ì","15-20ë¶","ì¬ìí¬ë¦¼ê³¼"],reviews:[{name:"Dilnoza",text_uz:"Juda mazali!",stars:5,status:"approved"}]},
+  {id:"somsa",emoji:"ð¥",price:10000,oldPrice:12000,uz:"Somsa",ru:"Ð¡Ð°Ð¼ÑÐ°",ko:"ì¼ì¬",cat:"hamirli",img:"",status:"new",isPopular:true,desc_uz:"Tandirda pishirilgan xushbo'y somsa.",desc_ru:"ÐÑÐ¾Ð¼Ð°ÑÐ½Ð°Ñ ÑÐ°Ð¼ÑÐ°.",desc_ko:"í¥ê¸í ì¼ì¬.",steps_uz:["Muzlatgichdan oling","180Â°C pechka","20-25 daqiqa","Issiq torting"],steps_ru:["ÐÐ¾ÑÑÐ°Ð½ÑÑÐµ","ÐÑÑÐ¾Ð²ÐºÑ 180Â°C","20-25 Ð¼Ð¸Ð½ÑÑ","ÐÐ¾ÑÑÑÐ¸Ð¼"],steps_ko:["êº¼ë´ì¸ì","ì¤ë¸ 180Â°C","20-25ë¶","ë¨ê²ê²"],reviews:[{name:"Kamola",text_uz:"Har hafta buyurtma beraman!",stars:5,status:"approved"}]},
+  {id:"kotlet",emoji:"ð",price:10000,oldPrice:null,uz:"Kotlet",ru:"ÐÐ¾ÑÐ»ÐµÑÑ",ko:"ì»¤íë¦¿",cat:"goshtli",img:"",status:"active",isPopular:false,desc_uz:"Qo'lda tayyorlangan yumshoq kotlet.",desc_ru:"ÐÐ¾Ð¼Ð°ÑÐ½Ð¸Ðµ ÐºÐ¾ÑÐ»ÐµÑÑ.",desc_ko:"ìì  ì»¤íë¦¿.",steps_uz:["Yog'da qoving","Har tomoni 5-7 min","Sabzavotlar bilan"],steps_ru:["ÐÐ°ÑÑÑÐµ","5-7 Ð¼Ð¸Ð½","Ð¡ Ð¾Ð²Ð¾ÑÐ°Ð¼Ð¸"],steps_ko:["êµ¬ì°ì¸ì","5-7ë¶","ì±ìì"],reviews:[]},
+  {id:"blinchik",emoji:"ð¯",price:10000,oldPrice:11000,uz:"Blinchik",ru:"ÐÐ»Ð¸Ð½ÑÐ¸ÐºÐ¸",ko:"ë¸ë¦°ì¹í¬",cat:"hamirli",img:"",status:"active",isPopular:true,desc_uz:"Nozik blinchalarga o'ralgan go'sht.",desc_ru:"ÐÑÑÐ¾ Ð² Ð±Ð»Ð¸Ð½ÑÐ¸ÐºÐ°Ñ.",desc_ko:"ë¸ë¦°ì ì¸ì¸ ê³ ê¸°.",steps_uz:["Yog'ga soling","2-3 min har tomoni","Oltin rang bo'lguncha"],steps_ru:["ÐÐ° Ð¼Ð°ÑÐ»Ð¾","2-3 Ð¼Ð¸Ð½","ÐÐ¾ Ð·Ð¾Ð»Ð¾ÑÐ°"],steps_ko:["ê¸°ë¦ì","2-3ë¶","ë¸ë¦íê²"],reviews:[]},
+  {id:"varenik",emoji:"ð¥",price:10000,oldPrice:null,uz:"Varenik",ru:"ÐÐ°ÑÐµÐ½Ð¸ÐºÐ¸",ko:"ë°ë ë",cat:"hamirli",img:"",status:"active",isPopular:false,desc_uz:"Yumshoq xamirda go'sht.",desc_ru:"ÐÐ°ÑÐµÐ½Ð¸ÐºÐ¸ Ñ Ð¼ÑÑÐ¾Ð¼.",desc_ko:"ë°ë ë.",steps_uz:["Qaynoq suvga soling","10-12 daqiqa","Sariyog' bilan"],steps_ru:["Ð ÐºÐ¸Ð¿ÑÑÑÑ Ð²Ð¾Ð´Ñ","10-12 Ð¼Ð¸Ð½","Ð¡Ð¾ Ð¼Ð°ÑÐ»Ð¾Ð¼"],steps_ko:["ëë ë¬¼ì","10-12ë¶","ë²í°ì"],reviews:[]},
+  {id:"honim",emoji:"ð«",price:10000,oldPrice:null,uz:"Honim",ru:"Ð¥Ð¾Ð½Ð¸Ð¼",ko:"í¸ë",cat:"hamirli",img:"",status:"active",isPopular:false,desc_uz:"Bug'langan go'sht ruleti.",desc_ru:"ÐÐ°ÑÐ¾Ð²Ð¾Ð¹ ÑÑÐ»ÐµÑ.",desc_ko:"ì° ë¡¤.",steps_uz:["Bug'da 30-35 min","Tilim-tilim qilib torting"],steps_ru:["ÐÐ°Ñ 30-35 Ð¼Ð¸Ð½","ÐÐ°ÑÐµÐ¶ÑÑÐµ"],steps_ko:["30-35ë¶","ì¬ë¼ì´ì¤"],reviews:[]},
+  {id:"frikadelka",emoji:"ð¡",price:10000,oldPrice:null,uz:"Frikadelka",ru:"Ð¤ÑÐ¸ÐºÐ°Ð´ÐµÐ»ÑÐºÐ¸",ko:"ë¯¸í¸ë³¼",cat:"goshtli",img:"",status:"active",isPopular:false,desc_uz:"Yumaloq go'sht kotletlar.",desc_ru:"ÐÑÑÐ½ÑÐµ ÑÐ°ÑÐ¸ÐºÐ¸.",desc_ko:"ë¯¸í¸ë³¼.",steps_uz:["Sho'rvaga soling","10-15 daqiqa"],steps_ru:["Ð ÑÑÐ¿","10-15 Ð¼Ð¸Ð½"],steps_ko:["ìíì","10-15ë¶"],reviews:[]},
 ];
 
 let CATS = JSON.parse(localStorage.getItem('dona_cats')||'null')||[
-  {id:"all",emoji:"🍱",uz:"Barchasi",ru:"Все",ko:"전체"},
-  {id:"hamirli",emoji:"🥟",uz:"Hamirli",ru:"Мучные",ko:"밀가루"},
-  {id:"goshtli",emoji:"🍖",uz:"Go'shtli",ru:"Мясные",ko:"육류"},
+  {id:"all",emoji:"ð±",uz:"Barchasi",ru:"ÐÑÐµ",ko:"ì ì²´"},
+  {id:"hamirli",emoji:"ð¥",uz:"Hamirli",ru:"ÐÑÑÐ½ÑÐµ",ko:"ë°ê°ë£¨"},
+  {id:"goshtli",emoji:"ð",uz:"Go'shtli",ru:"ÐÑÑÐ½ÑÐµ",ko:"ì¡ë¥"},
 ];
 
 let TEXTS = JSON.parse(localStorage.getItem('dona_texts')||'null')||{
-  uz:{hero1_badge:"🔥 CHEGIRMA",hero1_title:"O'zbek taomlari endi Koreyada!",hero1_sub:"Muzlatilgan, sifatli, tez pishadi",hero1_btn:"Buyurtma berish →",hero2_badge:"🚚 YETKAZISH",hero2_title:"Butun Koreya bo'yicha yetkazish",hero2_sub:"Seuldan Busangacha",hero2_btn:"Bot orqali →",hero3_badge:"🍱 7 TAOM",hero3_title:"7 xil milliy taom siz uchun!",hero3_sub:"Manti, Somsa, Kotlet va boshqalar",hero3_btn:"Ko'rish →",pop_title:"⭐ Mashhur Taomlar",main_title:"🍱 Barcha Mahsulotlar",tg_title:"Telegram botimiz orqali buyurtma bering!",tg_sub:"24/7 ishlaydi • 3 tilda",tg_btn:"Bot →",cart_title:"🛒 Savatcha",total_lbl:"Jami:",pay_title:"💳 TO'LOV",f_name:"Ism",f_phone:"Telefon",f_addr:"Manzil",f_note:"Izoh",submit_btn:"✅ Buyurtma Berish",done_title:"Buyurtma Qabul!",done_sub:"Tez orada siz bilan bog'lanamiz. Rahmat! 🙏",done_btn:"Yaxshi",pm_desc:"Tavsif",pm_how:"Pishirish Yo'riqnomasi",pm_revs:"Sharhlar",wr_title:"Sharh Yozing",wr_sub:"📩 Yuborish",won:"₩"},
-  ru:{hero1_badge:"🔥 СКИДКА",hero1_title:"Узбекские блюда теперь в Корее!",hero1_sub:"Замороженные, качественные",hero1_btn:"Заказать →",hero2_badge:"🚚 ДОСТАВКА",hero2_title:"По всей Корее",hero2_sub:"От Сеула до Пусана",hero2_btn:"Бот →",hero3_badge:"🍱 7 БЛЮД",hero3_title:"7 национальных блюд для вас!",hero3_sub:"Манты, самса и другие",hero3_btn:"Смотреть →",pop_title:"⭐ Популярные",main_title:"🍱 Все Продукты",tg_title:"Заказывайте через Telegram!",tg_sub:"Работает 24/7 • 3 языка",tg_btn:"Бот →",cart_title:"🛒 Корзина",total_lbl:"Итого:",pay_title:"💳 ОПЛАТА",f_name:"Имя",f_phone:"Телефон",f_addr:"Адрес",f_note:"Комментарий",submit_btn:"✅ Оформить Заказ",done_title:"Заказ принят!",done_sub:"Свяжемся с вами. Спасибо! 🙏",done_btn:"Хорошо",pm_desc:"Описание",pm_how:"Инструкция",pm_revs:"Отзывы",wr_title:"Написать отзыв",wr_sub:"📩 Отправить",won:"₩"},
-  ko:{hero1_badge:"🔥 할인",hero1_title:"우즈베크 음식 이제 한국에서!",hero1_sub:"냉동, 고품질, 빠른 조리",hero1_btn:"주문하기 →",hero2_badge:"🚚 배달",hero2_title:"한국 전국 배달",hero2_sub:"서울부터 부산까지",hero2_btn:"봇으로 →",hero3_badge:"🍱 7가지",hero3_title:"7가지 전통 음식!",hero3_sub:"만티, 삼사 등",hero3_btn:"보기 →",pop_title:"⭐ 인기 제품",main_title:"🍱 전체 제품",tg_title:"텔레그램으로 주문하세요!",tg_sub:"24/7 운영 • 3개 언어",tg_btn:"봇 →",cart_title:"🛒 장바구니",total_lbl:"합계:",pay_title:"💳 결제",f_name:"이름",f_phone:"전화번호",f_addr:"주소",f_note:"메모",submit_btn:"✅ 주문하기",done_title:"주문 접수!",done_sub:"곧 연락드립니다. 감사합니다! 🙏",done_btn:"확인",pm_desc:"설명",pm_how:"조리 방법",pm_revs:"리뷰",wr_title:"리뷰 작성",wr_sub:"📩 보내기",won:"₩"},
+  uz:{hero1_badge:"ð¥ CHEGIRMA",hero1_title:"O'zbek taomlari endi Koreyada!",hero1_sub:"Muzlatilgan, sifatli, tez pishadi",hero1_btn:"Buyurtma berish â",hero2_badge:"ð YETKAZISH",hero2_title:"Butun Koreya bo'yicha yetkazish",hero2_sub:"Seuldan Busangacha",hero2_btn:"Bot orqali â",hero3_badge:"ð± 7 TAOM",hero3_title:"7 xil milliy taom siz uchun!",hero3_sub:"Manti, Somsa, Kotlet va boshqalar",hero3_btn:"Ko'rish â",pop_title:"â­ Mashhur Taomlar",main_title:"ð± Barcha Mahsulotlar",tg_title:"Telegram botimiz orqali buyurtma bering!",tg_sub:"24/7 ishlaydi â¢ 3 tilda",tg_btn:"Bot â",cart_title:"ð Savatcha",total_lbl:"Jami:",pay_title:"ð³ TO'LOV",f_name:"Ism",f_phone:"Telefon",f_addr:"Manzil",f_note:"Izoh",submit_btn:"â Buyurtma Berish",done_title:"Buyurtma Qabul!",done_sub:"Tez orada siz bilan bog'lanamiz. Rahmat! ð",done_btn:"Yaxshi",pm_desc:"Tavsif",pm_how:"Pishirish Yo'riqnomasi",pm_revs:"Sharhlar",wr_title:"Sharh Yozing",wr_sub:"ð© Yuborish",won:"â©"},
+  ru:{hero1_badge:"ð¥ Ð¡ÐÐÐÐÐ",hero1_title:"Ð£Ð·Ð±ÐµÐºÑÐºÐ¸Ðµ Ð±Ð»ÑÐ´Ð° ÑÐµÐ¿ÐµÑÑ Ð² ÐÐ¾ÑÐµÐµ!",hero1_sub:"ÐÐ°Ð¼Ð¾ÑÐ¾Ð¶ÐµÐ½Ð½ÑÐµ, ÐºÐ°ÑÐµÑÑÐ²ÐµÐ½Ð½ÑÐµ",hero1_btn:"ÐÐ°ÐºÐ°Ð·Ð°ÑÑ â",hero2_badge:"ð ÐÐÐ¡Ð¢ÐÐÐÐ",hero2_title:"ÐÐ¾ Ð²ÑÐµÐ¹ ÐÐ¾ÑÐµÐµ",hero2_sub:"ÐÑ Ð¡ÐµÑÐ»Ð° Ð´Ð¾ ÐÑÑÐ°Ð½Ð°",hero2_btn:"ÐÐ¾Ñ â",hero3_badge:"ð± 7 ÐÐÐ®Ð",hero3_title:"7 Ð½Ð°ÑÐ¸Ð¾Ð½Ð°Ð»ÑÐ½ÑÑ Ð±Ð»ÑÐ´ Ð´Ð»Ñ Ð²Ð°Ñ!",hero3_sub:"ÐÐ°Ð½ÑÑ, ÑÐ°Ð¼ÑÐ° Ð¸ Ð´ÑÑÐ³Ð¸Ðµ",hero3_btn:"Ð¡Ð¼Ð¾ÑÑÐµÑÑ â",pop_title:"â­ ÐÐ¾Ð¿ÑÐ»ÑÑÐ½ÑÐµ",main_title:"ð± ÐÑÐµ ÐÑÐ¾Ð´ÑÐºÑÑ",tg_title:"ÐÐ°ÐºÐ°Ð·ÑÐ²Ð°Ð¹ÑÐµ ÑÐµÑÐµÐ· Telegram!",tg_sub:"Ð Ð°Ð±Ð¾ÑÐ°ÐµÑ 24/7 â¢ 3 ÑÐ·ÑÐºÐ°",tg_btn:"ÐÐ¾Ñ â",cart_title:"ð ÐÐ¾ÑÐ·Ð¸Ð½Ð°",total_lbl:"ÐÑÐ¾Ð³Ð¾:",pay_title:"ð³ ÐÐÐÐÐ¢Ð",f_name:"ÐÐ¼Ñ",f_phone:"Ð¢ÐµÐ»ÐµÑÐ¾Ð½",f_addr:"ÐÐ´ÑÐµÑ",f_note:"ÐÐ¾Ð¼Ð¼ÐµÐ½ÑÐ°ÑÐ¸Ð¹",submit_btn:"â ÐÑÐ¾ÑÐ¼Ð¸ÑÑ ÐÐ°ÐºÐ°Ð·",done_title:"ÐÐ°ÐºÐ°Ð· Ð¿ÑÐ¸Ð½ÑÑ!",done_sub:"Ð¡Ð²ÑÐ¶ÐµÐ¼ÑÑ Ñ Ð²Ð°Ð¼Ð¸. Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾! ð",done_btn:"Ð¥Ð¾ÑÐ¾ÑÐ¾",pm_desc:"ÐÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ",pm_how:"ÐÐ½ÑÑÑÑÐºÑÐ¸Ñ",pm_revs:"ÐÑÐ·ÑÐ²Ñ",wr_title:"ÐÐ°Ð¿Ð¸ÑÐ°ÑÑ Ð¾ÑÐ·ÑÐ²",wr_sub:"ð© ÐÑÐ¿ÑÐ°Ð²Ð¸ÑÑ",won:"â©"},
+  ko:{hero1_badge:"ð¥ í ì¸",hero1_title:"ì°ì¦ë² í¬ ìì ì´ì  íêµ­ìì!",hero1_sub:"ëë, ê³ íì§, ë¹ ë¥¸ ì¡°ë¦¬",hero1_btn:"ì£¼ë¬¸íê¸° â",hero2_badge:"ð ë°°ë¬",hero2_title:"íêµ­ ì êµ­ ë°°ë¬",hero2_sub:"ìì¸ë¶í° ë¶ì°ê¹ì§",hero2_btn:"ë´ì¼ë¡ â",hero3_badge:"ð± 7ê°ì§",hero3_title:"7ê°ì§ ì íµ ìì!",hero3_sub:"ë§í°, ì¼ì¬ ë±",hero3_btn:"ë³´ê¸° â",pop_title:"â­ ì¸ê¸° ì í",main_title:"ð± ì ì²´ ì í",tg_title:"íë ê·¸ë¨ì¼ë¡ ì£¼ë¬¸íì¸ì!",tg_sub:"24/7 ì´ì â¢ 3ê° ì¸ì´",tg_btn:"ë´ â",cart_title:"ð ì¥ë°êµ¬ë",total_lbl:"í©ê³:",pay_title:"ð³ ê²°ì ",f_name:"ì´ë¦",f_phone:"ì íë²í¸",f_addr:"ì£¼ì",f_note:"ë©ëª¨",submit_btn:"â ì£¼ë¬¸íê¸°",done_title:"ì£¼ë¬¸ ì ì!",done_sub:"ê³§ ì°ë½ëë¦½ëë¤. ê°ì¬í©ëë¤! ð",done_btn:"íì¸",pm_desc:"ì¤ëª",pm_how:"ì¡°ë¦¬ ë°©ë²",pm_revs:"ë¦¬ë·°",wr_title:"ë¦¬ë·° ìì±",wr_sub:"ð© ë³´ë´ê¸°",won:"â©"},
 };
 
 let PAY = JSON.parse(localStorage.getItem('dona_payment')||'{}');
@@ -637,9 +637,9 @@ let SETT = JSON.parse(localStorage.getItem('dona_sett')||'{}');
 let lang='uz', cart={}, curProd=null, curStar=5, curCat='all', curFilter='all';
 let bannerIdx=0;
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // INIT LOGO
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function initLogo(){
   const logo = SETT.logo||LOGO_URL;
   const logoEl = document.getElementById('logoImg');
@@ -655,22 +655,22 @@ function initLogo(){
   }
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // PAYMENT
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function initPay(){
   if(PAY.bank){
     document.getElementById('payInfoBox').style.display='block';
     document.getElementById('dBank').textContent=PAY.bank;
-    document.getElementById('dAcc').textContent=PAY.account||'—';
-    document.getElementById('dOwn').textContent=PAY.owner||'—';
+    document.getElementById('dAcc').textContent=PAY.account||'â';
+    document.getElementById('dOwn').textContent=PAY.owner||'â';
     document.getElementById('dMsg').textContent=PAY.msg||'';
   }
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // BANNER
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function initBanner(){
   const dots=document.getElementById('bannerDots');
   dots.innerHTML=[0,1,2].map(i=>`<div class="dot${i===0?' active':''}" onclick="goBanner(${i})"></div>`).join('');
@@ -682,9 +682,9 @@ function goBanner(i){
   document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===i));
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // LANG
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function setLang(l){
   lang=l;
   document.querySelectorAll('.lb').forEach((b,i)=>b.classList.toggle('active',['uz','ru','ko'][i]===l));
@@ -702,9 +702,9 @@ function setLang(l){
   renderCats();renderProds();
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // CATEGORIES
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function renderCats(){
   document.getElementById('catScroll').innerHTML=CATS.map(c=>`
     <button class="cat-icon-btn${c.id===curCat?' active':''}" onclick="selectCat('${c.id}')">
@@ -714,9 +714,9 @@ function renderCats(){
 }
 function selectCat(id){curCat=id;curFilter='all';document.querySelectorAll('.promo-tag').forEach(b=>b.classList.remove('active'));document.getElementById('pt_all').classList.add('active');renderCats();renderProds();}
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // PRODUCTS
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function filterPromo(f,btn){
   curFilter=f;curCat='all';
   document.querySelectorAll('.promo-tag').forEach(b=>b.classList.remove('active'));
@@ -754,11 +754,11 @@ function renderProds(){
         ${p.img?`<img src="${p.img}" onerror="this.style.display='none'">`:p.emoji}
         ${p.oldPrice?`<span class="sale-badge">SALE ${disc}%</span>`:''}
         ${p.status==='new'&&!p.oldPrice?`<span class="new-badge">NEW</span>`:''}
-        <button class="fav-btn" onclick="event.stopPropagation();this.textContent=this.textContent==='🤍'?'❤️':'🤍'">🤍</button>
+        <button class="fav-btn" onclick="event.stopPropagation();this.textContent=this.textContent==='ð¤'?'â¤ï¸':'ð¤'">ð¤</button>
       </div>
       <div class="prod-body">
         <div class="prod-name">${p[lang]||p.uz}</div>
-        <div class="prod-unit">❄️ Frozen</div>
+        <div class="prod-unit">âï¸ Frozen</div>
         <div class="prod-price-row">
           <div>
             <div class="prod-price">${p.price.toLocaleString()} ${t.won}</div>
@@ -766,7 +766,7 @@ function renderProds(){
           </div>
           <div onclick="event.stopPropagation()">
             ${qty>0?`<div class="qty-ctrl">
-              <button class="qty-m" onclick="chQty('${p.id}',-1)">−</button>
+              <button class="qty-m" onclick="chQty('${p.id}',-1)">â</button>
               <span class="qty-n">${qty}</span>
               <button class="qty-p" onclick="chQty('${p.id}',1)">+</button>
             </div>`:`<button class="add-btn" onclick="chQty('${p.id}',1)">+</button>`}
@@ -786,9 +786,9 @@ function chQty(id,d){
   if(document.getElementById('cartOverlay').classList.contains('show'))renderCartItems();
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // PRODUCT MODAL
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function openProd(id){
   const p=PRODS.find(x=>x.id===id);if(!p)return;
   curProd=p; curStar=5; setStar(5);
@@ -798,19 +798,19 @@ function openProd(id){
   document.getElementById('pmPrice').textContent=`${p.price.toLocaleString()} ${t.won}`;
   document.getElementById('pmDesc').textContent=p['desc_'+lang]||p.desc_uz||'';
   const steps=p['steps_'+lang]||p.steps_uz||[];
-  document.getElementById('pmSteps').innerHTML=steps.map(s=>`<li><span class="sn">→</span><span>${s}</span></li>`).join('');
+  document.getElementById('pmSteps').innerHTML=steps.map(s=>`<li><span class="sn">â</span><span>${s}</span></li>`).join('');
   document.getElementById('pmDescSec').textContent=t.pm_desc||'Tavsif';
   document.getElementById('pmHowSec').textContent=t.pm_how||'Pishirish';
   document.getElementById('pmRevSec').textContent=t.pm_revs||'Sharhlar';
   document.getElementById('wrTitle').textContent=t.wr_title||'Sharh Yozing';
-  document.getElementById('wrSub').textContent=t.wr_sub||'📩 Yuborish';
+  document.getElementById('wrSub').textContent=t.wr_sub||'ð© Yuborish';
   const revs=(p.reviews||[]).filter(r=>r.status==='approved');
   const stars=revs.length?Math.round(revs.reduce((s,r)=>s+(r.stars||5),0)/revs.length):5;
-  document.getElementById('pmStars').textContent='★'.repeat(stars)+'☆'.repeat(5-stars)+` (${revs.length})`;
+  document.getElementById('pmStars').textContent='â'.repeat(stars)+'â'.repeat(5-stars)+` (${revs.length})`;
   document.getElementById('pmRevList').innerHTML=revs.length?
-    revs.map(r=>`<div class="rev-i"><div class="rev-top"><span class="rev-name">${r.name}</span><span class="rev-s">${'★'.repeat(r.stars||5)}</span></div><div class="rev-txt">${r['text_'+lang]||r.text_uz||''}</div></div>`).join(''):
+    revs.map(r=>`<div class="rev-i"><div class="rev-top"><span class="rev-name">${r.name}</span><span class="rev-s">${'â'.repeat(r.stars||5)}</span></div><div class="rev-txt">${r['text_'+lang]||r.text_uz||''}</div></div>`).join(''):
     '<p style="color:var(--muted);font-size:0.78rem;padding:0.3rem 0">Hali sharh yo\'q!</p>';
-  document.getElementById('pmAddBtn').textContent=`🛒 ${t.won} ${p.price.toLocaleString()}`;
+  document.getElementById('pmAddBtn').textContent=`ð ${t.won} ${p.price.toLocaleString()}`;
   document.getElementById('revName').value='';document.getElementById('revText').value='';
   document.getElementById('pmOverlay').classList.add('show');
   document.body.style.overflow='hidden';
@@ -834,9 +834,9 @@ function submitRev(){
   closePM();
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // CART
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function openCart(){renderCartItems();document.getElementById('cartOverlay').classList.add('show');document.body.style.overflow='hidden';}
 function closeCart(){document.getElementById('cartOverlay').classList.remove('show');document.body.style.overflow='';}
 document.getElementById('cartOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('cartOverlay'))closeCart();});
@@ -851,7 +851,7 @@ function renderCartItems(){
       <div class="ci-img">${p.img?`<img src="${p.img}" onerror="this.style.display='none'">`:p.emoji}</div>
       <div style="flex:1"><div class="ci-name">${p[lang]||p.uz}</div><div class="ci-price">${sub.toLocaleString()} ${t.won}</div></div>
       <div class="ci-qty">
-        <button class="cq" onclick="chQty('${id}',-1)">−</button>
+        <button class="cq" onclick="chQty('${id}',-1)">â</button>
         <span style="font-weight:700;font-size:0.8rem">${qty}</span>
         <button class="cq" onclick="chQty('${id}',1)">+</button>
       </div>
@@ -860,15 +860,15 @@ function renderCartItems(){
   document.getElementById('totalAmt').textContent=`${total.toLocaleString()} ${t.won}`;
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // ORDER
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 async function submitOrder(){
   const name=document.getElementById('fName').value.trim();
   const phone=document.getElementById('fPhone').value.trim();
   const addr=document.getElementById('fAddr').value.trim();
   const note=document.getElementById('fNote').value.trim();
-  if(!name||!phone||!addr){alert(lang==='uz'?"Barcha maydonlarni to'ldiring!":lang==='ru'?"Заполните все поля!":"모든 항목을 입력하세요!");return;}
+  if(!name||!phone||!addr){alert(lang==='uz'?"Barcha maydonlarni to'ldiring!":lang==='ru'?"ÐÐ°Ð¿Ð¾Ð»Ð½Ð¸ÑÐµ Ð²ÑÐµ Ð¿Ð¾Ð»Ñ!":"ëª¨ë  í­ëª©ì ìë ¥íì¸ì!");return;}
   if(!Object.keys(cart).length){alert("Savatcha bo'sh!");return;}
   const btn=document.getElementById('submitBtn');
   btn.innerHTML='<span class="spinner"></span>Yuborilmoqda...';btn.disabled=true;
@@ -876,10 +876,10 @@ async function submitOrder(){
   let total=0;
   const itemsText=Object.entries(cart).map(([id,qty])=>{
     const p=PRODS.find(x=>x.id===id);const sub=p.price*qty;total+=sub;
-    return `${p.emoji} ${p[lang]||p.uz} x${qty} = ${sub.toLocaleString()} ₩`;
+    return `${p.emoji} ${p[lang]||p.uz} x${qty} = ${sub.toLocaleString()} â©`;
   }).join('\n');
   const oid=new Date().toISOString().replace(/\D/g,'').slice(6,14);
-  const msg=`🌐 <b>VEB-SAYT #${oid}</b>\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n`+(note?`📝 ${note}\n`:'')+`🌐 ${lang.toUpperCase()}\n\n${itemsText}\n\n💰 <b>${total.toLocaleString()} ₩</b>`;
+  const msg=`ð <b>VEB-SAYT #${oid}</b>\nð¤ ${name}\nð± ${phone}\nð ${addr}\n`+(note?`ð ${note}\n`:'')+`ð ${lang.toUpperCase()}\n\n${itemsText}\n\nð° <b>${total.toLocaleString()} â©</b>`;
   try{
     const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:TG_CHAT,text:msg,parse_mode:'HTML'})});
     const d=await r.json();
@@ -890,12 +890,12 @@ async function submitOrder(){
       renderProds();
     }else throw new Error(d.description);
   }catch(e){alert('Xatolik! Bot orqali buyurtma bering: t.me/Donafood_bot');}
-  btn.innerHTML=t.submit_btn||'✅ Buyurtma Berish';btn.disabled=false;
+  btn.innerHTML=t.submit_btn||'â Buyurtma Berish';btn.disabled=false;
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // ADMIN PANEL
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 function openAdmin(){document.getElementById('adminOverlay').classList.add('show');document.body.style.overflow='hidden';}
 function closeAdmin(){document.getElementById('adminOverlay').classList.remove('show');document.body.style.overflow='';}
 
@@ -934,7 +934,7 @@ function loadAdminData(){
   if(SETT.adminTg) document.getElementById('aAdminTg').value=SETT.adminTg;
 }
 
-// ─── PRODUCTS ADMIN ───
+// âââ PRODUCTS ADMIN âââ
 function renderAdminProds(){
   document.getElementById('adminProdList').innerHTML=PRODS.map((p,i)=>`
     <div class="prod-edit-item">
@@ -943,12 +943,12 @@ function renderAdminProds(){
           <div class="aimg-prev">${p.img?`<img src="${p.img}" onerror="this.style.display='none'">`:p.emoji}</div>
           <div>
             <div class="prod-edit-name">${p.uz}</div>
-            <div style="font-size:0.72rem;color:var(--muted)">${p.price.toLocaleString()} ₩ ${p.oldPrice?'• SALE':''} ${p.status==='new'?'• NEW':''}</div>
+            <div style="font-size:0.72rem;color:var(--muted)">${p.price.toLocaleString()} â© ${p.oldPrice?'â¢ SALE':''} ${p.status==='new'?'â¢ NEW':''}</div>
           </div>
         </div>
         <div style="display:flex;gap:0.4rem">
-          <button class="adel" style="background:rgba(41,128,185,0.1);color:#2980b9;border-color:rgba(41,128,185,0.2)" onclick="openEditProd(${i})">✏️</button>
-          <button class="adel" onclick="delProd(${i})">🗑️</button>
+          <button class="adel" style="background:rgba(41,128,185,0.1);color:#2980b9;border-color:rgba(41,128,185,0.2)" onclick="openEditProd(${i})">âï¸</button>
+          <button class="adel" onclick="delProd(${i})">ðï¸</button>
         </div>
       </div>
     </div>`).join('');
@@ -967,7 +967,7 @@ function openAddProd(){
 
 function openEditProd(i){
   const p=PRODS[i];
-  document.getElementById('prodEditTitle').textContent='✏️ '+p.uz;
+  document.getElementById('prodEditTitle').textContent='âï¸ '+p.uz;
   document.getElementById('peIdx').value=i;
   document.getElementById('peImg').value=p.img||'';
   document.getElementById('peEmoji').value=p.emoji||'';
@@ -999,7 +999,7 @@ function saveProdEdit(){
   if(!uz||!price){alert('Nomi va narxni kiriting!');return;}
   const p={
     id:document.getElementById('peIdx').value!==''?PRODS[parseInt(document.getElementById('peIdx').value)].id:'prod_'+Date.now(),
-    emoji:document.getElementById('peEmoji').value||'🍱',
+    emoji:document.getElementById('peEmoji').value||'ð±',
     price, oldPrice:parseInt(document.getElementById('peOldPrice').value)||null,
     uz, ru:document.getElementById('peRu').value||uz, ko:document.getElementById('peKo').value||uz,
     cat:document.getElementById('peCat').value,
@@ -1025,33 +1025,33 @@ function delProd(i){if(!confirm(`"${PRODS[i].uz}" ni o'chirasizmi?`))return;PROD
 function closeProdEdit(){document.getElementById('prodEditOverlay').classList.remove('show');}
 function showPETab(n,btn){document.querySelectorAll('#prodEditOverlay .atab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('#prodEditOverlay .atab-c').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('petab-'+n).classList.add('active');}
 
-// ─── CATS ADMIN ───
+// âââ CATS ADMIN âââ
 function renderAdminCats(){
   document.getElementById('adminCatList').innerHTML=CATS.filter(c=>c.id!=='all').map((c,i)=>`
     <div class="acat-item">
       <span class="acat-emoji">${c.emoji}</span>
       <div class="acat-name">${c.uz} / ${c.ru} / ${c.ko}</div>
-      <button class="adel" onclick="delCat(${i+1})">🗑️</button>
+      <button class="adel" onclick="delCat(${i+1})">ðï¸</button>
     </div>`).join('');
 }
 function addCat(){
   const uz=document.getElementById('ncUz').value.trim();
   if(!uz){alert('Nomi kiriting!');return;}
-  CATS.push({id:document.getElementById('ncId').value||uz.toLowerCase().replace(/\s+/g,'_'),emoji:document.getElementById('ncEmoji').value||'📦',uz,ru:document.getElementById('ncRu').value||uz,ko:document.getElementById('ncKo').value||uz});
+  CATS.push({id:document.getElementById('ncId').value||uz.toLowerCase().replace(/\s+/g,'_'),emoji:document.getElementById('ncEmoji').value||'ð¦',uz,ru:document.getElementById('ncRu').value||uz,ko:document.getElementById('ncKo').value||uz});
   ['ncEmoji','ncUz','ncRu','ncKo','ncId'].forEach(id=>document.getElementById(id).value='');
   localStorage.setItem('dona_cats',JSON.stringify(CATS));
   renderAdminCats();renderCats();
 }
 function delCat(i){if(!confirm(`"${CATS[i].uz}" ni o'chirasizmi?`))return;CATS.splice(i,1);localStorage.setItem('dona_cats',JSON.stringify(CATS));renderAdminCats();renderCats();}
 
-// ─── TEXTS ADMIN ───
+// âââ TEXTS ADMIN âââ
 const TEXT_KEYS=[
-  ['hero1_badge','Banner 1 — Yuqori yozuv'],['hero1_title','Banner 1 — Sarlavha'],['hero1_sub','Banner 1 — Tavsif'],['hero1_btn','Banner 1 — Tugma'],
-  ['hero2_badge','Banner 2 — Yuqori yozuv'],['hero2_title','Banner 2 — Sarlavha'],['hero2_sub','Banner 2 — Tavsif'],['hero2_btn','Banner 2 — Tugma'],
-  ['hero3_badge','Banner 3 — Yuqori yozuv'],['hero3_title','Banner 3 — Sarlavha'],['hero3_sub','Banner 3 — Tavsif'],['hero3_btn','Banner 3 — Tugma'],
-  ['pop_title','Mashhur Taomlar — Sarlavha'],['main_title','Barcha Mahsulotlar — Sarlavha'],
-  ['tg_title','Telegram — Sarlavha'],['tg_sub','Telegram — Tavsif'],['tg_btn','Telegram — Tugma'],
-  ['submit_btn','Buyurtma tugmasi'],['done_title','Muvaffaqiyat — Sarlavha'],['done_sub','Muvaffaqiyat — Tavsif'],
+  ['hero1_badge','Banner 1 â Yuqori yozuv'],['hero1_title','Banner 1 â Sarlavha'],['hero1_sub','Banner 1 â Tavsif'],['hero1_btn','Banner 1 â Tugma'],
+  ['hero2_badge','Banner 2 â Yuqori yozuv'],['hero2_title','Banner 2 â Sarlavha'],['hero2_sub','Banner 2 â Tavsif'],['hero2_btn','Banner 2 â Tugma'],
+  ['hero3_badge','Banner 3 â Yuqori yozuv'],['hero3_title','Banner 3 â Sarlavha'],['hero3_sub','Banner 3 â Tavsif'],['hero3_btn','Banner 3 â Tugma'],
+  ['pop_title','Mashhur Taomlar â Sarlavha'],['main_title','Barcha Mahsulotlar â Sarlavha'],
+  ['tg_title','Telegram â Sarlavha'],['tg_sub','Telegram â Tavsif'],['tg_btn','Telegram â Tugma'],
+  ['submit_btn','Buyurtma tugmasi'],['done_title','Muvaffaqiyat â Sarlavha'],['done_sub','Muvaffaqiyat â Tavsif'],
 ];
 function renderTextsEditor(){
   ['uz','ru','ko'].forEach(l=>{
@@ -1096,14 +1096,14 @@ function saveSettAndGitHub(){
   saveToGitHub('saveSettStatus');
 }
 
-// ─── GITHUB SAVE ───
+// âââ GITHUB SAVE âââ
 async function saveToGitHub(statusId='saveProdStatus'){
   const token=document.getElementById('ghToken').value.trim();
-  if(!token){showStatus(statusId,'❌ GitHub token kiriting!','err');return;}
+  if(!token){showStatus(statusId,'â GitHub token kiriting!','err');return;}
   
   const btn=document.getElementById('saveProdBtn');
-  if(btn){btn.textContent='⏳ Saqlanmoqda...';btn.disabled=true;}
-  showStatus(statusId,'⏳ GitHub ga saqlanmoqda...','');
+  if(btn){btn.textContent='â³ Saqlanmoqda...';btn.disabled=true;}
+  showStatus(statusId,'â³ GitHub ga saqlanmoqda...','');
 
   try{
     // Get current file SHA
@@ -1118,7 +1118,7 @@ async function saveToGitHub(statusId='saveProdStatus'){
     
     // Build new data injection
     const dataScript=`
-// ═══ SAVED DATA ═══
+// âââ SAVED DATA âââ
 const _SAVED_PRODS=${JSON.stringify(PRODS)};
 const _SAVED_CATS=${JSON.stringify(CATS)};
 const _SAVED_TEXTS=${JSON.stringify(TEXTS)};
@@ -1129,11 +1129,11 @@ if(!localStorage.getItem('dona_cats'))localStorage.setItem('dona_cats',JSON.stri
 if(!localStorage.getItem('dona_texts'))localStorage.setItem('dona_texts',JSON.stringify(_SAVED_TEXTS));
 if(!localStorage.getItem('dona_payment'))localStorage.setItem('dona_payment',JSON.stringify(_SAVED_PAY));
 if(!localStorage.getItem('dona_sett'))localStorage.setItem('dona_sett',JSON.stringify(_SAVED_SETT));
-// ═══ END SAVED DATA ═══`;
+// âââ END SAVED DATA âââ`;
 
     // Remove old saved data and inject new
-    let newHTML=currentHTML.replace(/\/\/ ═══ SAVED DATA ═══[\s\S]*?\/\/ ═══ END SAVED DATA ═══/,'');
-    newHTML=newHTML.replace('// ═══════════════════════════════════════\n// CONFIG',dataScript+'\n// ═══════════════════════════════════════\n// CONFIG');
+    let newHTML=currentHTML.replace(/\/\/ âââ SAVED DATA âââ[\s\S]*?\/\/ âââ END SAVED DATA âââ/,'');
+    newHTML=newHTML.replace('// âââââââââââââââââââââââââââââââââââââââ\n// CONFIG',dataScript+'\n// âââââââââââââââââââââââââââââââââââââââ\n// CONFIG');
 
     // Save to GitHub
     const saveResp=await fetch(`https://api.github.com/repos/${GH_USER}/${GH_REPO}/contents/${GH_FILE}`,{
@@ -1143,14 +1143,14 @@ if(!localStorage.getItem('dona_sett'))localStorage.setItem('dona_sett',JSON.stri
     });
     const saveData=await saveResp.json();
     if(saveData.content){
-      showStatus(statusId,'✅ GitHub ga saqlandi! 1-2 daqiqada saytda ko\'rinadi.','ok');
+      showStatus(statusId,'â GitHub ga saqlandi! 1-2 daqiqada saytda ko\'rinadi.','ok');
     } else {
       throw new Error(saveData.message||'Xatolik');
     }
   }catch(e){
-    showStatus(statusId,'❌ Xatolik: '+e.message,'err');
+    showStatus(statusId,'â Xatolik: '+e.message,'err');
   }
-  if(btn){btn.textContent='💾 GitHub ga Saqlash';btn.disabled=false;}
+  if(btn){btn.textContent='ð¾ GitHub ga Saqlash';btn.disabled=false;}
 }
 
 function showStatus(id,msg,type){
@@ -1161,9 +1161,9 @@ function showStatus(id,msg,type){
   el.style.display='block';
 }
 
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 // INIT
-// ═══════════════════════════════════════
+// âââââââââââââââââââââââââââââââââââââââ
 initLogo();
 initBanner();
 initPay();
