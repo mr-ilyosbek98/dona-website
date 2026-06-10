@@ -792,6 +792,8 @@ body.dark .faq-open-btn{background:#16213E;}
 </div>
 
 <script>
+
+
 // ─────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────
@@ -1535,15 +1537,7 @@ async function saveToGitHub(statusId='saveProdStatus'){
     const currentHTML = new TextDecoder('utf-8').decode(bytes);
 
     const dataScript=`
-// ─── SAVED DATA ───
-const _SAVED_VER='${Date.now()}';
-const _SAVED_PRODS=${JSON.stringify(PRODS)};
-const _SAVED_CATS=${JSON.stringify(CATS)};
-const _SAVED_TEXTS=${JSON.stringify(TEXTS)};
-const _SAVED_PAY=${JSON.stringify(PAY)};
-const _SAVED_SETT=${JSON.stringify(SETT)};
-const _SAVED_FAQ=${JSON.stringify(FAQ_DATA)};
-// ─── END SAVED DATA ───`;
+`;
 
     let newHTML=currentHTML.replace(/\/\/ ─── SAVED DATA ───[\s\S]*?\/\/ ─── END SAVED DATA ───/,'');
     newHTML=newHTML.replace('// ─────────────────────────────────────────\n// CONFIG',dataScript+'\n// ─────────────────────────────────────────\n// CONFIG');
