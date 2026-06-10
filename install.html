@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DONA - Ilovani O'rnating</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#8B1A1A,#C0392B);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;}
+  .card{background:#fff;border-radius:24px;padding:2rem;max-width:380px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+  .logo{width:80px;height:80px;border-radius:20px;margin:0 auto 1rem;display:block;}
+  h1{font-size:1.6rem;font-weight:900;color:#8B1A1A;margin-bottom:0.3rem;}
+  .sub{color:#666;font-size:0.9rem;margin-bottom:1.5rem;}
+  .features{background:#fef9f9;border-radius:12px;padding:1rem;margin-bottom:1.5rem;text-align:left;}
+  .feat{display:flex;align-items:center;gap:0.7rem;padding:0.4rem 0;font-size:0.85rem;color:#333;}
+  .install-btn{background:linear-gradient(135deg,#8B1A1A,#C0392B);color:#fff;border:none;padding:1rem 2rem;border-radius:16px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;margin-bottom:0.8rem;font-family:inherit;transition:transform 0.1s;}
+  .install-btn:active{transform:scale(0.97);}
+  .open-btn{background:transparent;color:#8B1A1A;border:2px solid #8B1A1A;padding:0.8rem 2rem;border-radius:16px;font-size:0.9rem;font-weight:700;cursor:pointer;width:100%;font-family:inherit;}
+  .ios-guide{display:none;background:#f0f8ff;border-radius:12px;padding:1rem;margin-top:1rem;text-align:left;}
+  .ios-guide.show{display:block;}
+  .ios-step{display:flex;align-items:flex-start;gap:0.5rem;margin-bottom:0.7rem;font-size:0.82rem;color:#333;}
+  .ios-num{background:#8B1A1A;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;margin-top:1px;}
+  .badge{display:inline-block;background:#e8f5e9;color:#2e7d32;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:700;margin-bottom:1rem;}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="logo" src="https://i.imgur.com/aAIrsYR.png" onerror="this.style.display='none'" alt="DONA">
+  <div class="badge">✅ Tekin • Yuklab olish shart emas</div>
+  <h1>DONA</h1>
+  <p class="sub">Uzbek Frozen Food — Koreya bo'yicha yetkazish</p>
+
+  <div class="features">
+    <div class="feat">🥟 O'zbek milliy taomlari</div>
+    <div class="feat">🚚 Butun Koreya bo'yicha yetkazish</div>
+    <div class="feat">📱 Ilova kabi ishlaydi</div>
+    <div class="feat">🌐 3 tilda: UZ • RU • KO</div>
+    <div class="feat">⚡ Tez va qulay buyurtma</div>
+  </div>
+
+  <button class="install-btn" id="installBtn" onclick="installApp()">
+    📲 Ilovani O'rnatish
+  </button>
+  <button class="open-btn" onclick="openSite()">
+    🌐 Saytni Ochish
+  </button>
+
+  <div class="ios-guide" id="iosGuide">
+    <strong style="font-size:0.85rem;color:#8B1A1A">iPhone uchun:</strong>
+    <div class="ios-step"><div class="ios-num">1</div><span>Pastdagi <strong>📤</strong> tugmasini bosing</span></div>
+    <div class="ios-step"><div class="ios-num">2</div><span><strong>"Bosh ekranga qo'shish"</strong> tanlang</span></div>
+    <div class="ios-step"><div class="ios-num">3</div><span><strong>"Qo'shish"</strong> bosing — tayyor!</span></div>
+  </div>
+</div>
+
+<script>
+const SITE_URL = 'https://mr-ilyosbek98.github.io/dona-website/';
+let deferredPrompt = null;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const isInStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installBtn').textContent = '📲 Ilovani O\'rnatish';
+});
+
+async function installApp() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const result = await deferredPrompt.userChoice;
+    if (result.outcome === 'accepted') {
+      document.getElementById('installBtn').textContent = '✅ O\'rnatildi!';
+      document.getElementById('installBtn').style.background = '#27ae60';
+    }
+    deferredPrompt = null;
+  } else if (isIOS) {
+    document.getElementById('iosGuide').classList.toggle('show');
+  } else {
+    // Redirect to site for manual install
+    window.location.href = SITE_URL;
+  }
+}
+
+function openSite() {
+  window.location.href = SITE_URL;
+}
+
+// Auto-detect
+if (isInStandalone) {
+  window.location.href = SITE_URL;
+}
+if (isIOS) {
+  document.getElementById('installBtn').textContent = '📲 iPhone ga O\'rnatish';
+}
+</script>
+</body>
+</html>
