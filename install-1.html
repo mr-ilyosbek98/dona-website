@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DONA - O'rnatish</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#8B1A1A,#C0392B);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;}
+  .card{background:#fff;border-radius:24px;padding:2rem;max-width:380px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+  .logo{width:80px;height:80px;border-radius:20px;margin:0 auto 1rem;display:block;}
+  h1{font-size:1.6rem;font-weight:900;color:#8B1A1A;margin-bottom:0.3rem;}
+  .sub{color:#666;font-size:0.9rem;margin-bottom:1rem;}
+  .lang-row{display:flex;gap:0.5rem;justify-content:center;margin-bottom:1.2rem;}
+  .lb{padding:0.3rem 0.8rem;border-radius:20px;border:2px solid #ddd;background:transparent;cursor:pointer;font-size:0.8rem;font-weight:700;color:#666;font-family:inherit;}
+  .lb.active{background:#8B1A1A;color:#fff;border-color:#8B1A1A;}
+  .features{background:#fef9f9;border-radius:12px;padding:1rem;margin-bottom:1.2rem;text-align:left;}
+  .feat{display:flex;align-items:center;gap:0.7rem;padding:0.35rem 0;font-size:0.85rem;color:#333;}
+  .install-btn{background:linear-gradient(135deg,#8B1A1A,#C0392B);color:#fff;border:none;padding:1rem;border-radius:16px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;margin-bottom:0.8rem;font-family:inherit;transition:transform 0.1s;}
+  .install-btn:active{transform:scale(0.97);}
+  .open-btn{background:transparent;color:#8B1A1A;border:2px solid #8B1A1A;padding:0.8rem;border-radius:16px;font-size:0.9rem;font-weight:700;cursor:pointer;width:100%;font-family:inherit;}
+  .guide{background:#f0f8ff;border-radius:12px;padding:1.2rem;margin-top:1rem;text-align:left;}
+  .guide-title{font-size:0.9rem;font-weight:800;color:#8B1A1A;margin-bottom:0.8rem;}
+  .step{display:flex;align-items:flex-start;gap:0.6rem;margin-bottom:0.8rem;}
+  .step-num{background:#8B1A1A;color:#fff;border-radius:50%;width:24px;height:24px;min-width:24px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;}
+  .step-text{font-size:0.85rem;color:#333;line-height:1.5;padding-top:2px;}
+  .badge{display:inline-block;background:#e8f5e9;color:#2e7d32;padding:0.2rem 0.7rem;border-radius:20px;font-size:0.72rem;font-weight:700;margin-bottom:1rem;}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="logo" src="https://i.imgur.com/aAIrsYR.png" onerror="this.style.display='none'" alt="DONA">
+  <div class="badge" id="badge">✅ Tekin • Yuklab olish shart emas</div>
+  <h1>DONA</h1>
+  <p class="sub" id="sub">Uzbek Frozen Food</p>
+
+  <div class="lang-row">
+    <button class="lb active" onclick="setLang('uz')">🇺🇿 UZ</button>
+    <button class="lb" onclick="setLang('ru')">🇷🇺 RU</button>
+    <button class="lb" onclick="setLang('ko')">🇰🇷 KO</button>
+  </div>
+
+  <div class="features" id="features">
+    <div class="feat">🥟 O'zbek milliy taomlari</div>
+    <div class="feat">🚚 Butun Koreya bo'yicha yetkazish</div>
+    <div class="feat">📱 Ilova kabi ishlaydi</div>
+    <div class="feat">🌐 3 tilda: UZ • RU • KO</div>
+    <div class="feat">⚡ Tez va qulay buyurtma</div>
+  </div>
+
+  <button class="install-btn" id="installBtn" onclick="installApp()">
+    📲 Ilovani O'rnatish
+  </button>
+  <button class="open-btn" id="openBtn" onclick="openSite()">
+    🌐 Saytni Ochish
+  </button>
+
+  <div class="guide" id="iosGuide" style="display:none">
+    <div class="guide-title" id="guideTitle">📱 iPhone uchun:</div>
+    <div class="step"><div class="step-num">1</div><div class="step-text" id="step1">Saytga kiring</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text" id="step2">Pastdagi <strong>📤</strong> tugmasini bosing</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text" id="step3"><strong>"Bosh ekranga qo'shish"</strong> tanlang</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-text" id="step4"><strong>"Qo'shish"</strong> bosing — tayyor! ✅</div></div>
+  </div>
+</div>
+
+<script>
+const SITE_URL = 'https://mr-ilyosbek98.github.io/dona-website/';
+let deferredPrompt = null;
+
+const T = {
+  uz: {
+    badge: "✅ Tekin • Yuklab olish shart emas",
+    sub: "Uzbek Frozen Food — Koreyada yetkazish",
+    feats: ["🥟 O'zbek milliy taomlari","🚚 Butun Koreya bo'yicha yetkazish","📱 Ilova kabi ishlaydi","🌐 3 tilda: UZ • RU • KO","⚡ Tez va qulay buyurtma"],
+    installBtn: "📲 Ilovani O'rnatish",
+    openBtn: "🌐 Saytni Ochish",
+    installed: "✅ O'rnatildi!",
+    guideTitle: "📱 iPhone uchun:",
+    steps: [
+      "Saytga kiring",
+      "Pastdagi <strong>📤</strong> tugmasini bosing",
+      "<strong>\"Bosh ekranga qo'shish\"</strong> tanlang",
+      "<strong>\"Qo'shish\"</strong> bosing — tayyor! ✅"
+    ]
+  },
+  ru: {
+    badge: "✅ Бесплатно • Без скачивания",
+    sub: "Узбекская еда — Доставка по Корее",
+    feats: ["🥟 Узбекские национальные блюда","🚚 Доставка по всей Корее","📱 Работает как приложение","🌐 3 языка: UZ • RU • KO","⚡ Быстрый и удобный заказ"],
+    installBtn: "📲 Установить приложение",
+    openBtn: "🌐 Открыть сайт",
+    installed: "✅ Установлено!",
+    guideTitle: "📱 Для iPhone:",
+    steps: [
+      "Откройте сайт",
+      "Нажмите кнопку <strong>📤</strong> внизу",
+      "Выберите <strong>«На экран Домой»</strong>",
+      "Нажмите <strong>«Добавить»</strong> — готово! ✅"
+    ]
+  },
+  ko: {
+    badge: "✅ 무료 • 다운로드 불필요",
+    sub: "우즈벡 음식 — 한국 전국 배달",
+    feats: ["🥟 우즈벡 전통 음식","🚚 한국 전국 배달","📱 앱처럼 작동","🌐 3개 언어: UZ • RU • KO","⚡ 빠르고 편한 주문"],
+    installBtn: "📲 앱 설치하기",
+    openBtn: "🌐 사이트 열기",
+    installed: "✅ 설치됨!",
+    guideTitle: "📱 iPhone 사용자:",
+    steps: [
+      "사이트를 여세요",
+      "하단의 <strong>📤</strong> 버튼을 누르세요",
+      "<strong>\"홈 화면에 추가\"</strong> 선택",
+      "<strong>\"추가\"</strong> 누르면 완료! ✅"
+    ]
+  }
+};
+
+let lang = 'uz';
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const isAndroid = /android/i.test(navigator.userAgent);
+
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lb').forEach((b,i) => b.classList.toggle('active', ['uz','ru','ko'][i] === l));
+  const t = T[l];
+  document.getElementById('badge').textContent = t.badge;
+  document.getElementById('sub').textContent = t.sub;
+  document.getElementById('features').innerHTML = t.feats.map(f => `<div class="feat">${f}</div>`).join('');
+  document.getElementById('installBtn').textContent = t.installBtn;
+  document.getElementById('openBtn').textContent = t.openBtn;
+  document.getElementById('guideTitle').textContent = t.guideTitle;
+  t.steps.forEach((s, i) => document.getElementById('step'+(i+1)).innerHTML = s);
+}
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+});
+
+async function installApp() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const result = await deferredPrompt.userChoice;
+    if (result.outcome === 'accepted') {
+      const btn = document.getElementById('installBtn');
+      btn.textContent = T[lang].installed;
+      btn.style.background = '#27ae60';
+    }
+    deferredPrompt = null;
+  } else if (isIOS) {
+    const guide = document.getElementById('iosGuide');
+    guide.style.display = guide.style.display === 'none' ? 'block' : 'none';
+  } else {
+    window.location.href = SITE_URL;
+  }
+}
+
+function openSite() {
+  window.location.href = SITE_URL;
+}
+
+// Auto show iOS guide
+if (isIOS) {
+  document.getElementById('iosGuide').style.display = 'block';
+}
+
+// Already installed
+if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+  window.location.href = SITE_URL;
+}
+</script>
+</body>
+</html>
