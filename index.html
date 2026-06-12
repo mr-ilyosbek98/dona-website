@@ -1,0 +1,3210 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<!-- SEO Meta Teglari -->
+<meta name="description" content="DONA — Koreyada eng mazali o'zbek muzlatilgan taomlari. Manti, Somsa, Kotlet va boshqalar. 한국에서 즐기는 정통 우즈베키스탄 음식. Тел: @Donafood_bot">
+<meta name="keywords" content="uzbek food korea, o'zbek taom, manti korea, somsa korea, 우즈베키스탄 음식, 만티, 삼사, корейские узбекские блюда, DONA frozen food">
+<meta name="author" content="DONA Uzbek Frozen Food">
+<meta name="robots" content="index, follow">
+<meta name="language" content="uz, ko, ru">
+<!-- Open Graph (Telegram, Facebook preview) -->
+<meta property="og:title" content="DONA — Koreyada O'zbek Taomlari 🥟">
+<meta property="og:description" content="Mazali, sifatli, tez pishadi. Manti, Somsa, Kotlet — Butun Koreya bo'yicha yetkazamiz!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mr-ilyosbek98.github.io/dona-website/">
+<meta property="og:image" content="https://mr-ilyosbek98.github.io/dona-website/icon-512.png">
+<meta property="og:locale" content="uz_UZ">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="ru_RU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DONA — Koreyada O'zbek Taomlari">
+<meta name="twitter:description" content="Manti, Somsa, Kotlet — Butun Koreya bo'yicha yetkazamiz!">
+<!-- Structured Data (Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "DONA Uzbek Frozen Food",
+  "description": "Koreyada o'zbek muzlatilgan taomlari yetkazib berish xizmati",
+  "url": "https://mr-ilyosbek98.github.io/dona-website/",
+  "telephone": "@Donafood_bot",
+  "servesCuisine": "Uzbek",
+  "areaServed": "Korea",
+  "hasMap": "https://t.me/Donafood_bot",
+  "sameAs": ["https://t.me/Donafood_bot"]
+}
+</script>
+
+<link rel="manifest" href="data:application/json,{%22name%22:%22DONA%20Uzbek%20Frozen%20Food%22,%22short_name%22:%22DONA%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%238B1A1A%22,%22theme_color%22:%22%238B1A1A%22,%22icons%22:[{%22src%22:%22https://i.imgur.com/aAIrsYR.png%22,%22sizes%22:%22192x192%22,%22type%22:%22image/png%22}]}">
+<meta name="theme-color" content="#8B1A1A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DONA">
+<link rel="apple-touch-icon" href="https://i.imgur.com/aAIrsYR.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DONA Uzbek Frozen Food</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#8B1A1A;--red2:#A52020;--gold:#C8922A;--gold2:#E8A83C;--bg:#F8F8F8;--white:#FFFFFF;--text:#1A1A1A;--muted:#666;--border:#EEEEEE;--green:#27AE60;--orange:#E67E22;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
+
+/* ADMIN PANEL */
+.admin-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:1rem;}
+.admin-overlay.show{display:flex;}
+.admin-panel{background:#fff;border-radius:16px;width:100%;max-width:600px;margin:auto;overflow:hidden;}
+.admin-header{background:var(--red);padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;}
+.admin-header h2{color:#fff;font-size:1rem;font-weight:800;}
+.admin-close{background:rgba(255,255,255,0.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;}
+.admin-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.atab{flex:0 0 auto;padding:0.6rem 0.8rem;border:none;background:#fff;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s;white-space:nowrap;}
+.atab.active{color:var(--red);border-bottom-color:var(--red);}
+.atab-c{display:none;padding:1.2rem;max-height:70vh;overflow-y:auto;}
+.atab-c.active{display:block;}
+.afield{margin-bottom:1rem;}
+.afield label{display:block;font-size:0.7rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.3rem;}
+.afield input,.afield textarea,.afield select{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:0.65rem 0.8rem;font-size:0.85rem;font-family:'Inter',sans-serif;outline:none;color:var(--text);background:#fafafa;transition:all 0.2s;}
+.afield input:focus,.afield textarea:focus{border-color:var(--red);background:#fff;}
+.afield textarea{min-height:65px;resize:vertical;}
+.afield-2{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
+.afield-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem;}
+.asave{background:var(--red);color:#fff;padding:0.75rem 1.5rem;border-radius:8px;border:none;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:700;cursor:pointer;width:100%;margin-top:0.5rem;transition:all 0.2s;}
+.asave:hover{background:var(--red2);}
+.asave.saving{opacity:0.7;}
+.prod-edit-item{background:#fafafa;border:1.5px solid var(--border);border-radius:10px;padding:0.8rem;margin-bottom:0.8rem;}
+.prod-edit-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem;}
+.prod-edit-name{font-weight:700;font-size:0.88rem;}
+.adel{background:rgba(231,76,60,0.1);color:var(--red);border:1px solid rgba(231,76,60,0.2);padding:0.3rem 0.7rem;border-radius:6px;cursor:pointer;font-size:0.75rem;font-family:'Inter',sans-serif;}
+.adel:hover{background:var(--red);color:#fff;}
+.aimg-prev{width:50px;height:50px;border-radius:8px;background:var(--bg);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.5rem;overflow:hidden;flex-shrink:0;}
+.aimg-prev img{width:100%;height:100%;object-fit:cover;}
+.a-add-prod{background:rgba(139,26,26,0.08);color:var(--red);border:1.5px dashed rgba(139,26,26,0.3);padding:0.7rem;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600;width:100%;margin-bottom:1rem;transition:all 0.2s;}
+.a-add-prod:hover{background:rgba(139,26,26,0.12);}
+.acat-item{display:flex;align-items:center;gap:0.8rem;background:#fafafa;border:1.5px solid var(--border);border-radius:8px;padding:0.6rem 0.8rem;margin-bottom:0.6rem;}
+.acat-emoji{font-size:1.3rem;}
+.acat-name{flex:1;font-size:0.85rem;font-weight:600;}
+.alang-tabs{display:flex;gap:0.3rem;margin-bottom:0.8rem;}
+.alang-tab{padding:0.3rem 0.8rem;border-radius:15px;border:1.5px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-size:0.75rem;font-family:'Inter',sans-serif;font-weight:600;}
+.alang-tab.active{background:var(--red);color:#fff;border-color:var(--red);}
+.alang-c{display:none;}
+.alang-c.active{display:block;}
+.status-msg{text-align:center;padding:0.5rem;font-size:0.82rem;font-weight:600;border-radius:8px;margin-top:0.5rem;}
+.status-ok{background:rgba(39,174,96,0.1);color:var(--green);}
+.status-err{background:rgba(231,76,60,0.1);color:var(--red);}
+.token-field{background:#fff3cd;border:1.5px solid #ffc107;border-radius:8px;padding:0.8rem;margin-bottom:1rem;}
+.token-field label{font-size:0.72rem;font-weight:700;color:#856404;text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:0.4rem;}
+.token-field input{background:#fff;border:1.5px solid #ffc107;border-radius:6px;padding:0.6rem 0.8rem;font-size:0.82rem;font-family:'Inter',sans-serif;outline:none;width:100%;color:var(--text);}
+
+/* ADMIN LOGIN */
+.admin-login{padding:2rem;}
+.admin-login h3{font-size:1.1rem;font-weight:800;color:var(--red);margin-bottom:0.5rem;text-align:center;}
+.admin-login p{font-size:0.82rem;color:var(--muted);text-align:center;margin-bottom:1.5rem;}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:2px solid var(--red);padding:0.4rem 1rem;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+.navbar-row1{display:flex;align-items:center;margin-bottom:0.3rem;}
+.navbar-row2{display:flex;align-items:center;gap:0.5rem;}
+.float-cart{position:fixed;bottom:1.5rem;right:1rem;width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;border:none;font-size:1.4rem;cursor:pointer;z-index:300;box-shadow:0 4px 15px rgba(139,26,26,0.4);display:flex;align-items:center;justify-content:center;}
+.float-cart-badge{position:absolute;top:-2px;right:-2px;background:#e74c3c;color:#fff;border-radius:50%;min-width:18px;height:18px;font-size:0.65rem;display:flex;align-items:center;justify-content:center;font-weight:800;padding:0 3px;border:2px solid #fff;}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;}
+.nav-logo img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--gold2);}
+.nav-logo-text{font-weight:800;font-size:1.1rem;color:var(--red);}
+.nav-logo-sub{font-size:0.6rem;color:var(--muted);display:block;font-weight:400;margin-top:-2px;white-space:nowrap;}
+.nav-right{display:flex;align-items:center;gap:0.4rem;flex-shrink:0;}
+.cart-btn{position:relative;background:var(--red);color:var(--white);border:none;padding:0.4rem 0.7rem;border-radius:20px;font-size:0.75rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:0.3rem;font-family:'Inter',sans-serif;transition:all 0.2s;}
+.cart-btn:hover{background:var(--red2);}
+.cart-count{background:var(--gold2);color:var(--text);width:18px;height:18px;border-radius:50%;font-size:0.62rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.lang-btns{display:flex;gap:0.2rem;}
+.lb{padding:0.22rem 0.5rem;border-radius:12px;border:1.5px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:0.68rem;font-family:'Inter',sans-serif;transition:all 0.2s;}
+.lb.active{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;}
+
+/* BANNER */
+.banner-wrap{overflow:hidden;position:relative;}
+.banner-track{display:flex;transition:transform 0.5s ease;}
+.banner-slide{min-width:100%;padding:1.5rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.banner-slide.b1{background:linear-gradient(135deg,#8B1A1A,#C0392B);}
+.banner-slide.b2{background:linear-gradient(135deg,#1B4B3E,#2C7A5C);}
+.banner-slide.b3{background:linear-gradient(135deg,#7D3C0A,#C8922A);}
+.banner-text{color:#fff;}
+.banner-badge{background:rgba(255,255,255,0.2);color:#fff;font-size:0.62rem;padding:0.18rem 0.55rem;border-radius:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-block;margin-bottom:0.4rem;}
+.banner-title{font-size:clamp(1rem,4vw,1.5rem);font-weight:800;line-height:1.2;margin-bottom:0.35rem;}
+.banner-sub{font-size:0.78rem;opacity:0.85;margin-bottom:0.7rem;}
+.banner-btn{background:#fff;color:var(--red);padding:0.45rem 1.1rem;border-radius:20px;font-weight:700;font-size:0.78rem;text-decoration:none;display:inline-block;}
+.banner-emoji{font-size:clamp(2.5rem,8vw,4.5rem);flex-shrink:0;}
+.banner-dots{display:flex;gap:0.4rem;justify-content:center;padding:0.5rem;background:var(--red);}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.35);cursor:pointer;transition:all 0.2s;}
+.dot.active{background:#fff;width:18px;border-radius:3px;}
+
+/* CATS */
+.cats-scroll{background:#fff;padding:0.8rem 1rem;border-bottom:1px solid var(--border);display:flex;gap:0.8rem;overflow-x:auto;scrollbar-width:none;}
+.cats-scroll::-webkit-scrollbar{display:none;}
+.cat-icon-btn{display:flex;flex-direction:column;align-items:center;gap:0.25rem;min-width:58px;cursor:pointer;border:none;background:transparent;font-family:'Inter',sans-serif;}
+.cat-icon-wrap{width:48px;height:48px;border-radius:50%;background:var(--bg);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:all 0.2s;overflow:hidden;}
+.cat-icon-wrap img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.cat-icon-btn.active .cat-icon-wrap,.cat-icon-btn:hover .cat-icon-wrap{background:rgba(139,26,26,0.08);border-color:var(--red);}
+.cat-icon-name{font-size:0.6rem;font-weight:600;color:var(--muted);text-align:center;line-height:1.2;max-width:58px;}
+.cat-icon-btn.active .cat-icon-name{color:var(--red);}
+
+/* PROMO */
+.promo-row{display:flex;gap:0.5rem;padding:0.6rem 1rem;overflow-x:auto;scrollbar-width:none;background:#fff;border-bottom:1px solid var(--border);}
+.promo-row::-webkit-scrollbar{display:none;}
+.promo-tag{white-space:nowrap;padding:0.32rem 0.85rem;border-radius:20px;font-size:0.75rem;font-weight:600;cursor:pointer;border:none;font-family:'Inter',sans-serif;transition:all 0.2s;flex-shrink:0;}
+.promo-tag.all{background:var(--bg);color:var(--text);border:1.5px solid var(--border);}
+.promo-tag.all.active{background:var(--text);color:#fff;}
+.promo-tag.sale{background:#FFF3E0;color:var(--orange);border:1.5px solid #FFD180;}
+.promo-tag.sale.active{background:var(--orange);color:#fff;}
+.promo-tag.new-t{background:#E8F5E9;color:var(--green);border:1.5px solid #A5D6A7;}
+.promo-tag.new-t.active{background:var(--green);color:#fff;}
+.promo-tag.pop{background:#FCE4EC;color:#C2185B;border:1.5px solid #F48FB1;}
+.promo-tag.pop.active{background:#C2185B;color:#fff;}
+
+/* SECTION */
+.sec-row{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1rem 0.5rem;}
+.sec-title{font-size:0.95rem;font-weight:800;color:var(--text);}
+
+/* PRODUCTS */
+.prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.7rem;padding:0 0.7rem 1rem;}
+.prod-card{background:#fff;border-radius:12px;overflow:visible;border:1.5px solid var(--border);transition:all 0.25s;cursor:pointer;position:relative;}
+.prod-card>.prod-img{border-radius:12px 12px 0 0;overflow:hidden;}
+.prod-card:hover{border-color:var(--red);box-shadow:0 4px 15px rgba(139,26,26,0.08);}
+.prod-img{height:140px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:4.5rem;position:relative;overflow:hidden;}
+.prod-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.sale-badge{position:absolute;top:0.4rem;left:0.4rem;background:var(--orange);color:#fff;font-size:0.62rem;font-weight:800;padding:0.18rem 0.45rem;border-radius:5px;}
+.new-badge{position:absolute;top:0.4rem;left:0.4rem;background:var(--green);color:#fff;font-size:0.62rem;font-weight:800;padding:0.18rem 0.45rem;border-radius:5px;}
+.fav-btn{position:absolute;top:0.4rem;right:0.4rem;background:rgba(255,255,255,0.95);border:none;cursor:pointer;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,0.15);-webkit-tap-highlight-color:transparent;}
+.fav-btn.active{background:rgba(255,220,220,0.95);}
+.prod-body{padding:0.6rem 0.7rem 0.7rem;}
+.prod-name{font-size:0.82rem;font-weight:700;color:var(--text);margin-bottom:0.15rem;line-height:1.3;}
+.prod-unit{font-size:0.68rem;color:var(--muted);margin-bottom:0.4rem;}
+.prod-price-row{display:flex;align-items:center;justify-content:space-between;}
+.prod-price{font-size:0.92rem;font-weight:800;color:var(--red);}
+.prod-old{font-size:0.68rem;color:var(--muted);text-decoration:line-through;}
+.add-btn{width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.qty-ctrl{display:flex;align-items:center;gap:0.3rem;}
+.qty-m,.qty-p{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--red);background:transparent;color:var(--red);cursor:pointer;font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.qty-m:hover,.qty-p:hover{background:var(--red);color:#fff;}
+.qty-n{font-size:0.82rem;font-weight:700;min-width:14px;text-align:center;}
+
+/* H-SCROLL */
+.h-scroll{display:flex;gap:0.7rem;overflow-x:auto;padding:0 0.7rem 1rem;scrollbar-width:none;}
+.h-scroll::-webkit-scrollbar{display:none;}
+.prod-card-h{min-width:140px;background:#fff;border-radius:12px;overflow:hidden;border:1.5px solid var(--border);flex-shrink:0;cursor:pointer;}
+.prod-card-h:hover{border-color:var(--red);}
+.prod-img-h{height:100px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden;}
+.prod-img-h img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.prod-body-h{padding:0.5rem 0.6rem;}
+.prod-name-h{font-size:0.75rem;font-weight:700;margin-bottom:0.15rem;line-height:1.3;}
+.prod-price-h{font-size:0.85rem;font-weight:800;color:var(--red);}
+
+/* PRODUCT MODAL */
+.pm-back-btn{background:none;border:none;color:var(--red);font-size:0.9rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;padding:0;}
+.pm-add-btn-top{background:var(--red);color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:20px;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pm-topbar{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--white);z-index:1;}
+.pm-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);display:none;align-items:stretch;justify-content:center;}
+.pm-overlay.show{display:flex;}
+.pm-box{background:#fff;border-radius:0;width:100%;max-width:480px;height:100vh;max-height:100vh;overflow-y:auto;position:relative;}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.pm-drag{text-align:center;padding:0.7rem 0 0.3rem;cursor:pointer;}
+.pm-drag span{display:inline-block;width:34px;height:4px;background:var(--border);border-radius:2px;}
+.pm-img{height:200px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:7rem;position:relative;overflow:hidden;}
+.pm-img img{width:100%;height:100%;object-fit:cover;}
+.pm-content{padding:1rem 1.1rem;}
+.pm-name{font-size:1.15rem;font-weight:800;margin-bottom:0.25rem;}
+.pm-price{font-size:1.3rem;font-weight:800;color:var(--red);margin-bottom:0.8rem;}
+.pm-stars{color:var(--gold2);font-size:0.8rem;letter-spacing:1px;margin-bottom:0.2rem;}
+.pm-sec{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text);margin:0.8rem 0 0.4rem;padding-bottom:0.3rem;border-bottom:1px solid var(--border);}
+.pm-desc-t{font-size:0.83rem;color:var(--muted);line-height:1.8;}
+.pm-steps{list-style:none;}
+.pm-steps li{display:flex;gap:0.6rem;font-size:0.8rem;margin-bottom:0.4rem;line-height:1.6;}
+.sn{min-width:20px;height:20px;border-radius:50%;background:var(--red);color:#fff;font-size:0.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.rev-i{background:var(--bg);border-radius:8px;padding:0.7rem;margin-bottom:0.5rem;}
+.rev-top{display:flex;justify-content:space-between;margin-bottom:0.2rem;}
+.rev-name{font-size:0.78rem;font-weight:700;}
+.rev-s{color:var(--gold2);font-size:0.68rem;}
+.rev-txt{font-size:0.8rem;color:var(--muted);line-height:1.6;}
+.wr{background:var(--bg);border-radius:10px;padding:0.9rem;margin-top:0.6rem;}
+.wr-title{font-size:0.75rem;font-weight:700;margin-bottom:0.6rem;}
+.star-row{display:flex;gap:0.2rem;margin-bottom:0.6rem;}
+.sb{font-size:1.3rem;background:none;border:none;cursor:pointer;opacity:0.3;line-height:1;}
+.sb.on{opacity:1;}
+.wr-inp{width:100%;border:1.5px solid var(--border);border-radius:7px;padding:0.55rem 0.7rem;font-size:0.8rem;font-family:'Inter',sans-serif;outline:none;background:#fff;color:var(--text);margin-bottom:0.4rem;}
+.wr-inp:focus{border-color:var(--red);}
+.wr-sub{background:var(--red);color:#fff;padding:0.55rem 1.2rem;border-radius:20px;border:none;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;cursor:pointer;}
+.pm-add-wrap{padding:0.7rem 1rem 1.2rem;background:#fff;border-top:1px solid var(--border);display:flex;gap:0.8rem;}
+.pm-add-btn{flex:1;background:var(--red);color:#fff;padding:0.85rem;border-radius:10px;border:none;font-size:0.88rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
+
+/* CART */
+.cart-overlay{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.5);display:none;align-items:flex-end;justify-content:center;}
+.cart-overlay.show{display:flex;}
+.cart-sheet{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;animation:slideUp 0.3s ease;}
+.cart-hdr{padding:0.9rem 1.1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.cart-title-t{font-size:0.95rem;font-weight:800;}
+.cart-close{background:var(--bg);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;}
+.cart-items{padding:0.7rem 1rem;}
+.ci-item{display:flex;align-items:center;gap:0.7rem;padding:0.6rem 0;border-bottom:1px solid var(--border);}
+.ci-img{width:46px;height:46px;border-radius:8px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.6rem;overflow:hidden;flex-shrink:0;}
+.ci-img img{width:100%;height:100%;object-fit:cover;}
+.ci-name{font-size:0.82rem;font-weight:700;}
+.ci-price{font-size:0.78rem;color:var(--red);font-weight:600;}
+.ci-qty{display:flex;align-items:center;gap:0.35rem;}
+.cq{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.cq:hover{background:var(--red);color:#fff;border-color:var(--red);}
+.cart-total-wrap{padding:0.7rem 1.1rem;border-top:2px solid var(--border);}
+.cart-total-row{display:flex;justify-content:space-between;font-size:1rem;font-weight:800;margin-bottom:0.8rem;}
+.pay-info{background:rgba(139,26,26,0.04);border:1.5px solid rgba(139,26,26,0.15);border-radius:8px;padding:0.7rem;margin-bottom:0.8rem;}
+.pay-info-title{font-size:0.68rem;font-weight:700;color:var(--red);text-transform:uppercase;margin-bottom:0.4rem;}
+.pay-row-i{display:flex;gap:0.5rem;font-size:0.78rem;margin-bottom:0.2rem;}
+.pay-lbl{color:var(--muted);min-width:55px;}
+.pay-val{font-weight:600;}
+.form-2{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;}
+.fg{margin-bottom:0.7rem;}
+.fg label{display:block;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:0.3rem;font-weight:700;}
+.fg input,.fg textarea{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;color:var(--text);padding:0.7rem 0.85rem;font-size:0.85rem;font-family:'Inter',sans-serif;outline:none;transition:all 0.2s;}
+.fg input:focus,.fg textarea:focus{border-color:var(--red);background:#fff;}
+.fg textarea{min-height:60px;resize:vertical;}
+.submit-btn{width:100%;background:var(--red);color:#fff;padding:0.95rem;border-radius:10px;border:none;font-size:0.9rem;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;margin-top:0.3rem;}
+
+/* TG BANNER */
+.tg-banner{background:linear-gradient(135deg,#1B4B3E,#2C7A5C);margin:0 0.7rem 0.8rem;border-radius:12px;padding:0.9rem 1rem;display:flex;align-items:center;gap:0.8rem;}
+.tg-icon{font-size:2rem;flex-shrink:0;}
+.tg-text h3{font-size:0.85rem;font-weight:800;color:#fff;margin-bottom:0.15rem;}
+.tg-text p{font-size:0.72rem;color:rgba(255,255,255,0.7);}
+.tg-btn{background:#fff;color:#1B4B3E;padding:0.45rem 0.9rem;border-radius:20px;font-weight:700;font-size:0.75rem;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+
+/* FOOTER */
+.footer{background:var(--text);padding:1.2rem 1rem;margin-top:0.3rem;}
+.footer-logo{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;}
+.footer-logo img{width:30px;height:30px;border-radius:50%;}
+.footer-logo span{font-weight:800;color:#fff;font-size:0.9rem;}
+.footer p{font-size:0.72rem;color:rgba(255,255,255,0.5);margin-bottom:0.25rem;}
+.footer a{color:var(--gold2);text-decoration:none;}
+.admin-trigger{position:fixed;bottom:1rem;left:1rem;background:rgba(139,26,26,0.15);border:1px solid rgba(139,26,26,0.3);color:var(--red);padding:0.4rem 0.8rem;border-radius:20px;font-size:0.7rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;z-index:400;}
+
+/* SUCCESS */
+.success-overlay{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center;padding:1rem;}
+.success-overlay.show{display:flex;}
+.success-box{background:#fff;border-radius:16px;padding:2rem;text-align:center;max-width:300px;width:100%;}
+.success-icon{font-size:3.5rem;margin-bottom:0.7rem;}
+.success-title{font-size:1.1rem;font-weight:800;margin-bottom:0.4rem;}
+.success-sub{font-size:0.82rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.6;}
+
+
+/* DARK MODE */
+body.dark{--bg:#1A1A2E;--white:#16213E;--text:#E0E0E0;--muted:#999;--border:#2A2A4A;}
+body.dark .navbar{background:#16213E;border-color:#8B1A1A;}
+body.dark .prod-card,body.dark .prod-card-h{background:#16213E;}
+body.dark .cats-scroll,body.dark .promo-row{background:#16213E;}
+body.dark .admin-panel,body.dark .pm-box,body.dark .cart-sheet{background:#16213E;}
+body.dark .atab{background:#16213E;color:#999;}
+body.dark .atab.active{color:var(--red);}
+body.dark .afield input,body.dark .afield textarea,body.dark .afield select{background:#1A1A2E;color:#E0E0E0;border-color:#2A2A4A;}
+body.dark .asave{background:var(--red);}
+.dark-btn{background:transparent;border:none;cursor:pointer;font-size:1.2rem;padding:0.2rem;}
+
+/* QIDIRUV */
+.search-wrap{padding:0.6rem 1rem;background:#fff;border-bottom:1px solid var(--border);}
+body.dark .search-wrap{background:#16213E;}
+.search-inp{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:0.5rem 1rem 0.5rem 2.2rem;font-size:0.85rem;font-family:'Inter',sans-serif;outline:none;color:var(--text);}
+.search-inp:focus{border-color:var(--red);}
+.search-wrap-inner{position:relative;}
+.search-icon{position:absolute;left:0.7rem;top:50%;transform:translateY(-50%);font-size:0.85rem;color:var(--muted);}
+
+/* FAQ */
+.faq-section{margin:0 0.7rem 1rem;}
+.faq-title{font-size:0.95rem;font-weight:800;padding:0.8rem 0 0.5rem;}
+.faq-item{background:#fff;border:1.5px solid var(--border);border-radius:10px;margin-bottom:0.5rem;overflow:hidden;}
+body.dark .faq-item{background:#16213E;}
+.faq-q{padding:0.8rem 1rem;font-size:0.85rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-a{display:none;padding:0 1rem 0.8rem;font-size:0.82rem;color:var(--muted);line-height:1.7;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-arrow{transition:transform 0.2s;font-size:0.75rem;}
+
+/* ZOOM MODAL */
+.zoom-overlay{position:fixed;inset:0;z-index:800;background:rgba(0,0,0,0.95);display:none;align-items:center;justify-content:center;}
+.zoom-overlay.show{display:flex;}
+.zoom-img{max-width:95vw;max-height:95vh;object-fit:contain;border-radius:8px;}
+
+/* DARK TOGGLE */
+.dark-toggle{background:transparent;border:1.5px solid var(--border);border-radius:20px;padding:0.18rem 0.4rem;cursor:pointer;font-size:0.85rem;font-family:'Inter',sans-serif;flex-shrink:0;}
+
+
+/* PWA INSTALL */
+.pwa-banner{position:fixed;bottom:5rem;left:0.7rem;right:0.7rem;background:linear-gradient(135deg,#8B1A1A,#C0392B);border-radius:12px;padding:0.8rem 1rem;display:none;align-items:center;gap:0.8rem;z-index:300;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.pwa-banner.show{display:flex;}
+.pwa-banner-text{flex:1;color:#fff;}
+.pwa-banner-text h4{font-size:0.85rem;font-weight:800;margin-bottom:0.2rem;}
+.pwa-banner-text p{font-size:0.72rem;opacity:0.85;}
+.pwa-install-btn{background:#fff;color:var(--red);padding:0.45rem 0.9rem;border-radius:20px;font-weight:700;font-size:0.75rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;}
+.pwa-close{background:rgba(255,255,255,0.2);border:none;color:#fff;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:0.8rem;}
+
+/* SHARE BUTTON */
+.share-btn{background:transparent;border:1.5px solid var(--border);color:var(--text);padding:0.3rem 0.5rem;border-radius:15px;font-size:0.75rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;flex-shrink:0;}
+
+/* ISH VAQTI */
+.work-status{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.65rem;font-weight:600;padding:0.15rem 0.5rem;border-radius:10px;margin-left:0.3rem;}
+.work-status.open{background:rgba(39,174,96,0.15);color:#27AE60;}
+.work-status.closed{background:rgba(231,76,60,0.15);color:#e74c3c;}
+.work-dot{width:6px;height:6px;border-radius:50%;animation:pulse 1.5s infinite;}
+.work-status.open .work-dot{background:#27AE60;}
+.work-status.closed .work-dot{background:#e74c3c;animation:none;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+
+
+/* SEVIMLILAR */
+.fav-btn{position:absolute;top:0.5rem;right:0.5rem;background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:28px;height:28px;font-size:0.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
+.fav-btn.active{color:#e74c3c;}
+.fav-section{margin:0 0.7rem 1rem;}
+.fav-title{font-size:0.95rem;font-weight:800;padding:0.8rem 0 0.5rem;}
+.fav-empty{color:var(--muted);font-size:0.82rem;padding:0.5rem 0;}
+/* DASHBOARD */
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-bottom:1rem;}
+.dash-card{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:0.8rem;text-align:center;}
+.dash-num{font-size:1.6rem;font-weight:900;color:var(--red);}
+.dash-label{font-size:0.7rem;color:var(--muted);margin-top:0.2rem;}
+.order-hist-item{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:0.7rem;margin-bottom:0.5rem;font-size:0.78rem;}
+.order-hist-item .oh-date{color:var(--muted);font-size:0.7rem;}
+.order-hist-item .oh-total{font-weight:700;color:var(--red);}
+
+
+/* FAQ PAGE */
+.faq-btn-wrap{margin:0 0.7rem 1rem;}
+.faq-open-btn{width:100%;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:0.9rem;font-weight:700;font-family:'Inter',sans-serif;color:var(--text);}
+.faq-open-btn span:last-child{font-size:1.2rem;color:var(--muted);}
+body.dark .faq-open-btn{background:#16213E;}
+.faq-page-overlay{position:fixed;inset:0;z-index:10000;display:none;}
+.faq-page-overlay.show{display:block;}
+.faq-page{background:var(--white);height:100vh;overflow-y:auto;}
+.faq-page-content{padding:1rem;}
+.faq-page-item{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;margin-bottom:0.7rem;overflow:hidden;}
+.faq-page-q{padding:1rem;font-size:0.88rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:0.5rem;}
+.faq-page-a{display:none;padding:0 1rem 1rem;font-size:0.83rem;color:var(--muted);line-height:1.7;}
+.faq-page-item.open .faq-page-a{display:block;}
+.faq-page-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-arrow{transition:transform 0.2s;font-size:0.75rem;flex-shrink:0;}
+
+
+.profile-btn{background:transparent;border:1.5px solid var(--border);border-radius:50%;width:30px;height:30px;font-size:0.85rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+.pay-info-box{background:#f8f9fa;border:1.5px solid #e0e0e0;border-radius:10px;padding:0.8rem;margin:0.8rem 0;text-align:left;font-size:0.8rem;line-height:1.8;}
+.pay-info-box .pay-bank{font-weight:700;color:#333;margin-bottom:0.3rem;}
+.pay-info-box .pay-tg{margin-top:0.5rem;}
+.pay-info-box .pay-tg a{color:var(--red);font-weight:700;}
+
+
+.stock-badge{display:inline-block;padding:0.15rem 0.5rem;border-radius:8px;font-size:0.65rem;font-weight:700;margin-top:0.2rem;}
+.stock-ok{background:#e8f5e9;color:#2e7d32;}
+.stock-low{background:#fff3e0;color:#e65100;}
+.stock-out{background:#ffebee;color:#c62828;}
+.prod-card .stock-badge{display:block;margin-top:0.3rem;}
+
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-top:2px solid #fff;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-right:5px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media(min-width:480px){.prod-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:380px){.form-2{grid-template-columns:1fr;}}
+
+/* PROMO KOD */
+.promo-input-wrap{display:flex;gap:0.5rem;margin-bottom:0.8rem;}
+.promo-inp{flex:1;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:0.6rem 0.8rem;font-size:0.83rem;font-family:'Inter',sans-serif;outline:none;color:var(--text);}
+.promo-inp:focus{border-color:var(--gold);}
+.promo-apply-btn{background:var(--gold);color:#fff;border:none;border-radius:8px;padding:0.6rem 1rem;font-size:0.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;}
+.promo-result{font-size:0.78rem;font-weight:600;padding:0.3rem 0;margin-bottom:0.5rem;}
+.promo-ok{color:var(--green);}
+.promo-fail{color:var(--red);}
+.discount-row{display:flex;justify-content:space-between;font-size:0.85rem;color:var(--green);font-weight:600;margin-bottom:0.4rem;}
+
+/* SPIN & WIN */
+.spin-overlay{position:fixed;inset:0;z-index:800;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:1rem;}
+.spin-overlay.show{display:flex;}
+.spin-box{background:#fff;border-radius:20px;width:100%;max-width:340px;overflow:hidden;}
+.spin-header{background:linear-gradient(135deg,var(--red),#C0392B);padding:1rem;text-align:center;color:#fff;}
+.spin-header h3{font-size:1.1rem;font-weight:800;margin-bottom:0.2rem;}
+.spin-header p{font-size:0.75rem;opacity:0.85;}
+.spin-content{padding:1.2rem;text-align:center;}
+.wheel-wrap{position:relative;width:200px;height:200px;margin:0 auto 1rem;}
+canvas#wheelCanvas{border-radius:50%;box-shadow:0 4px 20px rgba(0,0,0,0.2);}
+.wheel-pointer{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:1.5rem;z-index:10;}
+.spin-btn{background:var(--red);color:#fff;border:none;padding:0.85rem 2rem;border-radius:25px;font-size:0.95rem;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;width:100%;margin-top:0.5rem;}
+.spin-btn:disabled{opacity:0.5;cursor:not-allowed;}
+.spin-result{font-size:1rem;font-weight:800;color:var(--red);margin:0.5rem 0;min-height:1.5rem;}
+.spin-close{background:transparent;border:none;color:var(--muted);font-size:0.82rem;cursor:pointer;margin-top:0.5rem;font-family:'Inter',sans-serif;}
+.spin-trigger{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;border:none;padding:0.5rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;margin:0 0.7rem 1rem;width:calc(100% - 1.4rem);}
+
+/* PROMO ADMIN */
+.promo-list-item{background:#fafafa;border:1.5px solid var(--border);border-radius:10px;padding:0.75rem;margin-bottom:0.6rem;}
+.promo-list-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.4rem;}
+.promo-list-code{font-size:0.92rem;font-weight:800;color:var(--red);letter-spacing:0.05em;}
+.promo-list-badge{font-size:0.68rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:6px;}
+.promo-badge-on{background:#e8f5e9;color:#2e7d32;}
+.promo-badge-off{background:#ffebee;color:#c62828;}
+.promo-list-meta{font-size:0.72rem;color:var(--muted);display:flex;gap:0.6rem;flex-wrap:wrap;}
+.promo-list-meta span{background:var(--bg);border:1px solid var(--border);padding:0.1rem 0.4rem;border-radius:5px;}
+.promo-actions{display:flex;gap:0.4rem;margin-top:0.5rem;}
+.promo-toggle-btn{flex:1;padding:0.35rem 0.5rem;border-radius:6px;border:1.5px solid var(--border);background:#fff;font-size:0.72rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
+.promo-toggle-on{border-color:#27ae60;color:#27ae60;}
+.promo-toggle-off{border-color:#e74c3c;color:#e74c3c;}
+.promo-add-form{background:#f0f8ff;border:1.5px dashed #2980b9;border-radius:10px;padding:0.9rem;margin-bottom:1rem;}
+.promo-add-form .form-title{font-size:0.78rem;font-weight:800;color:#2980b9;margin-bottom:0.7rem;}
+.promo-stat{font-size:0.7rem;color:var(--muted);margin-top:0.15rem;}
+
+/* BANK TANLASH TUGMALAR */
+.bank-tag{background:#f0f4ff;color:#2c3e7a;border:1.5px solid #d0d8f0;border-radius:20px;padding:0.25rem 0.6rem;font-size:0.72rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.15s;white-space:nowrap;}
+.bank-tag:hover,.bank-tag.selected{background:var(--red);color:#fff;border-color:var(--red);}
+
+/* TELEGRAM ULASH */
+.tg-connected{background:#e8f5e9;border-color:#27ae60 !important;}
+.tg-connected .tg-btn{background:#27ae60;}
+.order-status-badge{display:inline-block;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:700;}
+.status-pending{background:#fff3cd;color:#856404;}
+.status-confirmed{background:#d1e7dd;color:#0a3622;}
+.status-preparing{background:#cfe2ff;color:#084298;}
+.status-shipped{background:#f8d7da;color:#842029;}
+.status-delivered{background:#d1e7dd;color:#0a3622;}
+.status-cancelled{background:#f8d7da;color:#842029;}
+.order-history-item{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:0.8rem;margin-bottom:0.6rem;}
+.order-history-item .order-h-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;}
+.order-history-item .order-h-id{font-weight:700;font-size:0.82rem;color:var(--red);}
+.order-history-item .order-h-date{font-size:0.72rem;color:var(--muted);}
+.order-history-item .order-h-items{font-size:0.78rem;color:var(--muted);margin-bottom:0.3rem;}
+.order-history-item .order-h-total{font-weight:700;font-size:0.88rem;}
+
+.disabled-btn{opacity:0.35;cursor:not-allowed !important;pointer-events:none;}
+
+/* MAHSULOT RASM GALEREYASI */
+.prod-gallery{position:relative;width:100%;background:var(--bg);overflow:hidden;}
+.prod-gallery-track{display:flex;transition:transform 0.35s cubic-bezier(.4,0,.2,1);}
+.prod-gallery-slide{min-width:100%;height:240px;display:flex;align-items:center;justify-content:center;font-size:5rem;background:var(--bg);}
+.prod-gallery-slide img{width:100%;height:100%;object-fit:cover;}
+.prod-gallery-dots{display:flex;justify-content:center;gap:0.4rem;padding:0.5rem 0;}
+.prod-gallery-dot{width:7px;height:7px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.2s;}
+.prod-gallery-dot.active{background:var(--red);width:18px;border-radius:4px;}
+.prod-gallery-prev,.prod-gallery-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.85);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:5;box-shadow:0 1px 4px rgba(0,0,0,0.15);}
+.prod-gallery-prev{left:0.4rem;}
+.prod-gallery-next{right:0.4rem;}
+.extra-img-row{display:flex;gap:0.4rem;align-items:center;margin-bottom:0.4rem;}
+.extra-img-row input{flex:1;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:0.5rem 0.7rem;font-size:0.8rem;font-family:Inter,sans-serif;outline:none;color:var(--text);}
+.extra-img-row input:focus{border-color:var(--gold);}
+.extra-img-thumb{width:36px;height:36px;object-fit:cover;border-radius:6px;border:1px solid var(--border);display:none;}
+.extra-img-del{background:#fee2e2;color:#c0392b;border:none;border-radius:6px;width:28px;height:28px;cursor:pointer;font-size:0.8rem;flex-shrink:0;}
+
+.promo-tag.fav-tag{background:linear-gradient(135deg,#ffe0e6,#ffd6e0);color:#c0392b;border-color:#f5a7b8;}
+.promo-tag.fav-tag.active{background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff;border-color:#c0392b;}
+.promo-tag.fav-tag #favFilterCount{font-weight:800;}
+
+/* MARKETING CARDS */
+.mkt-card{background:#fafafa;border:1.5px solid var(--border);border-radius:12px;padding:0.85rem;margin-bottom:0.8rem;}
+.mkt-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.6rem;}
+.mkt-card-title{font-weight:700;font-size:0.88rem;margin-bottom:0.2rem;}
+.mkt-card-desc{font-size:0.72rem;color:var(--muted);}
+.mkt-preview{background:#fff;border:1px solid var(--border);border-radius:8px;padding:0.5rem 0.7rem;font-size:0.78rem;margin-top:0.5rem;color:var(--text);min-height:2rem;display:none;}
+.mkt-preview.show{display:block;}
+/* Toggle switch */
+.toggle-switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0;}
+.toggle-switch input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;cursor:pointer;inset:0;background:#ccc;border-radius:24px;transition:.3s;}
+.toggle-slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+.toggle-switch input:checked+.toggle-slider{background:var(--red);}
+.toggle-switch input:checked+.toggle-slider:before{transform:translateX(20px);}
+/* Low stock badge */
+.low-stock-badge{display:inline-block;background:#fff3cd;color:#856404;font-size:0.68rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:6px;margin-top:0.2rem;animation:pulse-badge 1.5s infinite;}
+@keyframes pulse-badge{0%,100%{opacity:1;}50%{opacity:0.6;}}
+/* Bundle banner */
+.bundle-banner{background:linear-gradient(135deg,#8B1A1A,#C0392B);color:#fff;border-radius:10px;padding:0.6rem 0.8rem;font-size:0.8rem;font-weight:700;text-align:center;margin:0.5rem 0;}
+/* Referral card */
+.referral-card{background:linear-gradient(135deg,#1a3a8B,#2980b9);color:#fff;border-radius:12px;padding:0.8rem;margin:0.5rem 0;}
+/* Deadline banner */
+.deadline-banner{background:linear-gradient(135deg,#7a1a7a,#9b59b6);color:#fff;border-radius:10px;padding:0.5rem 0.8rem;font-size:0.78rem;font-weight:700;display:flex;align-items:center;gap:0.5rem;margin:0.5rem 0;}
+
+/* YETKAZISH SAHIFASI */
+.delivery-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);display:none;align-items:flex-end;justify-content:center;}
+.delivery-overlay.show{display:flex;}
+.delivery-panel{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;padding:1.2rem;}
+.delivery-handle{width:40px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 1rem;}
+.delivery-title{font-size:1.1rem;font-weight:800;margin-bottom:1rem;color:var(--text);}
+.delivery-zone{background:var(--bg);border-radius:12px;padding:0.9rem;margin-bottom:0.7rem;border:1.5px solid var(--border);}
+.delivery-zone-name{font-weight:700;font-size:0.9rem;margin-bottom:0.3rem;display:flex;align-items:center;gap:0.4rem;}
+.delivery-zone-price{font-size:1rem;font-weight:800;color:var(--red);}
+.delivery-zone-time{font-size:0.75rem;color:var(--muted);margin-top:0.2rem;}
+.delivery-zone-areas{font-size:0.72rem;color:var(--muted);margin-top:0.3rem;line-height:1.5;}
+.delivery-info-block{background:#f0f8ff;border-radius:10px;padding:0.8rem;margin-bottom:0.7rem;border:1px solid #cce5ff;}
+.delivery-info-title{font-weight:700;font-size:0.82rem;color:#0066cc;margin-bottom:0.4rem;}
+.delivery-info-item{font-size:0.78rem;color:var(--text);padding:0.2rem 0;display:flex;gap:0.4rem;}
+.delivery-close-btn{width:100%;padding:0.8rem;background:var(--red);color:#fff;border:none;border-radius:12px;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;margin-top:0.5rem;}
+
+/* PROFILE OVERLAY */
+.profile-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;}
+.profile-overlay.show{display:flex;}
+</style>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+
+
+<!-- PWA INSTALL BANNER -->
+<div class="pwa-banner" id="pwaBanner">
+  <div style="font-size:1.8rem">📱</div>
+  <div class="pwa-banner-text">
+    <h4>Ilovani o'rnating!</h4>
+    <p>Tez kirish uchun ekranga qo&#39;shing</p>
+  </div>
+  <button class="pwa-install-btn" id="pwaInstallBtn">O'rnatish</button>
+  <button class="pwa-close" onclick="document.getElementById('pwaBanner').classList.remove('show')">✕</button>
+</div>
+
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-row1">
+    <div class="nav-logo">
+      <img id="logoImg" src="" alt="DONA">
+      <div>
+        <div class="nav-logo-text" id="bizNameNav">DONA</div>
+        <span class="nav-logo-sub">Uzbek Frozen Food</span>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-row2">
+    <div class="lang-btns">
+      <button class="lb active" onclick="setLang('uz')">UZ</button>
+      <button class="lb" onclick="setLang('ru')">RU</button>
+      <button class="lb" onclick="setLang('ko')">KO</button>
+    </div>
+    <span id="workStatus" class="work-status"></span>
+    <button class="dark-toggle" onclick="toggleDark()" id="darkBtn">🌙</button>
+    <button class="profile-btn" onclick="openProfile()" title="Profil">👤</button>
+  </div>
+</nav>
+
+<!-- FLOATING CART -->
+<button class="float-cart" onclick="openCart()">
+  🛒
+  <span class="float-cart-badge" id="cartBadge" style="display:none">0</span>
+</button>
+
+<!-- BANNER -->
+<div class="banner-wrap">
+  <div class="banner-track" id="bannerTrack">
+    <div class="banner-slide b1">
+      <div class="banner-text">
+        <div class="banner-badge" id="b1badge">🔥 CHEGIRMA</div>
+        <div class="banner-title" id="b1title">O'zbek taomlari endi Koreyada!</div>
+        <div class="banner-sub" id="b1sub">Muzlatilgan, sifatli, tez pishadi</div>
+        <a href="#products" class="banner-btn" id="b1btn">Buyurtma berish →</a>
+      </div>
+      <div class="banner-emoji">🥟</div>
+    </div>
+    <div class="banner-slide b2">
+      <div class="banner-text">
+        <div class="banner-badge" id="b2badge">🚚 YETKAZISH</div>
+        <div class="banner-title" id="b2title">Butun Koreya bo'yicha yetkazish</div>
+        <div class="banner-sub" id="b2sub">Seuldan Busangacha</div>
+        <a href="https://t.me/Donafood_bot" class="banner-btn" id="b2btn" target="_blank">Bot orqali →</a>
+      </div>
+      <div class="banner-emoji">🚚</div>
+    </div>
+    <div class="banner-slide b3">
+      <div class="banner-text">
+        <div class="banner-badge" id="b3badge">🌱 7 TAOM</div>
+        <div class="banner-title" id="b3title">7 xil milliy taom siz uchun!</div>
+        <div class="banner-sub" id="b3sub">Manti, Somsa, Kotlet va boshqalar</div>
+        <a href="#products" class="banner-btn" id="b3btn">Ko'rish →</a>
+      </div>
+      <div class="banner-emoji">🥘</div>
+    </div>
+  </div>
+  <div class="banner-dots" id="bannerDots"></div>
+</div>
+
+<div class="cats-scroll" id="catScroll"></div>
+<div class="search-wrap">
+  <div class="search-wrap-inner">
+    <span class="search-icon">🔍</span>
+    <input class="search-inp" id="searchInp" placeholder="Mahsulot qidirish..." oninput="searchProds(this.value)">
+  </div>
+</div>
+<div class="promo-row" id="filterBar">
+  <button class="promo-tag all active" onclick="filterPromo('all',this)" id="pt_all">Barchasi</button>
+  <button class="promo-tag sale" onclick="filterPromo('sale',this)">🔥 Chegirma</button>
+  <button class="promo-tag new-t" onclick="filterPromo('new',this)">🌱 Yangi</button>
+  <button class="promo-tag pop" onclick="filterPromo('pop',this)">⭐ Mashhur</button>
+  <button class="promo-tag fav-tag" id="favFilterBtn" onclick="filterPromo('fav',this)">❤️ <span id="favFilterCount"></span> Sevimlilar</button>
+</div>
+
+<div class="fav-section" id="favSection" style="display:none"></div>
+<div id="popularSection">
+  <div class="sec-row"><div class="sec-title" id="popTitle">⭐ Mashhur Taomlar</div></div>
+  <div class="h-scroll" id="popularGrid"></div>
+</div>
+
+<div id="bundleBanner"></div>
+<button class="spin-trigger" onclick="openSpin()">🎡 Spin & Win — Chegirma Yut!</button>
+
+<div id="deadlineBanner" style="display:none;padding:0 0.5rem;margin-bottom:0.3rem"></div>
+<div id="favToast" style="position:fixed;bottom:5rem;left:50%;transform:translateX(-50%) translateY(10px);background:#c0392b;color:#fff;padding:0.5rem 1.2rem;border-radius:20px;font-size:0.82rem;font-weight:700;z-index:999;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap">❤️ Sevimlilarga qo'shildi</div>
+<div id="products">
+  <div class="sec-row"><div class="sec-title" id="mainTitle">🌱 Barcha Mahsulotlar</div></div>
+  <div class="prod-grid" id="prodGrid"></div>
+</div>
+
+<div class="tg-banner">
+  <div class="tg-icon">✈️</div>
+  <div class="tg-text">
+    <h3 id="tgTitle">Telegram botimiz orqali buyurtma bering!</h3>
+    <p id="tgSub">24/7 ishlaydi • 3 tilda • Tez va qulay</p>
+  </div>
+  <a href="https://t.me/Donafood_bot" class="tg-btn" target="_blank" id="tgBtn">Bot →</a>
+</div>
+
+<div class="faq-btn-wrap">
+  <button class="faq-open-btn" onclick="openFaqPage()">
+    <span>❓ Ko'p so'raladigan savollar</span>
+    <span>›</span>
+  </button>
+</div>
+<div id="referralCard" style="padding:0 0.7rem 0.5rem;display:none"></div>
+<div class="footer">
+  <button class="share-footer-btn" onclick="shareApp()" style="background:var(--red);color:#fff;border:none;padding:0.5rem 1.5rem;border-radius:20px;font-size:0.8rem;font-weight:700;cursor:pointer;margin-bottom:1rem;width:100%">📢 Do'stlarga ulashish</button>
+  <div class="footer-logo">
+    <img id="footerLogo" src="" alt="DONA">
+    <span id="bizNameFooter">DONA Uzbek Frozen Food</span>
+  </div>
+  <p>🤖 <a href="https://t.me/Donafood_bot" id="botLink">@Donafood_bot</a></p>
+  <p>📱 <a href="https://t.me/mr_yigitaliev" id="adminLink">@mr_yigitaliev</a></p>
+  <p style="margin-top:0.4rem">🇺🇿 Butun Koreya bo'yicha yetkazib berish 🇰🇷</p>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div class="pm-overlay" id="pmOverlay">
+  <div class="pm-box">
+    <div class="pm-topbar">
+      <button class="pm-back-btn" onclick="closePM()">← Orqaga</button>
+      <button class="pm-add-btn-top" id="pmAddBtnTop" onclick="addFromPM()">🛒 <span id="pmPriceTop"></span></button>
+    </div>
+    <!-- RASM GALEREYASI -->
+    <div class="prod-gallery" id="pmGallery">
+      <div class="prod-gallery-track" id="pmGalleryTrack"></div>
+      <button class="prod-gallery-prev" id="pmGalleryPrev" onclick="galleryNav(-1)" style="display:none">&#8249;</button>
+      <button class="prod-gallery-next" id="pmGalleryNext" onclick="galleryNav(1)" style="display:none">&#8250;</button>
+    </div>
+    <div class="prod-gallery-dots" id="pmGalleryDots"></div>
+    <div class="pm-content">
+      <div class="pm-name" id="pmName"></div><div id="pmStock" style="margin:0.3rem 0"></div>
+      <div class="pm-stars" id="pmStars">★★★★★</div>
+      <div class="pm-price" id="pmPrice"></div>
+      <div class="pm-sec" id="pmDescSec">Tavsif</div>
+      <p class="pm-desc-t" id="pmDesc"></p>
+      <div class="pm-sec" id="pmHowSec">Pishirish</div>
+      <ol class="pm-steps" id="pmSteps"></ol>
+      <div class="pm-sec" id="pmRevSec">Sharhlar</div>
+      <div id="pmRevList"></div>
+      <div class="wr">
+        <div class="wr-title" id="wrTitle">Sharh Yozing</div>
+        <div class="star-row">
+          <button class="sb on" data-v="1" onclick="setStar(1)">★</button>
+          <button class="sb on" data-v="2" onclick="setStar(2)">★</button>
+          <button class="sb on" data-v="3" onclick="setStar(3)">★</button>
+          <button class="sb on" data-v="4" onclick="setStar(4)">★</button>
+          <button class="sb on" data-v="5" onclick="setStar(5)">★</button>
+        </div>
+        <input class="wr-inp" id="revName" placeholder="Ismingiz...">
+        <textarea class="wr-inp" id="revText" rows="2" placeholder="Sharhingiz..."></textarea>
+        <button class="wr-sub" onclick="submitRev()" id="wrSub">📩 Yuborish</button>
+      </div>
+    </div>
+    <div class="pm-add-wrap">
+      <button class="pm-add-btn" id="pmAddBtn" onclick="addFromPM()">🛒 Savatchaga</button>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-sheet">
+    <div class="cart-hdr">
+      <div class="cart-title-t" id="cartTitleT">🛒 Savatcha</div>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItemsList"></div>
+    <div class="cart-total-wrap">
+      <div id="bundleCartBanner" style="display:none;margin-bottom:0.5rem"></div>
+      <div id="minOrderWarning" style="display:none;background:#fff3cd;border-radius:8px;padding:0.5rem 0.7rem;font-size:0.78rem;font-weight:600;color:#856404;margin-bottom:0.5rem"></div>
+      <div class="promo-input-wrap">
+        <input class="promo-inp" id="promoInp" placeholder="Promo kod...">
+        <button class="promo-apply-btn" onclick="applyPromo()">✓ Qo'llay</button>
+      </div>
+      <div class="promo-result" id="promoResult"></div>
+      <div class="discount-row" id="discountRow" style="display:none"><span>🎁 Chegirma:</span><span id="discountAmt"></span></div>
+      <div id="deliveryFeeHint"></div>
+      <div class="cart-total-row"><span id="totalLabel">Jami:</span><span id="totalAmt"></span></div>
+      <div class="pay-info" id="payInfoBox" style="display:none">
+        <div class="pay-info-title" id="payInfoTitle">💳 TO'LOV</div>
+        <div class="pay-row-i"><span class="pay-lbl">Bank:</span><span class="pay-val" id="dBank">—</span></div>
+        <div class="pay-row-i"><span class="pay-lbl">Hisob:</span><span class="pay-val" id="dAcc">—</span></div>
+        <div class="pay-row-i"><span class="pay-lbl">Egasi:</span><span class="pay-val" id="dOwn">—</span></div>
+        <p style="font-size:0.75rem;color:var(--muted);margin-top:0.4rem;line-height:1.6" id="dMsg"></p>
+      </div>
+      <div class="form-2">
+        <div class="fg"><label id="lName">Ism</label><input id="fName" placeholder="Hong Gil-dong"></div>
+        <div class="fg"><label id="lPhone">Telefon</label><input type="tel" id="fPhone" placeholder="+82 10-0000-0000"></div>
+      </div>
+      <div class="fg"><label id="lAddr">Manzil</label><input id="fAddr" placeholder="Seoul, Gangnam-gu..."></div>
+      <div class="fg"><label id="lNote">Izoh</label><textarea id="fNote" rows="2" placeholder="..."></textarea></div>
+      <button class="submit-btn" id="submitBtn" onclick="submitOrder()">✅ Buyurtma Berish</button>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS -->
+<div class="success-overlay" id="doneOverlay">
+  <div class="success-box done-content">
+    <div class="success-icon">✅</div>
+    <div class="success-title" id="doneTitle">Buyurtma Qabul!</div>
+    <div class="success-sub" id="doneSub">Tez orada siz bilan bog&#39;lanamiz. Rahmat! &#127881;</div>
+    <div class="pay-info-box" id="donePayInfo"></div>
+    <div id="doneBankBlock" style="background:#f8f9fa;border-radius:12px;padding:1rem;text-align:left;margin:0.8rem 0;display:none">
+      <div style="font-weight:700;margin-bottom:0.5rem;font-size:0.9rem">&#128179; To&#39;lov ma&#39;lumotlari:</div>
+      <div id="doneBankInfo" style="font-size:0.88rem;line-height:2"></div>
+      <button id="doneCopyBtn" onclick="copyAccount()" style="width:100%;padding:0.6rem;background:#2c3e7a;color:#fff;border:none;border-radius:8px;font-size:0.8rem;font-weight:700;cursor:pointer;margin-top:0.6rem;font-family:Inter,sans-serif;display:none">&#128203; Hisob raqamni nusxalash</button>
+    </div>
+    <a id="doneTgLink" href="#" target="_blank" style="display:none;width:100%;padding:0.7rem;background:#0088cc;color:#fff;border-radius:10px;font-size:0.85rem;font-weight:700;text-align:center;text-decoration:none;margin-bottom:0.5rem;box-sizing:border-box">&#128248; Chekni Telegramga yuborish</a>
+    <button class="submit-btn" onclick="document.getElementById('doneOverlay').classList.remove('show')" id="doneBtn">Yaxshi</button>
+  </div>
+</div>
+
+
+<script>
+
+// ─────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────
+const TG_TOKEN="8944732139:AAG5ONRQCyGsKkre6vSxdyODUC_vPR8eVaY";
+const TG_CHAT="-1003984119169";
+const GH_USER="mr-ilyosbek98";
+const GH_REPO="dona-website";
+const GH_FILE="index.html";
+
+
+// ─────────────────────────────────────────
+// XSS HIMOYA — foydalanuvchi kiritgan barcha matnlarni escape qilish
+// ─────────────────────────────────────────
+function esc(str){
+  if(str===null||str===undefined) return '';
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+// ─────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────
+// Sevimlilar
+let FAVS = JSON.parse(localStorage.getItem('dona_favs')||'[]');
+
+// Profil
+let PROFILE = JSON.parse(localStorage.getItem('dona_profile')||'{}');
+
+// FAQ admin functions
+let FAQ_DATA = JSON.parse(localStorage.getItem('dona_faq')||'null')||{
+  uz: [
+    {q:"Yetkazish qancha turadi?", a:"Yetkazish narxi manzilga qarab belgilanadi. @mr_yigitaliev ga yozing."},
+    {q:"Tolov qanday amalga oshiriladi?", a:"Bank otkazmasi orqali. Buyurtma bergandan keyin hisob raqami yuboriladi."},
+    {q:"Mahsulotlar muzlatilganmi?", a:"Ha, barcha mahsulotlar sifatli muzlatilgan holda yetkaziladi. Saqlash muddati 3 oy."},
+    {q:"Minimal buyurtma miqdori bormi?", a:"Minimal buyurtma yoq — 1 ta mahsulotdan ham buyurtma berish mumkin."},
+    {q:"Qaysi hududlarga yetkaziladi?", a:"Butun Koreya boyicha yetkazamiz — Seuldan Busangacha."},
+  ],
+  ru: [
+    {q:"Сколько стоит доставка?", a:"Стоимость доставки зависит от адреса. Для подробностей пишите @mr_yigitaliev."},
+    {q:"Как оплатить?", a:"Банковским переводом. После заказа мы отправим реквизиты."},
+    {q:"Продукты замороженные?", a:"Да, все продукты качественно заморожены. Срок хранения 3 месяца."},
+    {q:"Есть минимальный заказ?", a:"Минимального заказа нет — можно заказать даже 1 единицу."},
+    {q:"В какие районы доставляете?", a:"Доставляем по всей Корее — от Сеула до Пусана."},
+  ],
+  ko: [
+    {q:"배달비는 얼마인가요?", a:"배달비는 주소에 따라 다릅니다. 자세한 내용은 @mr_yigitaliev 에 문의하세요."},
+    {q:"결제는 어떻게 하나요?", a:"계좌이체로 결제합니다. 주문 후 계좌번호를 보내드립니다."},
+    {q:"제품은 냉동인가요?", a:"네, 모든 제품은 고품질로 냉동되어 배달됩니다. 보관 기간은 3개월입니다."},
+    {q:"최소 주문량이 있나요?", a:"최소 주문량 없음 — 1개부터 주문 가능합니다."},
+    {q:"어느 지역까지 배달하나요?", a:"한국 전국 배달 — 서울부터 부산까지."},
+  ]
+};
+
+// ADMIN_PASS endi hash sifatida saqlanadi (dona_admin_pass_hash)
+// Eski ochiq parol o'chiriladi: localStorage.removeItem('dona_admin_pass')
+let LOGO_URL = localStorage.getItem('dona_logo')||'https://i.imgur.com/aAIrsYR.png';
+
+// ─── DATA LOAD: HTML ichidagi ma'lumotlar ───
+if(typeof _SAVED_PRODS !== 'undefined'){
+  // Har doim GitHub dan kelgan ma'lumotlarni yukla
+  localStorage.setItem('dona_products', JSON.stringify(_SAVED_PRODS));
+  localStorage.setItem('dona_cats', JSON.stringify(_SAVED_CATS));
+  localStorage.setItem('dona_texts', JSON.stringify(_SAVED_TEXTS));
+  localStorage.setItem('dona_payment', JSON.stringify(_SAVED_PAY));
+  localStorage.setItem('dona_sett', JSON.stringify(_SAVED_SETT));
+  if(typeof _SAVED_FAQ !== 'undefined') localStorage.setItem('dona_faq', JSON.stringify(_SAVED_FAQ));
+  if(typeof _SAVED_PROMOS !== 'undefined') localStorage.setItem('dona_promos', JSON.stringify(_SAVED_PROMOS));
+  if(typeof _SAVED_BADGES !== 'undefined'){ localStorage.setItem('dona_prod_badges', JSON.stringify(_SAVED_BADGES)); PROD_BADGES = _SAVED_BADGES; }
+  if(typeof _SAVED_MARKETING !== 'undefined'){ localStorage.setItem('dona_marketing', JSON.stringify(_SAVED_MARKETING)); MARKETING = _SAVED_MARKETING; }
+  if(typeof _SAVED_DELIVERY !== 'undefined'){ localStorage.setItem('dona_delivery', JSON.stringify(_SAVED_DELIVERY)); DELIVERY = _SAVED_DELIVERY; }
+}
+
+let PRODS = JSON.parse(localStorage.getItem('dona_products')||'null')||[
+  {id:"manti",emoji:"🥟",price:10000,oldPrice:null,uz:"Manti",ru:"Манты",ko:"만티",cat:"hamirli",img:"",status:"active",isPopular:true,desc_uz:"Yumshoq xamirga o'ralgan mazali go'sht.",desc_ru:"Сочное мясо в нежном тесте.",desc_ko:"부드러운 반죽에 싸인 고기.",steps_uz:["Muzlatgichdan oling","Qaynoq suvga soling","15-20 daqiqa pishiring","Qaymoq bilan torting"],steps_ru:["Достаньте","В кипящую воду","15-20 минут","Со сметаной"],steps_ko:["꺼내세요","끓는 물에","15-20분","사워크림과"],reviews:[{name:"Dilnoza",text_uz:"Juda mazali!",stars:5,status:"approved"}]},
+  {id:"somsa",emoji:"🥐",price:10000,oldPrice:12000,uz:"Somsa",ru:"Самса",ko:"삼사",cat:"hamirli",img:"",status:"new",isPopular:true,desc_uz:"Tandirda pishirilgan xushbo'y somsa.",desc_ru:"Ароматная самса.",desc_ko:"향긋한 삼사.",steps_uz:["Muzlatgichdan oling","180°C pechka","20-25 daqiqa","Issiq torting"],steps_ru:["Достаньте","Духовку 180°C","20-25 минут","Горячим"],steps_ko:["꺼내세요","오븐 180°C","20-25분","따뜻하게"],reviews:[{name:"Kamola",text_uz:"Har hafta buyurtma beraman!",stars:5,status:"approved"}]},
+  {id:"kotlet",emoji:"🍖",price:10000,oldPrice:null,uz:"Kotlet",ru:"Котлеты",ko:"커틀릿",cat:"goshtli",img:"",status:"active",isPopular:false,desc_uz:"Qo'lda tayyorlangan yumshoq kotlet.",desc_ru:"Домашние котлеты.",desc_ko:"수제 커틀릿.",steps_uz:["Yog'da qoving","Har tomoni 5-7 min","Sabzavotlar bilan"],steps_ru:["Жарьте","5-7 мин","С овощами"],steps_ko:["구우세요","5-7분","채소와"],reviews:[]},
+  {id:"blinchik",emoji:"🥞",price:10000,oldPrice:11000,uz:"Blinchik",ru:"Блинчики",ko:"블린치크",cat:"hamirli",img:"",status:"active",isPopular:true,desc_uz:"Nozik blinchalarga o'ralgan go'sht.",desc_ru:"Мясо в блинчиках.",desc_ko:"블린에 싸인 고기.",steps_uz:["Yog'ga soling","2-3 min har tomoni","Oltin rang bo'lguncha"],steps_ru:["На масло","2-3 мин","До золота"],steps_ko:["기름에","2-3분","노릇하게"],reviews:[]},
+  {id:"varenik",emoji:"🥟",price:10000,oldPrice:null,uz:"Varenik",ru:"Вареники",ko:"바레니크",cat:"hamirli",img:"",status:"active",isPopular:false,desc_uz:"Yumshoq xamirda go'sht.",desc_ru:"Вареники с мясом.",desc_ko:"바레니크.",steps_uz:["Qaynoq suvga soling","10-12 daqiqa","Sariyog' bilan"],steps_ru:["В кипящую воду","10-12 мин","Со маслом"],steps_ko:["끓는 물에","10-12분","버터와"],reviews:[]},
+  {id:"honim",emoji:"🫔",price:10000,oldPrice:null,uz:"Honim",ru:"Хоним",ko:"호님",cat:"hamirli",img:"",status:"active",isPopular:false,desc_uz:"Bug'langan go'sht ruleti.",desc_ru:"Паровой рулет.",desc_ko:"찐 롤.",steps_uz:["Bug'da 30-35 min","Tilim-tilim qilib torting"],steps_ru:["Пар 30-35 мин","Нарежьте"],steps_ko:["30-35분","슬라이스"],reviews:[]},
+  {id:"frikadelka",emoji:"🍡",price:10000,oldPrice:null,uz:"Frikadelka",ru:"Фрикадельки",ko:"미트볼",cat:"goshtli",img:"",status:"active",isPopular:false,desc_uz:"Yumaloq go'sht kotletlar.",desc_ru:"Мясные шарики.",desc_ko:"미트볼.",steps_uz:["Sho'rvaga soling","10-15 daqiqa"],steps_ru:["В суп","10-15 мин"],steps_ko:["수프에","10-15분"],reviews:[]},
+];
+
+let CATS = JSON.parse(localStorage.getItem('dona_cats')||'null')||[
+  {id:"all",emoji:"🌱",uz:"Barchasi",ru:"Все",ko:"전체"},
+  {id:"hamirli",emoji:"🥟",uz:"Hamirli",ru:"Мучные",ko:"반가루"},
+  {id:"goshtli",emoji:"🍖",uz:"Go'shtli",ru:"Мясные",ko:"육류"},
+];
+
+const _DEFAULT_TEXTS = {
+  uz:{hero1_badge:"🔥 CHEGIRMA",hero1_title:"O'zbek taomlari endi Koreyada!",hero1_sub:"Muzlatilgan, sifatli, tez pishadi",hero1_btn:"Buyurtma berish →",hero2_badge:"🚚 YETKAZISH",hero2_title:"Butun Koreya bo'yicha yetkazish",hero2_sub:"Seuldan Busangacha",hero2_btn:"Bot orqali →",hero3_badge:"🌱 7 TAOM",hero3_title:"7 xil milliy taom siz uchun!",hero3_sub:"Manti, Somsa, Kotlet va boshqalar",hero3_btn:"Ko'rish →",pop_title:"⭐ Mashhur Taomlar",main_title:"🌱 Barcha Mahsulotlar",tg_title:"Telegram botimiz orqali buyurtma bering!",tg_sub:"24/7 ishlaydi • 3 tilda",tg_btn:"Bot →",cart_title:"🛒 Savatcha",total_lbl:"Jami:",pay_title:"💳 TO'LOV",f_name:"Ism",f_phone:"Telefon",f_addr:"Manzil",f_note:"Izoh",submit_btn:"✅ Buyurtma Berish",done_title:"Buyurtma Qabul!",done_sub:"Tez orada siz bilan bog'lanamiz. Rahmat! 🎉",done_btn:"Yaxshi",pm_desc:"Tavsif",pm_how:"Pishirish Yo'riqnomasi",pm_revs:"Sharhlar",wr_title:"Sharh Yozing",wr_sub:"📩 Yuborish",won:"₩",faq_btn:"Ko'p so'raladigan savollar",share_btn:"Do'stlarga ulashish"},
+  ru:{hero1_badge:"🔥 СКИДКА",hero1_title:"Узбекские блюда теперь в Корее!",hero1_sub:"Замороженные, качественные",hero1_btn:"Заказать →",hero2_badge:"🚚 ДОСТАВКА",hero2_title:"По всей Корее",hero2_sub:"От Сеула до Пусана",hero2_btn:"Бот →",hero3_badge:"🌱 7 БЛЮД",hero3_title:"7 национальных блюд для вас!",hero3_sub:"Манты, самса и другие",hero3_btn:"Смотреть →",pop_title:"⭐ Популярные",main_title:"🌱 Все Продукты",tg_title:"Заказывайте через Telegram!",tg_sub:"Работает 24/7 • 3 языка",tg_btn:"Бот →",cart_title:"🛒 Корзина",total_lbl:"Итого:",pay_title:"💳 ОПЛАТА",f_name:"Имя",f_phone:"Телефон",f_addr:"Адрес",f_note:"Комментарий",submit_btn:"✅ Оформить Заказ",done_title:"Заказ принят!",done_sub:"Свяжемся с вами. Спасибо! 🎉",done_btn:"Хорошо",pm_desc:"Описание",pm_how:"Инструкция",pm_revs:"Отзывы",wr_title:"Написать отзыв",wr_sub:"📩 Отправить",won:"₩",faq_btn:"Часто задаваемые вопросы",share_btn:"Поделиться"},
+  ko:{hero1_badge:"🔥 할인",hero1_title:"우즈벡 음식이 이제 한국에서!",hero1_sub:"냉동, 고품질, 빠른 조리",hero1_btn:"주문하기 →",hero2_badge:"🚚 배달",hero2_title:"한국 전국 배달",hero2_sub:"서울부터 부산까지",hero2_btn:"봇으로 →",hero3_badge:"🌱 7가지",hero3_title:"7가지 전통 음식!",hero3_sub:"만티, 삼사 등",hero3_btn:"보기 →",pop_title:"⭐ 인기 제품",main_title:"🌱 전체 제품",tg_title:"텔레그램으로 주문하세요!",tg_sub:"24/7 이용 • 3개 언어",tg_btn:"봇 →",cart_title:"🛒 장바구니",total_lbl:"합계:",pay_title:"💳 결제",f_name:"이름",f_phone:"전화번호",f_addr:"주소",f_note:"메모",submit_btn:"✅ 주문하기",done_title:"주문 완료!",done_sub:"곧 연락드립니다. 감사합니다! 🎉",done_btn:"확인",pm_desc:"설명",pm_how:"조리 방법",pm_revs:"리뷰",wr_title:"리뷰 작성",wr_sub:"📩 보내기",won:"₩",faq_btn:"자주 묻는 질문",share_btn:"친구에게 공유"},
+};
+
+let PAY = JSON.parse(localStorage.getItem('dona_payment')||'{}')||{};
+let SETT = JSON.parse(localStorage.getItem('dona_sett')||'{}')||{};
+
+// ─── MARKETING SOZLAMALARI ───
+let MARKETING = JSON.parse(localStorage.getItem('dona_marketing')||'null') || {
+  lowStockThreshold: 3,        // "Tez tugayapti" uchun chegara
+  lowStockEnabled: true,
+  minOrderAmount: 0,           // Minimum buyurtma summasi (0 = yo'q)
+  minOrderEnabled: false,
+  bundleEnabled: false,        // Bundle taklif
+  bundleQty: 2,                // Necha ta olinganda
+  bundleDiscount: 10,          // Foiz chegirma
+  referralEnabled: false,      // Referral tizim
+  referralDiscount: 5,         // Referral chegirma foizi
+  deliveryDeadlineEnabled: false, // Buyurtma vaqti
+  deliveryDeadlineHour: 18,    // Soat
+  deliveryDeadlineTomorrow: true, // Ertaga yetkaziladi
+};
+let TEXTS = (function(){
+  var saved = JSON.parse(localStorage.getItem('dona_texts')||'null');
+  if(!saved) return _DEFAULT_TEXTS;
+  // Merge - default keylar yo'q bo'lsa qo'shamiz
+  ['uz','ru','ko'].forEach(function(l){
+    if(!saved[l]) saved[l] = _DEFAULT_TEXTS[l];
+    else Object.keys(_DEFAULT_TEXTS[l]||{}).forEach(function(k){
+      if(!saved[l][k]) saved[l][k] = _DEFAULT_TEXTS[l][k];
+    });
+  });
+  return saved;
+})();
+
+
+// Mahsulot badge lari (admin paneldan boshqariladi)
+let PROD_BADGES = JSON.parse(localStorage.getItem('dona_prod_badges')||'null') || [
+  {id:'frozen',  emoji:'❄️', text:'Frozen'},
+  {id:'fresh',   emoji:'🌿', text:'Yangi'},
+  {id:'hot',     emoji:'🔥', text:'Issiq'},
+  {id:'ready',   emoji:'📦', text:'Tayyor'},
+  {id:'jar',     emoji:'🫙', text:'Saqlanadi'},
+  {id:'none',    emoji:'',   text:''},
+];
+
+// Xaridorning Telegram ID si — bot orqali bir marta ulanadi
+let TG_USER_ID = localStorage.getItem('dona_tg_user_id') || '';
+let TG_USERNAME = localStorage.getItem('dona_tg_username') || '';
+
+// ─── TELEGRAM BOT CONFIG ───
+const TG_BOT_TOKEN = localStorage.getItem('dona_tg_token') || '';
+// Token Worker URL orqali xavfsiz ishlatiladi
+// Admin → Sozlama → Worker URL kiriting
+const TG_ADMIN_ID  = localStorage.getItem('dona_tg_admin') || '961419057';
+const TG_GROUP_ID  = localStorage.getItem('dona_tg_group') || '-1003984119169';
+
+// Telegram API orqali xabar yuborish
+// Worker URL — Cloudflare Worker deploy qilingandan keyin o'zgartiring
+// Hozircha to'g'ridan API ga, keyinroq Worker ga o'tamiz
+var WORKER_URL = localStorage.getItem('dona_worker_url') || '';
+
+async function sendTelegramMsg(chatId, text){
+  try {
+    var endpoint = WORKER_URL
+      ? WORKER_URL + '/send-message'
+      : 'https://api.telegram.org/bot'+TG_BOT_TOKEN+'/sendMessage';
+
+    var body = WORKER_URL
+      ? JSON.stringify({chat_id: chatId, text: text, parse_mode: 'HTML'})
+      : JSON.stringify({chat_id: chatId, text: text, parse_mode: 'HTML'});
+
+    var res = await fetch(endpoint, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: body
+    });
+    var data = await res.json();
+    return data.ok;
+  } catch(e){
+    console.warn('Telegram xabar ketmadi:', e.message);
+    return false;
+  }
+}
+
+async function tgGetUpdates(offset){
+  try {
+    var endpoint = WORKER_URL
+      ? WORKER_URL + '/get-updates?offset='+offset
+      : 'https://api.telegram.org/bot'+TG_BOT_TOKEN+'/getUpdates?offset='+offset+'&timeout=5&allowed_updates=["callback_query","message"]';
+    var res = await fetch(endpoint);
+    return await res.json();
+  } catch(e){ return {ok:false,result:[]}; }
+}
+
+async function tgAnswerCallback(body){
+  try {
+    var endpoint = WORKER_URL
+      ? WORKER_URL + '/answer-callback'
+      : 'https://api.telegram.org/bot'+TG_BOT_TOKEN+'/answerCallbackQuery';
+    var res = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    return await res.json();
+  } catch(e){ return {ok:false}; }
+}
+
+async function tgEditMessage(body){
+  try {
+    var endpoint = WORKER_URL
+      ? WORKER_URL + '/edit-message'
+      : 'https://api.telegram.org/bot'+TG_BOT_TOKEN+'/editMessageText';
+    var res = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    return await res.json();
+  } catch(e){ return {ok:false}; }
+}
+
+// Promo kodlar — admin paneldan boshqariladi, STATE bo'limida bo'lishi shart (hoisting)
+let PROMO_CODES = JSON.parse(localStorage.getItem('dona_promos')||'null') || [
+  {code:'DONA10', discount:10, type:'percent', limit:null, expiry:'', used:0, active:true},
+  {code:'DONA20', discount:20, type:'percent', limit:null, expiry:'', used:0, active:true},
+  {code:'SAVE5000', discount:5000, type:'fixed', limit:50, expiry:'', used:0, active:true},
+  {code:'NEWUSER', discount:15, type:'percent', limit:100, expiry:'', used:0, active:true},
+];
+let activePromo = null;
+
+let lang='uz', cart={}, curProd=null, curStar=5, curCat='all', curFilter='all';
+let bannerIdx=0;
+
+// ─────────────────────────────────────────
+// INIT LOGO
+// ─────────────────────────────────────────
+function initLogo(){
+  const logo = SETT.logo||LOGO_URL;
+  const logoEl = document.getElementById('logoImg');
+  const footerLogoEl = document.getElementById('footerLogo');
+  if(logo && logo.startsWith('http')){
+    logoEl.src=logo;
+    logoEl.style.display='block';
+    if(footerLogoEl){ footerLogoEl.src=logo; footerLogoEl.style.display='block'; }
+  } else {
+    // Logo URL yo'q bo'lsa emoji ko'rsatamiz
+    logoEl.style.display='none';
+    var logoText = document.getElementById('logoText');
+    if(logoText) logoText.style.display='block';
+  }
+  if(SETT.bizName){
+    document.getElementById('bizNameNav').textContent=SETT.bizName;
+    document.getElementById('bizNameFooter').textContent=SETT.bizName+' Uzbek Frozen Food';
+  }
+}
+
+// ─────────────────────────────────────────
+// PAYMENT
+// ─────────────────────────────────────────
+function initPay(){
+  if(PAY.bank){
+    document.getElementById('payInfoBox').style.display='block';
+    document.getElementById('dBank').textContent=PAY.bank;
+    document.getElementById('dAcc').textContent=PAY.account||'—';
+    document.getElementById('dOwn').textContent=PAY.owner||'—';
+    document.getElementById('dMsg').textContent=PAY.msg||'';
+  }
+}
+
+// ─────────────────────────────────────────
+// BANNER
+// ─────────────────────────────────────────
+let bannerTimer=null;
+function startBannerTimer(){
+  stopBannerTimer();
+  bannerTimer=setInterval(()=>goBanner((bannerIdx+1)%3),4000);
+}
+function stopBannerTimer(){
+  if(bannerTimer){clearInterval(bannerTimer);bannerTimer=null;}
+}
+function initBanner(){
+  const dots=document.getElementById('bannerDots');
+  dots.innerHTML=[0,1,2].map(i=>`<div class="dot${i===0?' active':''}" onclick="goBanner(${i})"></div>`).join('');
+  startBannerTimer();
+
+  // Swipe (surish) funksiyasi
+  const track=document.getElementById('bannerTrack');
+  let startX=0, isDragging=false, startIdx=0;
+
+  track.addEventListener('touchstart',e=>{
+    startX=e.touches[0].clientX;
+    isDragging=true;
+    startIdx=bannerIdx;
+    stopBannerTimer();
+  },{passive:true});
+
+  track.addEventListener('touchmove',e=>{
+    if(!isDragging)return;
+    const diff=e.touches[0].clientX-startX;
+    const base=-bannerIdx*100;
+    // pct hisoblangan lekin transform uchun diff px ishlatiladi
+    track.style.transition='none';
+    track.style.transform=`translateX(calc(${base}% + ${diff}px))`;
+  },{passive:true});
+
+  track.addEventListener('touchend',e=>{
+    if(!isDragging)return;
+    isDragging=false;
+    const diff=e.changedTouches[0].clientX-startX;
+    track.style.transition='transform 0.5s ease';
+    if(diff<-50&&bannerIdx<2)goBanner(bannerIdx+1);
+    else if(diff>50&&bannerIdx>0)goBanner(bannerIdx-1);
+    else goBanner(bannerIdx);
+    startBannerTimer();
+  },{passive:true});
+
+  // Bosib tursa toxtaydi, qoysa davom etadi
+  track.addEventListener('touchstart',()=>stopBannerTimer(),{passive:true});
+}
+function goBanner(i){
+  bannerIdx=i;
+  document.getElementById('bannerTrack').style.transition='transform 0.5s ease';
+  document.getElementById('bannerTrack').style.transform=`translateX(-${i*100}%)`;
+  document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===i));
+}
+
+// ─────────────────────────────────────────
+// LANG
+// ─────────────────────────────────────────
+function setLang(l){
+  lang=l;
+  document.querySelectorAll('.lb').forEach((b,i)=>b.classList.toggle('active',['uz','ru','ko'][i]===l));
+  const t=TEXTS[l]||TEXTS.uz;
+  const ids={
+    b1badge:'hero1_badge',b1title:'hero1_title',b1sub:'hero1_sub',b1btn:'hero1_btn',
+    b2badge:'hero2_badge',b2title:'hero2_title',b2sub:'hero2_sub',b2btn:'hero2_btn',
+    b3badge:'hero3_badge',b3title:'hero3_title',b3sub:'hero3_sub',b3btn:'hero3_btn',
+    popTitle:'pop_title',mainTitle:'main_title',tgTitle:'tg_title',tgSub:'tg_sub',tgBtn:'tg_btn',
+    cartTitleT:'cart_title',totalLabel:'total_lbl',
+    lName:'f_name',lPhone:'f_phone',lAddr:'f_addr',lNote:'f_note',
+    submitBtn:'submit_btn',doneTitle:'done_title',doneSub:'done_sub',doneBtn:'done_btn',
+  };
+  // FAQ va share tugmalarini yangilash
+  const faqTexts = {uz:"❓ Ko'p so'raladigan savollar",ru:"❓ Часто задаваемые вопросы",ko:"❓ 자주 묻는 질문"};
+  const shareTexts = {uz:"📢 Do'stlarga ulashish",ru:"📢 Поделиться",ko:"📢 친구에게 공유"};
+  const faqBtn = document.querySelector('.faq-open-btn span:first-child');
+  if(faqBtn) faqBtn.textContent = t.faq_btn || faqTexts[l] || faqTexts.uz;
+  const shareBtn = document.querySelector('.share-footer-btn');
+  if(shareBtn) shareBtn.textContent = t.share_btn || shareTexts[l] || shareTexts.uz;
+  Object.entries(ids).forEach(([id,key])=>{const el=document.getElementById(id);if(el&&t[key])el.textContent=t[key];});
+  renderCats();renderProds();renderFaq();renderFavSection();
+  updateProfileLang();
+  renderDeadlineBanner();
+  renderReferralCard();
+  updateDeliveryLang();
+  var bbEl2 = document.getElementById('bundleBanner');
+  if(bbEl2) bbEl2.innerHTML = getBundleBannerHtml();var _fpo=document.getElementById('faqPageOverlay');if(_fpo&&_fpo.classList.contains('show'))renderFaqPage();
+
+}
+
+// ─────────────────────────────────────────
+// CATEGORIES
+// ─────────────────────────────────────────
+function renderCats(){
+  document.getElementById('catScroll').innerHTML=CATS.map(c=>`
+    <button class="cat-icon-btn${c.id===curCat?' active':''}" onclick="selectCat('${c.id}')">
+      <div class="cat-icon-wrap">${c.img?`<img src="${c.img}" onerror="this.style.display='none';this.parentNode.innerHTML='${c.emoji}'">`:c.emoji}</div>
+      <span class="cat-icon-name">${c[lang]||c.uz}</span>
+    </button>`).join('');
+}
+function selectCat(id){curCat=id;curFilter='all';document.querySelectorAll('.promo-tag').forEach(b=>b.classList.remove('active'));document.getElementById('pt_all').classList.add('active');renderCats();renderProds();}
+
+// ─────────────────────────────────────────
+// PRODUCTS
+// ─────────────────────────────────────────
+function filterPromo(f,btn){
+  curFilter=f;curCat='all';
+  document.querySelectorAll('.promo-tag').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderCats();
+  renderProds();
+  // Fav filter aktiv bo'lganda popular/spin section ni yashiramiz
+  var popularSection = document.getElementById('popularSection');
+  var spinTrigger = document.querySelector('.spin-trigger');
+  var isFav = f === 'fav';
+  if(popularSection) popularSection.style.display = isFav ? 'none' : '';
+  if(spinTrigger) spinTrigger.style.display = isFav ? 'none' : '';
+  // Sevimlilar bo'sh bo'lsa xabar
+  if(isFav && FAVS.length === 0){
+    document.getElementById('prodGrid').innerHTML =
+      '<div style="grid-column:span 2;text-align:center;padding:2rem;color:var(--muted)">'
+      + '<div style="font-size:3rem">🤍</div>'
+      + '<div style="font-weight:600;margin-top:0.5rem">Hali sevimli mahsulot yo&#39;q</div>'
+      + '<div style="font-size:0.8rem;margin-top:0.3rem">Mahsulot tepasidagi ❤️ ni bosing</div>'
+      + '</div>';
+  }
+}
+// Qidiruv
+let searchQuery='';
+function searchProds(q){
+  searchQuery=q.toLowerCase().trim();
+  renderProds();
+}
+function getFiltered(){
+  let p=PRODS.filter(x=>x.status!=='sold');
+  if(curCat!=='all') p=p.filter(x=>x.cat===curCat);
+  if(curFilter==='sale') p=p.filter(x=>x.oldPrice);
+  if(curFilter==='new') p=p.filter(x=>x.status==='new');
+  if(curFilter==='pop') p=p.filter(x=>x.isPopular);
+  if(curFilter==='fav') p=p.filter(x=>FAVS.includes(x.id));
+  if(searchQuery) p=p.filter(x=>(x.uz||'').toLowerCase().includes(searchQuery)||(x.ru||'').toLowerCase().includes(searchQuery));
+  return p;
+}
+
+function getStockBadge(p){
+  if(p.stock===null||p.stock===undefined||p.stock==='') return '';
+  const s = parseInt(p.stock);
+  if(isNaN(s)) return '';
+  if(s===0){
+    const txt={uz:"Sotuvda yoq",ru:"Нет в наличии",ko:"품절"};
+    return '<span class="stock-badge stock-out">'+(txt[lang]||txt.uz)+'</span>';
+  }
+  if(s<=5){
+    const txt={uz:s+" ta qoldi",ru:"Осталось "+s+" шт",ko:s+"개 남음"};
+    return '<span class="stock-badge stock-low">'+(txt[lang]||txt.uz)+'</span>';
+  }
+  const txt={uz:s+" ta mavjud",ru:"В наличии: "+s,ko:"재고: "+s+"개"};
+  return '<span class="stock-badge stock-ok">'+(txt[lang]||txt.uz)+'</span>';
+}
+
+function renderProds(){
+  var t = TEXTS[lang]||TEXTS.uz;
+  var popular = PRODS.filter(function(x){ return x.isPopular && x.status!=='sold'; });
+  var popularHtml = popular.map(function(p){
+    var disc = p.oldPrice ? Math.round((1-p.price/p.oldPrice)*100) : 0;
+    var html = '<div class="prod-card-h" onclick="openProd(\''+p.id+'\')">'+
+      '<div class="prod-img-h">'+(p.img?'<img src="'+esc(p.img)+'" onerror="this.style.display=\'none\'">':p.emoji)+
+      (p.oldPrice?'<span class="sale-badge" style="font-size:0.55rem">SALE</span>':'')+
+      '</div><div class="prod-body-h">'+
+      '<div class="prod-name-h">'+esc(p[lang]||p.uz)+'</div>'+
+      '<div class="prod-price-h">'+p.price.toLocaleString()+' '+(t.won||'₩')+'</div>'+
+      (p.stock!==null&&p.stock!==undefined&&p.stock!==''&&parseInt(p.stock)<=3&&parseInt(p.stock)>0?'<span class="low-stock-badge">'+getMktT().lowStock(parseInt(p.stock))+'</span>':'')+
+      (p.stock===0||p.stock==='0'?'<span class="stock-badge out">'+(t.soldOut||'Sotuvda yoq')+'</span>':'')+
+      '</div></div>';
+    return html;
+  }).join('');
+  document.getElementById('popularGrid').innerHTML = popularHtml;
+
+  var filtered = getFiltered();
+  var grid = document.getElementById('prodGrid');
+  if(!grid) return;
+
+  if(!filtered.length){
+    var emptyMsg = curFilter==='fav'
+      ? '<div style="grid-column:span 2;text-align:center;padding:2rem;color:var(--muted)"><div style="font-size:3rem">&#x1F90D;</div><div style="font-weight:600;margin-top:0.5rem">Hali sevimli mahsulot yo&#39;q</div><div style="font-size:0.8rem;margin-top:0.3rem">Mahsulot tepasidagi &#10084;&#65039; ni bosing</div></div>'
+      : '<p style="color:var(--muted);text-align:center;grid-column:1/-1;padding:2rem;font-size:0.85rem">Bu bo&#39;limda mahsulot yo&#39;q</p>';
+    grid.innerHTML = emptyMsg;
+    return;
+  }
+
+  var html = filtered.map(function(p){
+    var qty = cart[p.id]||0;
+    var disc = p.oldPrice ? Math.round((1-p.price/p.oldPrice)*100) : 0;
+    var isSold = (p.stock===0||parseInt(p.stock)===0||p.status==='sold');
+    var favActive = FAVS.includes(p.id);
+    var badgeHtml = getBadgeHtml(p);
+    var lowStockHtml = getLowStockHtml(p);
+
+    var addBtn = isSold
+      ? '<button class="add-btn" disabled style="opacity:0.35;cursor:not-allowed">+</button>'
+      : (qty>0
+          ? '<div class="qty-ctrl"><button class="qty-m" onclick="chQty(\''+p.id+'\',-1)">&#8722;</button><span class="qty-n">'+qty+'</span><button class="qty-p" onclick="chQty(\''+p.id+'\',1)">+</button></div>'
+          : '<button class="add-btn" onclick="chQty(\''+p.id+'\',1)">+</button>');
+
+    return '<div class="prod-card" onclick="openProd(\''+p.id+'\')">'+
+      '<button class="fav-btn'+(favActive?' active':'')+'" data-id="'+p.id+'" onclick="toggleFav(\''+p.id+'\',event)">'+(favActive?'&#10084;&#65039;':'&#129293;')+'</button>'+
+      '<div class="prod-img">'+
+        (p.img?'<img src="'+esc(p.img)+'" onerror="this.style.display=\'none\'">':p.emoji)+
+        (p.oldPrice?'<span class="sale-badge">SALE '+disc+'%</span>':'')+
+        (p.status==='new'&&!p.oldPrice?'<span class="new-badge">NEW</span>':'')+
+      '</div>'+
+      '<div class="prod-body">'+
+        '<div class="prod-name">'+esc(p[lang]||p.uz)+'</div>'+
+        badgeHtml+
+        lowStockHtml+
+        '<div class="prod-price-row">'+
+          '<div>'+
+            '<div class="prod-price">'+p.price.toLocaleString()+' '+(t.won||'&#8361;')+'</div>'+
+            (p.stock!==null&&p.stock!==undefined&&p.stock!==''?getStockBadge(p):'')+
+            (p.oldPrice?'<div class="prod-old-price">'+p.oldPrice.toLocaleString()+' '+(t.won||'&#8361;')+'</div>':'')+
+          '</div>'+
+          '<div onclick="event.stopPropagation()">'+addBtn+'</div>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  grid.innerHTML = html;
+  renderFavBtns();
+}
+function chQty(id,d){
+  const prod = PRODS.find(p=>p.id===id);
+  const newQty = Math.max(0,(cart[id]||0)+d);
+  // Stock limit check
+  if(d>0 && prod && prod.stock!==null && prod.stock!==undefined){
+    if(prod.stock===0) return;
+    if(newQty > prod.stock){
+      alert(lang==='ru'?'Недостаточно товара!':lang==='ko'?'재고가 부족합니다!':'Zaxirada yetarli mahsulot yoq!');
+      return;
+    }
+  }
+  cart[id]=newQty;
+  if(!cart[id])delete cart[id];
+  const total=Object.values(cart).reduce((s,v)=>s+v,0);
+  const badge=document.getElementById('cartBadge');
+  badge.textContent=total; badge.style.display=total>0?'flex':'none';
+  renderProds();
+  if(document.getElementById('cartOverlay').classList.contains('show'))renderCartItems();
+}
+
+// ─────────────────────────────────────────
+// PRODUCT MODAL
+// ─────────────────────────────────────────
+function openProd(id){
+  const p=PRODS.find(x=>x.id===id);if(!p)return;
+  curProd=p; curStar=5; setStar(5);
+  const t=TEXTS[lang]||TEXTS.uz;
+  buildGallery(p);
+  document.getElementById('pmName').textContent=p[lang]||p.uz;
+  var _badge = getBadge(p);
+  var _pmUnit = document.getElementById('pmUnit');
+  if(_pmUnit) _pmUnit.textContent = _badge ? (_badge.emoji + ' ' + _badge.text) : '';
+  document.getElementById('pmPrice').textContent=`${p.price.toLocaleString()} ${t.won}`;
+  document.getElementById('pmDesc').textContent=p['desc_'+lang]||p.desc_uz||''  ;
+  const steps=p['steps_'+lang]||p.steps_uz||[];
+  document.getElementById('pmSteps').innerHTML=steps.map(s=>`<li><span class="sn">✓</span><span>${s}</span></li>`).join('');
+  document.getElementById('pmDescSec').textContent=t.pm_desc||'Tavsif';
+  document.getElementById('pmHowSec').textContent=t.pm_how||'Pishirish';
+  document.getElementById('pmRevSec').textContent=t.pm_revs||'Sharhlar';
+  document.getElementById('wrTitle').textContent=t.wr_title||'Sharh Yozing';
+  document.getElementById('wrSub').textContent=t.wr_sub||'📩 Yuborish';
+  const revs=(p.reviews||[]).filter(r=>r.status==='approved');
+  const stars=revs.length?Math.round(revs.reduce((s,r)=>s+(r.stars||5),0)/revs.length):5;
+  document.getElementById('pmStars').textContent='★'.repeat(stars)+'☆'.repeat(5-stars)+` (${revs.length})`;
+    document.getElementById('pmRevList').innerHTML=revs.length?
+    revs.map(function(r){return '<div class="rev-i"><div class="rev-top"><span class="rev-name">'+esc(r.name)+'</span><span class="rev-s">'+'★'.repeat(r.stars||5)+'</span></div><div class="rev-txt">'+esc(r['text_'+lang]||r.text_uz||'')+'</div></div>';}).join(''):
+    '<p style="color:var(--muted);font-size:0.78rem;padding:0.3rem 0">Hali sharh yo&#39;q!</p>';
+  document.getElementById('pmAddBtn').textContent=`🛒 ${t.won} ${p.price.toLocaleString()}`;
+  // Show stock in modal
+  const stockEl = document.getElementById('pmStock');
+  if(stockEl){
+    stockEl.innerHTML = getStockBadge(p);
+    if(p.stock===0){
+      document.getElementById('pmAddBtn').disabled = true;
+      document.getElementById('pmAddBtn').style.opacity = '0.5';
+    } else {
+      document.getElementById('pmAddBtn').disabled = false;
+      document.getElementById('pmAddBtn').style.opacity = '1';
+    }
+  }
+  if(document.getElementById('pmPriceTop')) document.getElementById('pmPriceTop').textContent=`${p.price.toLocaleString()} ₩`;
+  document.getElementById('revName').value='';document.getElementById('revText').value='';
+  document.getElementById('pmOverlay').classList.add('show');
+  document.body.style.overflow='hidden';
+  history.pushState({modal:'pm'},'');
+}
+function closePM(){
+  document.getElementById('pmOverlay').classList.remove('show');
+  document.body.style.overflow='';
+}
+var _pmo=document.getElementById('pmOverlay');if(_pmo)_pmo.addEventListener('click',function(e){if(e.target===_pmo)closePM();});
+function addFromPM(){if(!curProd)return;chQty(curProd.id,1);closePM();}
+function setStar(v){curStar=v;document.querySelectorAll('.sb').forEach(b=>b.classList.toggle('on',parseInt(b.getAttribute('data-v'))<=v));}
+function submitRev(){
+  if(!curProd)return;
+  const name=document.getElementById('revName').value.trim();
+  const text=document.getElementById('revText').value.trim();
+  if(!name||!text){alert('Ism va sharh yozing!');return;}
+  const idx=PRODS.findIndex(p=>p.id===curProd.id);
+  if(idx>-1){
+    if(!PRODS[idx].reviews)PRODS[idx].reviews=[];
+    PRODS[idx].reviews.push({name,text_uz:text,stars:curStar,status:'pending',date:new Date().toISOString().slice(0,10)});
+    localStorage.setItem('dona_products',JSON.stringify(PRODS));
+  }
+  alert('Sharhingiz yuborildi! Moderatsiyadan keyin ko\'rinadi.');
+  closePM();
+}
+
+// ─────────────────────────────────────────
+// CART
+// ─────────────────────────────────────────
+function openCart(){
+  renderCartItems();
+  // Auto-fill from profile
+  const prof = JSON.parse(localStorage.getItem('dona_profile')||'{}');
+  const fields = {fName:'name', fPhone:'phone', fAddr:'addr', fNote:'note'};
+  Object.entries(fields).forEach(([id, key])=>{
+    const el = document.getElementById(id);
+    if(el && prof[key]) el.value = prof[key];
+  });
+  document.getElementById('cartOverlay').classList.add('show');
+  document.body.style.overflow='hidden';
+  history.pushState({modal:'cart'},'');
+}
+function closeCart(){
+  document.getElementById('cartOverlay').classList.remove('show');
+  document.body.style.overflow='';
+}
+var _co=document.getElementById('cartOverlay');if(_co)_co.addEventListener('click',function(e){if(e.target===_co)closeCart();});
+function renderCartItems(){
+  const t=TEXTS[lang]||TEXTS.uz;
+  const entries=Object.entries(cart);
+  let total=0;
+  document.getElementById('cartItemsList').innerHTML=entries.length?entries.map(([id,qty])=>{
+    const p=PRODS.find(x=>x.id===id);if(!p)return'';
+    const sub=p.price*qty;total+=sub;
+    return `<div class="ci-item">
+      <div class="ci-img">${p.img?`<img src="${p.img}" onerror="this.style.display='none'">`:p.emoji}</div>
+      <div style="flex:1"><div class="ci-name">${p[lang]||p.uz}</div><div class="ci-price">${sub.toLocaleString()} ${t.won}</div></div>
+      <div class="ci-qty">
+        <button class="cq" onclick="chQty('${id}',-1)">−</button>
+        <span style="font-weight:700;font-size:0.8rem">${qty}</span>
+        <button class="cq" onclick="chQty('${id}',1)">+</button>
+      </div>
+    </div>`;
+  }).join(''):'<p style="color:var(--muted);text-align:center;padding:1.5rem;font-size:0.83rem">Savatcha bo\'sh</p>';
+  // Bundle chegirma
+  var bundleDisc = getBundleDiscount(cart);
+  var bundleCartEl = document.getElementById('bundleCartBanner');
+  if(bundleCartEl){
+    if(bundleDisc > 0){
+      bundleCartEl.style.display = 'block';
+      bundleCartEl.innerHTML = '<div class="bundle-banner">'+getMktT().bundle(MARKETING.bundleQty, MARKETING.bundleDiscount)+'</div>';
+    } else if(MARKETING.bundleEnabled){
+      bundleCartEl.style.display = 'block';
+      var needMore = MARKETING.bundleQty - Object.values(cart).reduce(function(s,v){return s+v;},0);
+      if(needMore > 0) bundleCartEl.innerHTML = '<div style="background:#fff3cd;border-radius:8px;padding:0.4rem 0.6rem;font-size:0.75rem;color:#856404;font-weight:600">&#127873; '+needMore+' ta ko&#39;proq olsangiz '+MARKETING.bundleDiscount+'% chegirma!</div>';
+    } else {
+      bundleCartEl.style.display = 'none';
+    }
+  }
+
+  // Bundle chegirmani hisoblash
+  var bundleDiscAmt = bundleDisc > 0 ? Math.round(total * bundleDisc / 100) : 0;
+  var promoDiscAmt = calcDiscount(total - bundleDiscAmt);
+  var totalDiscount = bundleDiscAmt + promoDiscAmt;
+
+  if(totalDiscount > 0){
+    document.getElementById('discountAmt').textContent = '-' + totalDiscount.toLocaleString() + ' ' + t.won;
+    document.getElementById('discountRow').style.display = 'flex';
+    document.getElementById('totalAmt').textContent = (total-totalDiscount).toLocaleString() + ' ' + t.won;
+  } else {
+    document.getElementById('discountRow').style.display = 'none';
+    document.getElementById('totalAmt').textContent = total.toLocaleString() + ' ' + t.won;
+  }
+
+  // Bepul yetkazish hisobi
+  var deliveryFeeEl = document.getElementById('deliveryFeeHint');
+  if(deliveryFeeEl) deliveryFeeEl.innerHTML = getDeliveryFeeHtml(total - (totalDiscount||0));
+
+  // Min order warning
+  var minWarnEl = document.getElementById('minOrderWarning');
+  if(minWarnEl){
+    var minWarn = checkMinOrder(total);
+    if(minWarn){ minWarnEl.textContent = minWarn; minWarnEl.style.display = 'block'; }
+    else { minWarnEl.style.display = 'none'; }
+  }
+}
+
+// ─────────────────────────────────────────
+// ORDER
+// ─────────────────────────────────────────
+async function submitOrder(){
+  // Auto-fill from profile if empty
+  const prof = JSON.parse(localStorage.getItem('dona_profile')||'{}');
+
+  const name=document.getElementById('fName').value.trim();
+  const phone=document.getElementById('fPhone').value.trim();
+  const addr=document.getElementById('fAddr').value.trim();
+  const note=document.getElementById('fNote').value.trim();
+  // Min order tekshiruv
+  if(MARKETING.minOrderEnabled && total < MARKETING.minOrderAmount){
+    alert(getMktT().minOrderWarn(MARKETING.minOrderAmount, MARKETING.minOrderAmount - total));
+    return;
+  }
+  if(!name||!phone||!addr){alert(lang==='uz'?"Barcha maydonlarni to'ldiring!":lang==='ru'?"Заполните все поля!":"모든 항목을 입력하세요!");return;}
+  if(!Object.keys(cart).length){alert("Savatcha boʻsh!");return;}
+  const btn=document.getElementById('submitBtn');
+  btn.innerHTML='<span class="spinner"></span>Yuborilmoqda...';btn.disabled=true;
+  const t=TEXTS[lang]||TEXTS.uz;
+  let total=0;
+  const itemsText=Object.entries(cart).map(([id,qty])=>{
+    const p=PRODS.find(x=>x.id===id);const sub=p.price*qty;total+=sub;
+    return `${p.emoji} ${p[lang]||p.uz} x${qty} = ${sub.toLocaleString()} ₩`;
+  }).join('\n');
+  const bundleDiscPct = getBundleDiscount(cart);
+  const bundleDiscAmt2 = bundleDiscPct > 0 ? Math.round(total * bundleDiscPct / 100) : 0;
+  const discount = calcDiscount(total - bundleDiscAmt2);
+  const finalTotal = total - discount - bundleDiscAmt2;
+  const oid=new Date().toISOString().replace(/\D/g,'').slice(6,14);
+  const promoLine = activePromo ? `\n🎁 Promo: ${activePromo.code} (-${discount.toLocaleString()} ₩)` : '';
+  // Guruhga to'liq xabar
+  var bankInfo = PAY.bank ? '\n\n💳 <b>To\'lov:</b>\n🏦 '+PAY.bank.replace(/\n/g,' ')+(PAY.account?'\n💰 Hisob: <code>'+PAY.account+'</code>':'')+(PAY.owner?'\n👤 Egasi: '+PAY.owner:'') : '';
+  const msg=`🛒 <b>VEB-SAYT #${oid}</b>\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n`+(note?`💬 ${note}\n`:'')+`🌐 ${lang.toUpperCase()}\n\n${itemsText}${promoLine}\n\n💰 <b>${finalTotal.toLocaleString()} ₩</b>`+bankInfo;
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:TG_CHAT,text:msg,parse_mode:'HTML'})});
+    const d=await r.json();
+    if(d.ok){
+      // Zaxirani kamaytirish
+      var stockChanged = false;
+      Object.entries(cart).forEach(function([id,qty]){
+        var p = PRODS.find(function(x){return x.id===id;});
+        if(p && p.stock!==null && p.stock!==undefined && p.stock!==''){
+          p.stock = Math.max(0, parseInt(p.stock) - qty);
+          stockChanged = true;
+        }
+      });
+      localStorage.setItem('dona_products', JSON.stringify(PRODS));
+      if(stockChanged) saveStockToFirebase();
+      // Promo kod ishlatilgan bo'lsa used++ qil va tozala
+      if(activePromo){
+        var pidx = PROMO_CODES.findIndex(function(c){return c.code===activePromo.code;});
+        if(pidx>-1){
+          PROMO_CODES[pidx].used = (PROMO_CODES[pidx].used||0)+1;
+          localStorage.setItem('dona_promos', JSON.stringify(PROMO_CODES));
+          renderPromoAdminList();
+        }
+        var spinWon = localStorage.getItem('dona_spin_promo');
+        if(spinWon){try{var sp=JSON.parse(spinWon);if(sp.code===activePromo.code)localStorage.removeItem('dona_spin_promo');}catch(err){}}
+        activePromo=null;
+        if(document.getElementById('promoInp')) document.getElementById('promoInp').value='';
+        if(document.getElementById('promoResult')) document.getElementById('promoResult').textContent='';
+        if(document.getElementById('discountRow')) document.getElementById('discountRow').style.display='none';
+      }
+      // Xaridorga to'lov ma'lumotlarini bot orqali yuborish uchun deep link
+      if(PAY.bank){
+        var payText = encodeURIComponent(
+          'Buyurtma_'+oid+
+          '__Bank:'+PAY.bank.replace(/\n/g,' ')+
+          (PAY.account?'__Hisob:'+PAY.account:'')+
+          (PAY.owner?'__Egasi:'+PAY.owner:'')
+        );
+        var botUser = (SETT.botUser||'Donafood_bot').replace('@','');
+        localStorage.setItem('dona_last_order_bot', 'https://t.me/'+botUser+'?start='+payText);
+        localStorage.setItem('dona_last_order_id', oid);
+        localStorage.setItem('dona_last_order_total', finalTotal.toLocaleString());
+      }
+      closeCart();
+      document.getElementById('doneOverlay').classList.add('show');
+      renderDoneInfo(oid, finalTotal);
+      // Xaridorga Telegram orqali to'lov ma'lumotlarini yuborish
+      if(PAY.bank && SETT.adminTg){
+        const tgUser = SETT.adminTg.replace('@','');
+        const bankMsg = encodeURIComponent("Buyurtma qabul qilindi!\n\nTo&#39;lov ma&#39;lumotlari:\n"+PAY.bank+"\n\nTo'lov qilgandan so'ng chekni shu yerga yuboring.");
+        setTimeout(()=>{
+          if(confirm("To&#39;lov ma&#39;lumotlarini Telegram orqali olmoqchimisiz?")){
+            window.open("https://t.me/"+tgUser+"?start=payment","_blank");
+          }
+        }, 1500);
+      }
+      // Show payment info
+      const payBox = document.getElementById('donePayInfo');
+      if(payBox && PAY.bank){
+        const tg = SETT.adminTg||'@mr_yigitaliev';
+        const tgUser = tg.replace('@','');
+        // PAY.bank admin kiritadi — lekin xavfsiz render
+        var ph = '<div style="font-weight:700;margin-bottom:4px">&#128179; Bank ma&#39;lumoti:</div>';
+        ph += '<div>'+esc(PAY.bank).replace(/\n/g,'<br>')+'</div>';
+        ph += '<div style="margin-top:8px">Chekni yuboring: <a href="https://t.me/'+esc(tgUser)+'" target="_blank" style="color:var(--red);font-weight:700">'+esc(tg)+'</a></div>';
+        payBox.innerHTML = ph;
+      }
+      // Buyurtma tarixiga to'liq ma'lumot bilan saqlash
+      var orderData = {
+        id: oid,
+        name: name,
+        phone: phone,
+        addr: addr,
+        note: note || '',
+        items: itemsText,
+        total: finalTotal.toLocaleString(),
+        promo: activePromo ? activePromo.code : '',
+        bank: PAY.bank || '',
+        account: PAY.account || '',
+        owner: PAY.owner || '',
+        tgUserId: TG_USER_ID || '',
+        status: 'pending',
+        createdAt: Date.now()
+      };
+      saveOrderToHistory(orderData);
+
+      // Admin ga inline keyboard bilan yuborish
+      sendOrderToAdmin(orderData);
+
+      // Xaridorga bot xabari (agar TG ulangan bo'lsa)
+      if(TG_USER_ID){
+        var userText = '&#128722; Buyurtmangiz #'+oid+' qabul qilindi!\n\n'+itemsText+'\n\n&#128176; '+finalTotal.toLocaleString()+' &#8361;\n\nAdmin tasdiqlashini kuting...';
+        sendTelegramMsg(TG_USER_ID, userText);
+      }
+      cart={};['fName','fPhone','fAddr','fNote'].forEach(i=>document.getElementById(i).value='');
+      document.getElementById('cartBadge').style.display='none';
+      renderProds();
+    }else throw new Error(d.description);
+  }catch(e){alert('Xatolik! Bot orqali buyurtma bering: t.me/Donafood_bot');}
+  btn.innerHTML=t.submit_btn||'✅ Buyurtma Berish';btn.disabled=false;
+}
+
+// ─────────────────────────────────────────
+// ADMIN PANEL
+// ─────────────────────────────────────────
+
+
+// ─────────────────────────────────────────
+// PAROL XAVFSIZLIGI — SHA-256 hash
+// ─────────────────────────────────────────
+
+// ─── PRODUCTS ADMIN ───
+
+function fillCatSelect(sel){
+  document.getElementById('peCat').innerHTML=CATS.filter(c=>c.id!=='all').map(c=>`<option value="${c.id}"${c.id===sel?' selected':''} >${c.emoji} ${c.uz}</option>`).join('');
+}
+function closeProdEdit(){
+  document.getElementById('prodEditOverlay').classList.remove('show');
+  document.body.style.overflow='hidden'; // adminOverlay hali ochiq
+}
+function showPETab(n,btn){document.querySelectorAll('#prodEditOverlay .atab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('#prodEditOverlay .atab-c').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('petab-'+n).classList.add('active');}
+
+// ─── CATS ADMIN ───
+function editCat(i){
+  const c=CATS[i];
+  const img=prompt('Rasm URL (bo\'sh qoldiring = emoji):', c.img||'');
+  if(img===null)return;
+  const emoji=prompt('Emoji:', c.emoji||'🍽️');
+  if(emoji===null)return;
+  const uz=prompt('O\'zbek nomi:', c.uz);
+  if(!uz)return;
+  CATS[i]={...c, img:img.trim(), emoji:emoji||c.emoji, uz};
+  localStorage.setItem('dona_cats',JSON.stringify(CATS));
+  renderAdminCats();renderCats();
+}
+function addCat(){
+  const uz=document.getElementById('ncUz').value.trim();
+  if(!uz){alert('Nomi kiriting!');return;}
+  CATS.push({
+    id:document.getElementById('ncId').value||uz.toLowerCase().replace(/\s+/g,'_'),
+    emoji:document.getElementById('ncEmoji').value||'🍽️',
+    img:document.getElementById('ncImg').value.trim(),
+    uz,
+    ru:document.getElementById('ncRu').value||uz,
+    ko:document.getElementById('ncKo').value||uz
+  });
+  ['ncEmoji','ncImg','ncUz','ncRu','ncKo','ncId'].forEach(id=>document.getElementById(id).value='');
+  localStorage.setItem('dona_cats',JSON.stringify(CATS));
+  renderAdminCats();renderCats();
+}
+
+// ─── TEXTS ADMIN ───
+const TEXT_KEYS=[
+  ['hero1_badge','Banner 1 — Yuqori yozuv'],['hero1_title','Banner 1 — Sarlavha'],['hero1_sub','Banner 1 — Tavsif'],['hero1_btn','Banner 1 — Tugma'],
+  ['hero2_badge','Banner 2 — Yuqori yozuv'],['hero2_title','Banner 2 — Sarlavha'],['hero2_sub','Banner 2 — Tavsif'],['hero2_btn','Banner 2 — Tugma'],
+  ['hero3_badge','Banner 3 — Yuqori yozuv'],['hero3_title','Banner 3 — Sarlavha'],['hero3_sub','Banner 3 — Tavsif'],['hero3_btn','Banner 3 — Tugma'],
+  ['pop_title','Mashhur Taomlar — Sarlavha'],['main_title','Barcha Mahsulotlar — Sarlavha'],
+  ['tg_title','Telegram — Sarlavha'],['tg_sub','Telegram — Tavsif'],['tg_btn','Telegram — Tugma'],
+  ['submit_btn','Buyurtma tugmasi'],['done_title','Muvaffaqiyat — Sarlavha'],['done_sub','Muvaffaqiyat — Tavsif'],
+];
+function savePayAndGitHub(){
+  PAY={bank:document.getElementById('aBank').value,account:document.getElementById('aAcc').value,owner:document.getElementById('aOwner').value,msg:document.getElementById('aPayMsg').value};
+  localStorage.setItem('dona_payment',JSON.stringify(PAY));
+  initPay();
+  saveToGitHub('savePayStatus');
+}
+
+// ─── FIREBASE ───
+let db = null;
+
+function initFirebase(){
+  try {
+    // XAVFSIZLIK TAVSIYASI: Firebase Console da Security Rules ni o'rnating:
+    // {
+    //   "rules": {
+    //     "stock": { ".read": true, ".write": false },  // faqat admin yoza oladi
+    //     "orders": { ".read": false, ".write": true }   // faqat yozish
+    //   }
+    // }
+    var firebaseConfig = {
+      databaseURL: "https://dona-food-default-rtdb.asia-southeast1.firebasedatabase.app"
+    };
+    if(!firebase.apps || !firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    db = firebase.database();
+    loadStockFromFirebase();
+  } catch(e) {
+    console.warn('Firebase yuklanmadi:', e.message);
+  }
+}
+
+// Firebase dan zaxirani yukla
+function loadStockFromFirebase(){
+  if(!db) return;
+  db.ref('stock').on('value', snap=>{
+    const data = snap.val();
+    if(!data) return;
+    let changed = false;
+    PRODS.forEach(p=>{
+      if(data[p.id] !== undefined){
+        p.stock = data[p.id];
+        changed = true;
+      }
+    });
+    if(changed){
+      localStorage.setItem('dona_products', JSON.stringify(PRODS));
+      renderProds();
+    }
+  });
+}
+
+// Firebase ga zaxirani saqlash
+function saveStockToFirebase(){
+  if(!db) return;
+  const stockData = {};
+  PRODS.forEach(p=>{
+    if(p.stock !== null && p.stock !== undefined && p.stock !== ''){
+      stockData[p.id] = parseInt(p.stock)||0;
+    }
+  });
+  db.ref('stock').set(stockData);
+}
+
+// ─── GITHUB SAVE ───
+
+function showStatus(id,msg,type){
+  const el=document.getElementById(id);
+  if(!el)return;
+  el.textContent=msg;
+  el.className='status-msg '+(type==='ok'?'status-ok':type==='err'?'status-err':'');
+  el.style.display='block';
+}
+
+// ─────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────
+// DOM tayyor bo'lgach ishga tushiramiz — null classList xatosini oldini olish uchun
+
+
+function renderDoneInfo(oid, total){
+  if(!PAY.bank) return;
+  var tgAdmin = (SETT.adminTg||'@mr_yigitaliev').replace('@','');
+
+  // Bank blokini ko'rsatamiz
+  var bankBlock = document.getElementById('doneBankBlock');
+  var bankInfo  = document.getElementById('doneBankInfo');
+  var copyBtn   = document.getElementById('doneCopyBtn');
+  var tgLink    = document.getElementById('doneTgLink');
+
+  if(!bankBlock) return;
+  bankBlock.style.display = 'block';
+
+  var info = '';
+  if(PAY.bank)    info += '<b>Bank:</b> '+esc(PAY.bank.replace(/\n/g,' '))+'<br>';
+  if(PAY.account) info += '<b>Hisob:</b> <span style="font-size:1rem;font-weight:800;letter-spacing:0.05em;color:#2c3e7a">'+esc(PAY.account)+'</span><br>';
+  if(PAY.owner)   info += '<b>Egasi:</b> '+esc(PAY.owner)+'<br>';
+  info += '<b>Summa:</b> <span style="color:#c0392b;font-weight:700">'+total.toLocaleString()+' &#8361;</span>';
+  bankInfo.innerHTML = info;
+
+  // Nusxalash tugmasi
+  if(PAY.account && copyBtn){
+    copyBtn.style.display = 'block';
+  }
+
+  // Telegram chek yuborish linki
+  if(tgLink){
+    tgLink.href = 'https://t.me/'+esc(tgAdmin);
+    tgLink.style.display = 'block';
+  }
+}
+
+function copyAccount(){
+  if(!PAY.account) return;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(PAY.account.replace(/[^0-9-]/g,'')).then(function(){
+      alert('Hisob raqam nusxalandi: '+PAY.account);
+    });
+  } else {
+    // Fallback
+    var ta = document.createElement('textarea');
+    ta.value = PAY.account.replace(/[^0-9-]/g,'');
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('Hisob raqam nusxalandi!');
+  }
+}
+
+
+// ═══════════════════════════════════════════════════════
+// TELEGRAM ULASH TIZIMI
+// ═══════════════════════════════════════════════════════
+
+function linkTelegram(){
+  var botUser = (SETT.botUser||'Donafood_bot').replace('@','');
+  // Telefon raqamni identifier sifatida ishlatamiz
+  var phone = (localStorage.getItem('dona_prof_phone')||'').replace(/[^0-9]/g,'');
+  if(!phone){
+    // Profil telefon raqamidan olamiz
+    var profPhone = document.getElementById('profPhone');
+    phone = profPhone ? profPhone.value.replace(/[^0-9]/g,'') : '';
+  }
+  if(!phone){
+    alert('Avval profilga telefon raqamingizni saqlang!');
+    return;
+  }
+  // Noyob token yaratamiz
+  var token = 'TG' + phone + '_' + Date.now().toString(36).toUpperCase();
+  localStorage.setItem('dona_tg_link_token', token);
+  localStorage.setItem('dona_tg_link_phone', phone);
+  // Botga deep link
+  var deepLink = 'https://t.me/'+botUser+'?start='+token;
+  window.open(deepLink, '_blank');
+  // Tasdiq kutish
+  document.getElementById('tgLinkStatus').textContent = '⏳ Botga /start_'+token.slice(-6)+' yuborilgandan keyin avtomatik ulanadi...';
+  // 30 sekund kutib localStorage ni tekshiramiz
+  var checkInterval = setInterval(function(){
+    var saved = localStorage.getItem('dona_tg_user_id');
+    if(saved){
+      clearInterval(checkInterval);
+      updateTgLinkUI(saved, localStorage.getItem('dona_tg_username')||'');
+    }
+  }, 2000);
+  setTimeout(function(){ clearInterval(checkInterval); }, 60000);
+}
+
+function updateTgLinkUI(tgId, username){
+  var block = document.getElementById('tgLinkBlock');
+  var btn = document.getElementById('tgLinkBtn');
+  var info = document.getElementById('tgLinkedInfo');
+  var status = document.getElementById('tgLinkStatus');
+  if(block) block.style.background = '#e8f5e9';
+  if(block) block.style.borderColor = '#27ae60';
+  if(btn) btn.style.display = 'none';
+  if(status) status.textContent = '';
+  if(info){
+    info.style.display = 'block';
+    info.innerHTML = '&#9989; Telegram ulandi' + (username ? ': @'+esc(username) : '') + ' <button onclick="unlinkTelegram()" style="background:none;border:none;color:#e74c3c;font-size:0.75rem;cursor:pointer;font-family:Inter,sans-serif">Uzish</button>';
+  }
+}
+
+function unlinkTelegram(){
+  if(!confirm('Telegram ulanishini uzmoqchimisiz?')) return;
+  TG_USER_ID = '';
+  TG_USERNAME = '';
+  localStorage.removeItem('dona_tg_user_id');
+  localStorage.removeItem('dona_tg_username');
+  localStorage.removeItem('dona_tg_link_token');
+  // UI ni qaytarish
+  var block = document.getElementById('tgLinkBlock');
+  var btn = document.getElementById('tgLinkBtn');
+  var info = document.getElementById('tgLinkedInfo');
+  var status = document.getElementById('tgLinkStatus');
+  if(block){ block.style.background = '#f0f8ff'; block.style.borderColor = '#2196F3'; }
+  if(btn) btn.style.display = 'block';
+  if(info) info.style.display = 'none';
+  if(status) status.textContent = 'Botga ulanib buyurtma holatini Telegramda oling';
+}
+
+// Profil ochilganda TG holatini ko'rsatamiz
+function renderTgLinkStatus(){
+  var tgId = localStorage.getItem('dona_tg_user_id');
+  var tgUser = localStorage.getItem('dona_tg_username');
+  if(tgId){
+    TG_USER_ID = tgId;
+    TG_USERNAME = tgUser || '';
+    updateTgLinkUI(tgId, tgUser||'');
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// BUYURTMA TARIXI TIZIMI
+// ═══════════════════════════════════════════════════════
+
+var ORDER_STATUS_LABELS = {
+  'pending':    {uz:'&#9203; To&#39;lov kutilmoqda', ru:'&#9203; &#1054;&#1078;&#1080;&#1076;&#1072;&#1077;&#1090; &#1086;&#1087;&#1083;&#1072;&#1090;&#1099;', ko:'&#9203; &#44208;&#51228; &#45824;&#44592;&#51473;'},
+  'confirmed':  {uz:'&#9989; To&#39;lov tasdiqlandi', ru:'&#9989; &#1054;&#1087;&#1083;&#1072;&#1090;&#1072; &#1087;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1072;', ko:'&#9989; &#44208;&#51228; &#54869;&#51064;&#46121;'},
+  'preparing':  {uz:'&#128104;&#8205;&#127859; Tayyorlanmoqda', ru:'&#128104;&#8205;&#127859; &#1043;&#1086;&#1090;&#1086;&#1074;&#1080;&#1090;&#1089;&#1103;', ko:'&#128104;&#8205;&#127859; &#51456;&#48708;&#51473;'},
+  'shipped':    {uz:'&#128666; Yo&#39;lda', ru:'&#128666; &#1042; &#1087;&#1091;&#1090;&#1080;', ko:'&#128666; &#48176;&#49569;&#51473;'},
+  'delivered':  {uz:'&#127881; Yetkazildi', ru:'&#127881; &#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1086;', ko:'&#127881; &#48176;&#45813;&#50756;&#47308;'},
+  'cancelled':  {uz:'&#10060; Bekor qilindi', ru:'&#10060; &#1054;&#1090;&#1084;&#1077;&#1085;&#1077;&#1085;&#1086;', ko:'&#10060; &#52712;&#49548;&#46121;'}
+};
+
+function getStatusLabel(status){
+  var s = ORDER_STATUS_LABELS[status] || ORDER_STATUS_LABELS['pending'];
+  return s[lang] || s['uz'];
+}
+
+function getStatusClass(status){
+  var map = {
+    'pending':'status-pending','confirmed':'status-confirmed',
+    'preparing':'status-preparing','shipped':'status-shipped',
+    'delivered':'status-delivered','cancelled':'status-cancelled'
+  };
+  return map[status]||'status-pending';
+}
+
+function saveOrderToHistory(orderData){
+  var hist = JSON.parse(localStorage.getItem('dona_order_history')||'[]');
+  hist.unshift(orderData);
+  // Faqat oxirgi 50 ta saqlash
+  if(hist.length > 50) hist = hist.slice(0,50);
+  localStorage.setItem('dona_order_history', JSON.stringify(hist));
+}
+
+function updateOrderStatus(orderId, newStatus){
+  var hist = JSON.parse(localStorage.getItem('dona_order_history')||'[]');
+  var idx = hist.findIndex(function(o){ return o.id === orderId; });
+  if(idx > -1){
+    hist[idx].status = newStatus;
+    hist[idx].updatedAt = Date.now();
+    localStorage.setItem('dona_order_history', JSON.stringify(hist));
+    renderOrderHistory();
+  }
+}
+
+function renderOrderHistory(){
+  var el = document.getElementById('orderHistoryList');
+  if(!el) return;
+  var hist = JSON.parse(localStorage.getItem('dona_order_history')||'[]');
+  if(!hist.length){
+    el.innerHTML = '<p style="color:var(--muted);font-size:0.82rem;text-align:center;padding:0.5rem">Hali buyurtma yo&#39;q</p>';
+    return;
+  }
+  var html = '';
+  hist.forEach(function(o){
+    var date = o.createdAt ? new Date(o.createdAt).toLocaleDateString('ko-KR') : '';
+    var statusLabel = getStatusLabel(o.status||'pending');
+    var statusClass = getStatusClass(o.status||'pending');
+    html += '<div class="order-history-item">';
+    html += '<div class="order-h-top">';
+    html += '<span class="order-h-id">#'+esc(o.id)+'</span>';
+    html += '<span class="order-status-badge '+statusClass+'">'+statusLabel+'</span>';
+    html += '</div>';
+    html += '<div class="order-h-date">'+esc(date)+'</div>';
+    html += '<div class="order-h-items">'+esc(o.items||'')+'</div>';
+    html += '<div class="order-h-total">'+esc(String(o.total||''))+'</div>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════
+// ADMIN TELEGRAM TASDIQLASH TIZIMI
+// Inline keyboard bilan: ✅ Tasdiqlash | ❌ Bekor qilish
+// ═══════════════════════════════════════════════════════
+
+async function sendOrderToAdmin(orderData){
+  var adminId = TG_ADMIN_ID || '961419057';
+  var itemsText = orderData.items || '';
+  var promoLine = orderData.promo ? '\n🎁 Promo: '+orderData.promo : '';
+
+  var text = '🔔 <b>YANGI BUYURTMA #'+orderData.id+'</b>\n';
+  text += '👤 '+orderData.name+'\n';
+  text += '📱 '+orderData.phone+'\n';
+  text += '📍 '+orderData.addr+'\n';
+  if(orderData.note) text += '💬 '+orderData.note+'\n';
+  text += '\n'+itemsText+promoLine;
+  text += '\n\n💰 <b>'+String(orderData.total)+' ₩</b>';
+  if(orderData.tgUserId) text += '\n🆔 TG: '+orderData.tgUserId;
+
+  // Inline keyboard
+  var keyboard = {
+    inline_keyboard: [[
+      {text: '✅ Tasdiqlash', callback_data: 'confirm_'+orderData.id},
+      {text: '❌ Bekor qilish', callback_data: 'cancel_'+orderData.id}
+    ]]
+  };
+
+  try {
+    var res = await fetch('https://api.telegram.org/bot'+TG_BOT_TOKEN+'/sendMessage',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        chat_id: adminId,
+        text: text,
+        parse_mode: 'HTML',
+        reply_markup: JSON.stringify(keyboard)
+      })
+    });
+    var data = await res.json();
+    if(data.ok) localStorage.setItem('dona_admin_msg_'+orderData.id, String(data.result.message_id));
+    return data.ok;
+  } catch(e){
+    console.warn('Admin xabar ketmadi:', e.message);
+    return false;
+  }
+}
+
+async function sendUserConfirmation(tgUserId, orderData){
+  if(!tgUserId) return;
+  var botUser = (SETT.botUser||'Donafood_bot').replace('@','');
+  var tgAdmin = (SETT.adminTg||'@mr_yigitaliev').replace('@','');
+
+  var text = '✅ <b>Buyurtmangiz tasdiqlandi!</b>\n\n';
+  text += '🛒 Buyurtma #'+orderData.id+'\n';
+  text += orderData.items+'\n';
+  text += '\n💰 <b>'+String(orderData.total)+' ₩</b>\n\n';
+  text += '&#128179; <b>To&#39;lov ma&#39;lumotlari:</b>\n';
+  if(orderData.bank)    text += '🏦 '+orderData.bank.replace(/\n/g,' ')+'\n';
+  if(orderData.account) text += '💳 Hisob: <code>'+orderData.account+'</code>\n';
+  if(orderData.owner)   text += '👤 Egasi: '+orderData.owner+'\n';
+  text += '\n&#128248; To&#39;lov qilgandan so&#39;ng chekni '+tgAdmin+' ga yuboring';
+
+  try {
+    await fetch('https://api.telegram.org/bot'+TG_BOT_TOKEN+'/sendMessage',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({chat_id: tgUserId, text: text, parse_mode: 'HTML'})
+    });
+  } catch(e){ console.warn('User xabar ketmadi:', e.message); }
+}
+
+async function sendToGroup(orderData){
+  var groupId = TG_GROUP_ID || '-1003984119169';
+  var text = '📦 <b>TASDIQLANGAN BUYURTMA #'+orderData.id+'</b>\n';
+  text += '👤 '+orderData.name+'\n';
+  text += '📱 '+orderData.phone+'\n';
+  text += '📍 '+orderData.addr+'\n';
+  text += '\n'+orderData.items;
+  text += '\n\n💰 <b>'+String(orderData.total)+' ₩</b>';
+  text += '\n&#9989; Status: To&#39;lov tasdiqlandi';
+
+  try {
+    await fetch('https://api.telegram.org/bot'+TG_BOT_TOKEN+'/sendMessage',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({chat_id: groupId, text: text, parse_mode: 'HTML'})
+    });
+  } catch(e){ console.warn('Guruh xabar ketmadi:', e.message); }
+}
+
+// Telegram Webhook polling — admin callback larini qabul qilish
+// (getUpdates usuli — serverless)
+var _lastUpdateId = parseInt(localStorage.getItem('dona_last_update')||'0');
+
+async function pollTelegramUpdates(){
+  try {
+    var data = await tgGetUpdates(_lastUpdateId+1);
+    if(!data.ok || !data.result.length) return;
+
+    data.result.forEach(function(update){
+      _lastUpdateId = update.update_id;
+      localStorage.setItem('dona_last_update', String(_lastUpdateId));
+
+      // Admin callback_query (✅/❌ tugmalar)
+      if(update.callback_query){
+        var cb = update.callback_query;
+        var cbData = cb.data || '';
+
+        if(cbData.startsWith('confirm_')){
+          var orderId = cbData.replace('confirm_','');
+          handleAdminConfirm(orderId, cb);
+        } else if(cbData.startsWith('cancel_')){
+          var orderId = cbData.replace('cancel_','');
+          handleAdminCancel(orderId, cb);
+        }
+      }
+
+      // Foydalanuvchi /start_TOKEN yuborsa — TG ID saqlanadi
+      if(update.message && update.message.text){
+        var msgText = update.message.text;
+        var fromId = String(update.message.from.id);
+        var fromUser = update.message.from.username || '';
+
+        if(msgText.startsWith('/start TG') || msgText.startsWith('/start_TG')){
+          var token = msgText.split(' ')[1] || msgText.replace('/start_','');
+          var savedToken = localStorage.getItem('dona_tg_link_token');
+          if(token === savedToken){
+            TG_USER_ID = fromId;
+            TG_USERNAME = fromUser;
+            localStorage.setItem('dona_tg_user_id', fromId);
+            localStorage.setItem('dona_tg_username', fromUser);
+            updateTgLinkUI(fromId, fromUser);
+            // Foydalanuvchiga tasdiqlash xabari
+            sendTelegramMsg(fromId, '✅ Telegram muvaffaqiyatli ulandi! Endi buyurtmalaringiz holati haqida xabar olasiz.');
+          }
+        }
+      }
+    });
+  } catch(e){ /* offline — jimgina o'tamiz */ }
+}
+
+async function handleAdminConfirm(orderId, cb){
+  var hist = JSON.parse(localStorage.getItem('dona_order_history')||'[]');
+  var order = hist.find(function(o){ return o.id === orderId; });
+
+  // Callback query ga javob (tugmani o'chirish)
+  await tgAnswerCallback({callback_query_id: cb.id, text: '&#9989; Tasdiqlandi!'});
+
+  // Xabarni yangilash (inline keyboard o'chirish)
+  var msgId = localStorage.getItem('dona_admin_msg_'+orderId);
+  if(msgId){
+    var confirmText = cb.message ? cb.message.text : '';
+    confirmText += '\n\n✅ <b>TASDIQLANDI</b> — '+new Date().toLocaleString('ko-KR');
+    await fetch('https://api.telegram.org/bot'+TG_BOT_TOKEN+'/editMessageText',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        chat_id: TG_ADMIN_ID||'961419057',
+        message_id: parseInt(msgId),
+        text: confirmText,
+        parse_mode: 'HTML'
+      })
+    });
+  }
+
+  // Status yangilash
+  updateOrderStatus(orderId, 'confirmed');
+
+  // Xaridorga xabar
+  if(order && order.tgUserId){
+    await sendUserConfirmation(order.tgUserId, order);
+  }
+
+  // Guruhga yuborish
+  if(order) await sendToGroup(order);
+}
+
+async function handleAdminCancel(orderId, cb){
+  // Callback query ga javob
+  await tgAnswerCallback({callback_query_id: cb.id, text: '&#10060; Bekor qilindi'});
+
+  // Status yangilash
+  updateOrderStatus(orderId, 'cancelled');
+
+  var hist = JSON.parse(localStorage.getItem('dona_order_history')||'[]');
+  var order = hist.find(function(o){ return o.id === orderId; });
+
+  // Xaridorga xabar
+  if(order && order.tgUserId){
+    var cancelText = '&#10060; Buyurtma #'+orderId+' bekor qilindi.\nSavollar uchun: '+(SETT.adminTg||'@mr_yigitaliev');
+    await sendTelegramMsg(order.tgUserId, cancelText);
+  }
+}
+
+
+// Profil labellarini til bilan yangilaymiz
+function updateProfileLang(){
+  var t = TEXTS[lang]||TEXTS.uz;
+  var labels = {
+    uz: {name:'ISMINGIZ', phone:'TELEFON RAQAM', addr:'MANZIL', note:'IZOH (IXTIYORIY)',
+         save:'Saqlash', title:'Mening Profilim', payTitle:"To'lov ma'lumotlari",
+         hist:'Buyurtmalar Tarixi', payNote:"To'lov qilgandan so'ng chekni",
+         payNote2:'ga yuboring', tgTitle:'Telegram Ulash',
+         tgDesc:'Botga ulanib buyurtma holatini Telegramda oling',
+         tgBtn:'Telegramga ulash'},
+    ru: {name:'ВАШЕ ИМЯ', phone:'НОМЕР ТЕЛЕФОНА', addr:'АДРЕС', note:'ПРИМЕЧАНИЕ (НЕОБЯЗАТЕЛЬНО)',
+         save:'Сохранить', title:'Мой Профиль', payTitle:'Реквизиты оплаты',
+         hist:'История заказов', payNote:'После оплаты отправьте чек',
+         payNote2:'по ссылке', tgTitle:'Подключить Telegram',
+         tgDesc:'Получайте статус заказа в Telegram',
+         tgBtn:'Подключить Telegram'},
+    ko: {name:'이름', phone:'전화번호', addr:'주소', note:'메모 (선택사항)',
+         save:'저장', title:'내 프로필', payTitle:'결제 정보',
+         hist:'주문 내역', payNote:'결제 후 영수증을',
+         payNote2:'에 보내주세요', tgTitle:'텔레그램 연결',
+         tgDesc:'텔레그램으로 주문 상태를 받아보세요',
+         tgBtn:'텔레그램 연결'}
+  };
+  var l = labels[lang]||labels.uz;
+  var set = function(id, val){ var e=document.getElementById(id); if(e) e.textContent=val; };
+  var setInner = function(id, val){ var e=document.getElementById(id); if(e) e.innerHTML=val; };
+  set('profLabelName', l.name);
+  set('profLabelPhone', l.phone);
+  set('profLabelAddr', l.addr);
+  set('profLabelNote', l.note);
+  set('profSaveBtn', l.save);
+  set('profTitle', l.title);
+  setInner('profPayTitle', l.payTitle);
+  set('profHistTitleTxt', l.hist);
+  var noteEl = document.getElementById('profPayNote');
+  if(noteEl) noteEl.innerHTML = l.payNote;
+  var note2El = document.getElementById('profPayNote2');
+  if(note2El) note2El.innerHTML = l.payNote2;
+  // TG blok matnlari
+  var tgTitle = document.querySelector('#tgLinkBlock div[style*="font-weight:700"]');
+  if(tgTitle) tgTitle.textContent = l.tgTitle;
+  var tgStatus = document.getElementById('tgLinkStatus');
+  var tgId = localStorage.getItem('dona_tg_user_id');
+  if(tgStatus && !tgId) tgStatus.textContent = l.tgDesc;
+  var tgBtn = document.getElementById('tgLinkBtn');
+  if(tgBtn) tgBtn.innerHTML = '&#128279; '+l.tgBtn;
+}
+
+// Banner adminni loadAdminData da chaqiramiz
+
+// ─────────────────────────────────────────
+// MAHSULOT RASM GALEREYASI
+// ─────────────────────────────────────────
+var _galleryIdx = 0;
+var _galleryImgs = [];
+
+function buildGallery(prod){
+  _galleryIdx = 0;
+  // Barcha rasmlarni yig'amiz: asosiy + qo'shimcha
+  _galleryImgs = [];
+  if(prod.img) _galleryImgs.push(prod.img);
+  if(prod.imgs && Array.isArray(prod.imgs)){
+    prod.imgs.forEach(function(u){ if(u && u !== prod.img) _galleryImgs.push(u); });
+  }
+  // Agar rasm yo'q bo'lsa emoji
+  if(!_galleryImgs.length) _galleryImgs.push(null);
+
+  var track = document.getElementById('pmGalleryTrack');
+  var dots  = document.getElementById('pmGalleryDots');
+  var prev  = document.getElementById('pmGalleryPrev');
+  var next  = document.getElementById('pmGalleryNext');
+  if(!track) return;
+
+  // Slides
+  track.innerHTML = _galleryImgs.map(function(url){
+    if(url){
+      return '<div class="prod-gallery-slide"><img src="'+esc(url)+'" onerror="this.parentElement.innerHTML=&#39;'+esc(prod.emoji||'&#127869;')+'&#39;"></div>';
+    }
+    return '<div class="prod-gallery-slide" style="font-size:5rem">'+(prod.emoji||'🍽️')+'</div>';
+  }).join('');
+
+  // Dots
+  if(_galleryImgs.length > 1){
+    dots.innerHTML = _galleryImgs.map(function(_, i){
+      return '<div class="prod-gallery-dot'+(i===0?' active':'')+'" onclick="goGallery('+i+')"></div>';
+    }).join('');
+    dots.style.display = 'flex';
+    if(prev) prev.style.display = 'flex';
+    if(next) next.style.display = 'flex';
+  } else {
+    dots.innerHTML = '';
+    dots.style.display = 'none';
+    if(prev) prev.style.display = 'none';
+    if(next) next.style.display = 'none';
+  }
+
+  // Touch swipe
+  var gallery = document.getElementById('pmGallery');
+  var startX = 0;
+  gallery.ontouchstart = function(e){ startX = e.touches[0].clientX; };
+  gallery.ontouchend = function(e){
+    var diff = startX - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 40) galleryNav(diff > 0 ? 1 : -1);
+  };
+
+  goGallery(0);
+}
+
+function goGallery(idx){
+  _galleryIdx = Math.max(0, Math.min(idx, _galleryImgs.length-1));
+  var track = document.getElementById('pmGalleryTrack');
+  if(track) track.style.transform = 'translateX(-'+(_galleryIdx*100)+'%)';
+  // Dots yangilash
+  document.querySelectorAll('#pmGalleryDots .prod-gallery-dot').forEach(function(d, i){
+    d.classList.toggle('active', i === _galleryIdx);
+  });
+}
+
+function galleryNav(dir){
+  var newIdx = _galleryIdx + dir;
+  if(newIdx < 0) newIdx = _galleryImgs.length - 1;
+  if(newIdx >= _galleryImgs.length) newIdx = 0;
+  goGallery(newIdx);
+}
+
+// Admin: qo'shimcha rasm qo'shish
+function addExtraImg(url){
+  var container = document.getElementById('extraImgsContainer');
+  if(!container) return;
+  var count = container.querySelectorAll('.extra-img-row').length;
+  if(count >= 4){
+    alert('Maksimal 4 ta qo&#39;shimcha rasm (asosiy bilan 5 ta)');
+    return;
+  }
+  var row = document.createElement('div');
+  row.className = 'extra-img-row';
+  var inp = document.createElement('input');
+  inp.placeholder = 'https://i.imgur.com/rasm.jpg';
+  inp.value = url || '';
+  inp.oninput = function(){
+    var thumb = row.querySelector('.extra-img-thumb');
+    if(this.value.startsWith('http')){
+      thumb.src = this.value;
+      thumb.style.display = 'block';
+    } else {
+      thumb.style.display = 'none';
+    }
+  };
+  var thumb = document.createElement('img');
+  thumb.className = 'extra-img-thumb';
+  if(url){ thumb.src = url; thumb.style.display = 'block'; }
+  var del = document.createElement('button');
+  del.className = 'extra-img-del';
+  del.innerHTML = '&#10006;';
+  del.onclick = function(){ row.remove(); };
+  row.appendChild(inp);
+  row.appendChild(thumb);
+  row.appendChild(del);
+  container.appendChild(row);
+}
+
+function updateImgPreview(){
+  var val = document.getElementById('peImg').value.trim();
+  var box = document.getElementById('peImgPreviewBox');
+  var img = document.getElementById('peImgPreview');
+  if(val.startsWith('http')){
+    box.style.display = 'block';
+    img.src = val;
+    img.style.display = 'block';
+  } else {
+    box.style.display = 'none';
+  }
+}
+
+function getExtraImgs(){
+  var imgs = [];
+  document.querySelectorAll('.extra-img-row input').forEach(function(inp){
+    var v = inp.value.trim();
+    if(v) imgs.push(v);
+  });
+  return imgs;
+}
+
+function loadExtraImgs(imgs){
+  var container = document.getElementById('extraImgsContainer');
+  if(!container) return;
+  container.innerHTML = '';
+  if(imgs && imgs.length){
+    imgs.forEach(function(url){ addExtraImg(url); });
+  }
+}
+
+
+// ─────────────────────────────────────────
+// BADGE TIZIMI
+// ─────────────────────────────────────────
+
+function getBadge(prod){
+  var badgeId = prod.badgeId !== undefined ? prod.badgeId : 'frozen';
+  if(badgeId === 'none' || badgeId === '') return null;
+  var badge = PROD_BADGES.find(function(b){ return b.id === badgeId; });
+  if(!badge) badge = PROD_BADGES[0]; // default frozen
+  if(!badge || (!badge.emoji && !badge.text)) return null;
+  return badge;
+}
+
+function getBadgeHtml(prod){
+  var b = getBadge(prod);
+  if(!b) return '';
+  return '<div class="prod-unit">'+esc(b.emoji)+' '+esc(b.text)+'</div>';
+}
+
+
+// ═══════════════════════════════════════════════════════
+// MARKETING TIZIMI — 5 ta funksiya
+// ═══════════════════════════════════════════════════════
+
+// Ko'p tilli marketing matnlari
+var MKT_TEXTS = {
+  uz: {
+    lowStock:    function(n){ return '⚡ Faqat '+n+' ta qoldi!'; },
+    minOrder:    function(n){ return '&#128722; Minimum buyurtma: '+n.toLocaleString()+' &#8361;'; },
+    minOrderWarn:function(n,diff){ return '&#9888;&#65039; Yana '+diff.toLocaleString()+' &#8361; qo&#39;shsangiz buyurtma berishingiz mumkin'; },
+    bundle:      function(q,d){ return '🎁 '+q+' ta olsang '+d+'% arzon!'; },
+    referral:    function(d){ return '&#128279; Do&#39;stingni taklif qil — ikkalangizga '+d+'% chegirma!'; },
+    referralCopy:'Havolani nusxalash',
+    referralCopied:'✅ Nusxalandi!',
+    deadline:    function(h,isYesterday){ return '⏰ '+(isYesterday?'Ertaga':'Bugun')+' yetkazish uchun soat '+h+':00 gacha buyurtma bering!'; },
+    deadlinePassed: function(){ return '⏰ Bugungi buyurtma vaqti tugadi. Ertaga yetkaziladi.'; },
+  },
+  ru: {
+    lowStock:    function(n){ return '⚡ Осталось только '+n+'!'; },
+    minOrder:    function(n){ return '🛒 Минимальный заказ: '+n.toLocaleString()+' ₩'; },
+    minOrderWarn:function(n,diff){ return '⚠️ Добавьте ещё '+diff.toLocaleString()+' ₩ для оформления заказа'; },
+    bundle:      function(q,d){ return '🎁 Купи '+q+' и получи скидку '+d+'%!'; },
+    referral:    function(d){ return '🔗 Пригласи друга — оба получат скидку '+d+'%!'; },
+    referralCopy:'Скопировать ссылку',
+    referralCopied:'✅ Скопировано!',
+    deadline:    function(h,t){ return '⏰ Закажите до '+h+':00 для доставки '+(t?'завтра':'сегодня')+'!'; },
+    deadlinePassed: function(){ return '⏰ Время заказа истекло. Доставка завтра.'; },
+  },
+  ko: {
+    lowStock:    function(n){ return '⚡ '+n+'개 남았습니다!'; },
+    minOrder:    function(n){ return '🛒 최소 주문금액: '+n.toLocaleString()+' ₩'; },
+    minOrderWarn:function(n,diff){ return '⚠️ '+diff.toLocaleString()+' ₩ 더 담아야 주문 가능합니다'; },
+    bundle:      function(q,d){ return '🎁 '+q+'개 구매시 '+d+'% 할인!'; },
+    referral:    function(d){ return '🔗 친구 초대하면 둘 다 '+d+'% 할인!'; },
+    referralCopy:'링크 복사',
+    referralCopied:'✅ 복사됨!',
+    deadline:    function(h,t){ return '⏰ '+(t?'내일':'오늘')+' 배송은 '+h+'시 이전 주문!'; },
+    deadlinePassed: function(){ return '⏰ 오늘 주문 마감. 내일 배송됩니다.'; },
+  }
+};
+
+function getMktT(){ return MKT_TEXTS[lang] || MKT_TEXTS.uz; }
+
+// ─── 1. LOW STOCK BADGE ───
+function getLowStockHtml(prod){
+  if(!MARKETING.lowStockEnabled) return '';
+  if(prod.stock === null || prod.stock === undefined || prod.stock === '') return '';
+  var s = parseInt(prod.stock);
+  if(isNaN(s) || s <= 0 || s > MARKETING.lowStockThreshold) return '';
+  return '<span class="low-stock-badge">'+getMktT().lowStock(s)+'</span>';
+}
+
+// ─── 2. MIN ORDER CHECK ───
+function checkMinOrder(total){
+  if(!MARKETING.minOrderEnabled || !MARKETING.minOrderAmount) return null;
+  var min = parseInt(MARKETING.minOrderAmount);
+  if(total >= min) return null;
+  return getMktT().minOrderWarn(min, min - total);
+}
+
+// ─── 3. BUNDLE ───
+function getBundleDiscount(cart){
+  if(!MARKETING.bundleEnabled) return 0;
+  var totalQty = Object.values(cart).reduce(function(s,v){ return s+v; }, 0);
+  if(totalQty < MARKETING.bundleQty) return 0;
+  return MARKETING.bundleDiscount;
+}
+
+function getBundleBannerHtml(){
+  if(!MARKETING.bundleEnabled) return '';
+  var t = getMktT();
+  return '<div class="bundle-banner">'+t.bundle(MARKETING.bundleQty, MARKETING.bundleDiscount)+'</div>';
+}
+
+// ─── 4. REFERRAL ───
+function getReferralCode(){
+  var code = localStorage.getItem('dona_referral_code');
+  if(!code){
+    var phone = (localStorage.getItem('dona_prof_phone')||'').replace(/[^0-9]/g,'');
+    code = 'REF' + (phone ? phone.slice(-4) : Math.random().toString(36).slice(2,6).toUpperCase());
+    localStorage.setItem('dona_referral_code', code);
+    // Promo kodga ham qo'shamiz
+    var exists = PROMO_CODES.find(function(c){ return c.code === code; });
+    if(!exists && MARKETING.referralEnabled){
+      PROMO_CODES.push({
+        code: code, discount: MARKETING.referralDiscount,
+        type: 'percent', limit: null, expiry: '', used: 0, active: true
+      });
+      localStorage.setItem('dona_promos', JSON.stringify(PROMO_CODES));
+    }
+  }
+  return code;
+}
+
+function renderReferralCard(){
+  var el = document.getElementById('referralCard');
+  if(!el) return;
+  if(!MARKETING.referralEnabled){ el.style.display='none'; return; }
+  el.style.display = 'block';
+  var t = getMktT();
+  var code = getReferralCode();
+  var botUser = (SETT.botUser||'Donafood_bot').replace('@','');
+  var link = 'https://t.me/'+botUser+'?start=ref_'+code;
+  el.innerHTML = '<div class="referral-card">'
+    + '<div style="font-weight:700;margin-bottom:0.4rem">'+t.referral(MARKETING.referralDiscount)+'</div>'
+    + '<div style="font-size:0.8rem;margin-bottom:0.5rem;opacity:0.85">Kod: <b>'+esc(code)+'</b></div>'
+    + '<button id="refCopyBtn" data-link="'+esc(link)+'" onclick="copyReferral(this.dataset.link)" style="background:rgba(255,255,255,0.2);color:#fff;border:1.5px solid rgba(255,255,255,0.5);border-radius:8px;padding:0.4rem 0.8rem;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;width:100%">'
+    + t.referralCopy+'</button>'
+    + '</div>';
+}
+
+function copyReferral(link){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(link).then(function(){
+      var btn = document.getElementById('refCopyBtn');
+      if(btn){ btn.textContent = getMktT().referralCopied; setTimeout(function(){ renderReferralCard(); },2000); }
+    });
+  }
+}
+
+// ─── 5. DEADLINE BANNER ───
+function getDeadlineBannerHtml(){
+  if(!MARKETING.deliveryDeadlineEnabled) return '';
+  var t = getMktT();
+  var now = new Date();
+  var deadline = new Date();
+  deadline.setHours(MARKETING.deliveryDeadlineHour, 0, 0, 0);
+  var isPassed = now > deadline;
+  var isTomorrow = MARKETING.deliveryDeadlineTomorrow;
+  var msg = isPassed ? t.deadlinePassed() : t.deadline(MARKETING.deliveryDeadlineHour, isTomorrow);
+  return '<div class="deadline-banner">'+msg+'</div>';
+}
+
+function renderDeadlineBanner(){
+  var el = document.getElementById('deadlineBanner');
+  if(!el) return;
+  el.innerHTML = getDeadlineBannerHtml();
+  el.style.display = MARKETING.deliveryDeadlineEnabled ? 'block' : 'none';
+}
+
+// ─── ADMIN: Marketing sozlamalarini saqlash ───
+
+
+// ═══════════════════════════════════════════════════════
+// YETKAZISH SAHIFASI
+// ═══════════════════════════════════════════════════════
+
+// Yetkazish sozlamalari (admin paneldan boshqariladi)
+let DELIVERY = JSON.parse(localStorage.getItem('dona_delivery')||'null') || {
+  zones: [
+    {name:'📍 Seoul (서울)',    price:'3,000 ₩',  time:'1-2 kun', areas:'Gangnam, Mapo, Hongdae, Itaewon va barcha tumanlar'},
+    {name:'📍 Gyeonggi (경기)', price:'5,000 ₩',  time:'1-2 kun', areas:'Suwon, Incheon, Seongnam, Yongin va boshqalar'},
+    {name:'📍 Busan (부산)',    price:'5,000 ₩',  time:'2-3 kun', areas:'Busan, Daegu, Daejeon, Gwangju va janubiy viloyatlar'},
+    {name:'🇰🇷 Butun Koreya',   price:'Bepul',    time:'50,000₩ dan yuqori buyurtmada', areas:'Barcha viloyatlar — minimum 50,000₩ dan bepul!'},
+  ],
+  freeDeliveryMin: 50000,
+  workHours: '09:00 — 22:00',
+};
+
+var DELIVERY_TEXTS = {
+  uz: {
+    title: '🚚 Yetkazib Berish',
+    workHours: function(h){ return 'Buyurtma qabul: '+h; },
+    coldInfo: 'Muzlatilgan holda yetkaziladi',
+    payInfo: 'To&#39;lov: bank o&#39;tkazma (Toss, Kakao, KB...)',
+    packInfo: 'Sovuq paket bilan qadoqlanadi',
+    botTitle: '📱 Telegram orqali ham buyurtma bering',
+    botDesc: '24/7 ishlaydi • 3 tilda • Tez va qulay',
+    freeFrom: 'dan bepul yetkazish',
+    delivery: 'Yetkazish',
+  },
+  ru: {
+    title: '🚚 Доставка',
+    workHours: function(h){ return 'Приём заказов: '+h; },
+    coldInfo: 'Доставляется в замороженном виде',
+    payInfo: 'Оплата: банковский перевод (Toss, Kakao, KB...)',
+    packInfo: 'Упаковывается в холодный пакет',
+    botTitle: '📱 Заказывайте через Telegram',
+    botDesc: 'Работает 24/7 • 3 языка • Быстро и удобно',
+    freeFrom: 'бесплатная доставка от',
+    delivery: 'Доставка',
+  },
+  ko: {
+    title: '🚚 배달 안내',
+    workHours: function(h){ return '주문 접수: '+h; },
+    coldInfo: '냉동 상태로 배달됩니다',
+    payInfo: '결제: 계좌이체 (토스, 카카오, KB...)',
+    packInfo: '아이스팩과 함께 포장됩니다',
+    botTitle: '📱 텔레그램으로도 주문하세요',
+    botDesc: '24시간 운영 • 3개 언어 • 빠르고 편리',
+    freeFrom: '이상 무료배송',
+    delivery: '배달',
+  }
+};
+
+function getDeliveryT(){ return DELIVERY_TEXTS[lang]||DELIVERY_TEXTS.uz; }
+
+function openDelivery(){
+  document.getElementById('deliveryOverlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  updateDeliveryLang();
+  if(!history.state||history.state.modal!=='delivery') history.pushState({modal:'delivery'},'');
+}
+
+function closeDelivery(){
+  document.getElementById('deliveryOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function updateDeliveryLang(){
+  var t = getDeliveryT();
+  var set = function(id,val){ var e=document.getElementById(id); if(e) e.textContent=val; };
+  var setHtml = function(id,val){ var e=document.getElementById(id); if(e) e.innerHTML=val; };
+
+  set('deliveryTitle', t.title);
+  set('deliveryWorkHours', t.workHours(DELIVERY.workHours));
+  set('deliveryColdInfo', t.coldInfo);
+  set('deliveryPayInfo', t.payInfo);
+  set('deliveryPackInfo', t.packInfo);
+  set('deliveryBotTitle', t.botTitle);
+  set('deliveryBotDesc', t.botDesc);
+  set('fDeliveryLink', t.delivery);
+
+  // Yetkazish bot linki
+  var botUser = (SETT.botUser||'Donafood_bot').replace('@','');
+  var botLink = document.getElementById('deliveryBotLink');
+  if(botLink) botLink.href = 'https://t.me/'+botUser;
+
+  // Zonalarni render qilish
+  renderDeliveryZones();
+}
+
+function renderDeliveryZones(){
+  var list = document.getElementById('deliveryZonesList');
+  if(!list || !DELIVERY.zones) return;
+  list.innerHTML = DELIVERY.zones.map(function(z){
+    return '<div class="delivery-zone">'
+      + '<div class="delivery-zone-name">'+esc(z.name)+'</div>'
+      + '<div class="delivery-zone-price">'+esc(z.price)+'</div>'
+      + '<div class="delivery-zone-time">⏱ '+esc(z.time)+'</div>'
+      + '<div class="delivery-zone-areas">'+esc(z.areas)+'</div>'
+      + '</div>';
+  }).join('');
+}
+
+// Savatda yetkazish narxini ko'rsatish
+function getDeliveryFeeHtml(total){
+  if(!DELIVERY.freeDeliveryMin || total >= DELIVERY.freeDeliveryMin) return '';
+  var t = getDeliveryT();
+  var diff = DELIVERY.freeDeliveryMin - total;
+  return '<div style="font-size:0.75rem;color:#0066cc;text-align:center;padding:0.3rem;background:#e8f4ff;border-radius:6px;margin-top:0.3rem">🚚 '+diff.toLocaleString()+'₩ '+t.freeFrom+'</div>';
+}
+
+
+// ─────────────────────────────────────────
+// YETKAZISH ADMIN
+// ─────────────────────────────────────────
+
+function initApp(){
+  initLogo();
+  initBanner();
+  initPay();
+  setLang('uz');
+  renderFaq();
+  // Dark mode button
+  if(localStorage.getItem('dona_dark')==='1'){
+    var _db=document.getElementById('darkBtn');
+    if(_db) _db.textContent='☀️';
+  }
+  // Ish vaqtini boshlash
+  checkWorkTime();
+
+  // Telegram polling — admin callback larini qabul qilish
+  // Faqat Firebase token bo'lsa ishlaydi
+  // Marketing tizimini ishga tushiramiz
+  var savedMkt = localStorage.getItem('dona_marketing');
+  if(savedMkt){ try{ MARKETING = JSON.parse(savedMkt); }catch(e){} }
+  renderDeadlineBanner();
+  renderReferralCard();
+  updateDeliveryLang();
+  // Bundle banner
+  var bbEl = document.getElementById('bundleBanner');
+  if(bbEl) bbEl.innerHTML = getBundleBannerHtml();
+
+  // Saqlangan banner ma'lumotlarini qo'llaymiz
+  var savedBanners = localStorage.getItem('dona_banners');
+  if(savedBanners){ try{ applyBannersToDOM(JSON.parse(savedBanners)); }catch(e){} }
+  // Yetkazish sozlamalarini yuklash
+  var savedDelivery = localStorage.getItem('dona_delivery');
+  if(savedDelivery){ try{ DELIVERY = JSON.parse(savedDelivery); }catch(e){} }
+
+  // Firebase - sahifa yuklanganida ishga tushirish
+  window.addEventListener('load', function(){
+    var attempts = 0;
+    function tryFirebase(){
+      if(typeof firebase !== 'undefined'){ initFirebase(); }
+      else if(attempts < 10){ attempts++; setTimeout(tryFirebase, 500); }
+      else { console.warn('Firebase offline rejim'); }
+    }
+    tryFirebase();
+  });
+
+  if(TG_BOT_TOKEN){
+    pollTelegramUpdates();
+    setInterval(pollTelegramUpdates, 10000);
+  }
+}
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
+// Firebase sahifa to'liq yuklanganida — yuklanganini tekshirib chaqiramiz
+window.addEventListener('load', function(){
+  // Firebase CDN yuklanishini kutamiz (max 5 sekund)
+  var attempts = 0;
+  function tryFirebase(){
+    if(typeof firebase !== 'undefined'){
+      initFirebase();
+    } else if(attempts < 10){
+      attempts++;
+      setTimeout(tryFirebase, 500);
+    } else {
+      console.warn('Firebase CDN yuklanmadi — offline rejim');
+    }
+  }
+  tryFirebase();
+});
+
+
+
+function toggleFav(id, e){
+  e.stopPropagation();
+  var fidx = FAVS.indexOf(id);
+  var isAdding = fidx < 0;
+  if(fidx >= 0) FAVS.splice(fidx, 1);
+  else FAVS.push(id);
+  localStorage.setItem('dona_favs', JSON.stringify(FAVS));
+  renderFavBtns();
+  renderFavSection();
+  // Qo'shilganda kichik toast xabar
+  if(isAdding) showFavToast();
+}
+
+function showFavToast(){
+  var toast = document.getElementById('favToast');
+  if(!toast) return;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateY(0)';
+  setTimeout(function(){
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+  }, 1800);
+}
+
+function renderFavBtns(){
+  document.querySelectorAll('.fav-btn').forEach(btn=>{
+    const id = btn.dataset.id;
+    btn.classList.toggle('active', FAVS.includes(id));
+    btn.textContent = FAVS.includes(id) ? '❤️' : '🤍';
+  });
+}
+
+function renderFavSection(){
+  // Sevimlilar soni filter tugmasida ko'rsatiladi
+  var count = FAVS.length;
+  var countEl = document.getElementById('favFilterCount');
+  if(countEl) countEl.textContent = count > 0 ? '('+count+') ' : '';
+
+  // Agar hozir fav filter aktiv bo'lsa — prodlarni qayta render qilamiz
+  if(curFilter === 'fav'){
+    renderProds();
+  }
+}
+
+// Buyurtma tarixi
+function saveOrderHistory(order){
+  const hist = JSON.parse(localStorage.getItem('dona_orders')||'[]');
+  hist.unshift({...order, date: new Date().toLocaleDateString('uz'), ts: Date.now()});
+  // 1 oydan eski buyurtmalarni o'chirish
+  const oneMonth = 30*24*60*60*1000;
+  const filtered = hist.filter(o=>!o.ts||(Date.now()-o.ts)<oneMonth);
+  localStorage.setItem('dona_orders', JSON.stringify(filtered));
+}
+
+// Dashboard
+
+
+
+function openProfile(){
+  renderTgLinkStatus();
+  renderOrderHistory();
+  document.getElementById("profName").value = PROFILE.name||"";
+  document.getElementById("profPhone").value = PROFILE.phone||"";
+  document.getElementById("profAddr").value = PROFILE.addr||"";
+  document.getElementById("profNote").value = PROFILE.note||"";
+  const payBlock = document.getElementById("payInfoBlock");
+  if(payBlock){
+    if(PAY.bank){
+      var bankLines = esc(PAY.bank).replace(/\n/g,'<br>');
+      var accLine = PAY.account ? '<br><b>Hisob:</b> <span style="font-size:0.95rem;font-weight:700;letter-spacing:0.03em">'+esc(PAY.account)+'</span>' : '';
+      var ownerLine = PAY.owner ? '<br><b>Egasi:</b> '+esc(PAY.owner) : '';
+      var copyBtn = PAY.account ? '<br><button onclick="copyAccount()" style="margin-top:0.5rem;padding:0.4rem 0.9rem;background:#2c3e7a;color:#fff;border:none;border-radius:8px;font-size:0.75rem;font-weight:700;cursor:pointer;font-family:Inter,sans-serif">&#128203; Nusxalash</button>' : '';
+      payBlock.innerHTML = "<div style='font-size:0.85rem;line-height:1.9'>"+bankLines+accLine+ownerLine+copyBtn+"</div>";
+    } else {
+      payBlock.innerHTML = "<div style='color:var(--muted);font-size:0.82rem'>Tolov malumotlari admin paneldan kiritiladi</div>";
+    }
+  }
+  const tgLink = document.getElementById("sellerTgLink");
+  if(tgLink && SETT.adminTg){
+    const tgUser = SETT.adminTg.replace("@","");
+    tgLink.href = "https://t.me/"+tgUser;
+    tgLink.textContent = SETT.adminTg;
+  }
+  document.getElementById("profileOverlay").classList.add("show");
+  document.body.style.overflow="hidden";
+  history.pushState({modal:"profile"},"");
+}
+
+function closeProfile(){
+  document.getElementById('profileOverlay').classList.remove('show');
+  document.body.style.overflow='';
+}
+
+function saveProfile(){
+  PROFILE = {
+    name: document.getElementById('profName').value.trim(),
+    phone: document.getElementById('profPhone').value.trim(),
+    addr: document.getElementById('profAddr').value.trim(),
+    note: document.getElementById('profNote').value.trim(),
+  };
+  localStorage.setItem('dona_profile', JSON.stringify(PROFILE));
+  document.getElementById('profStatus').textContent = '✅ Saqlandi!';
+  setTimeout(()=>document.getElementById('profStatus').textContent='', 2000);
+}
+
+// FAQ Page
+function openFaqPage(){
+  renderFaqPage();
+  document.getElementById('faqPageOverlay').classList.add('show');
+  document.body.style.overflow='hidden';
+  history.pushState({modal:'faq'},'');
+}
+function closeFaqPage(){
+  document.getElementById('faqPageOverlay').classList.remove('show');
+  document.body.style.overflow='';
+}
+function renderFaqPage(){
+  const faqs = FAQ_DATA[lang]||FAQ_DATA.uz||[];
+  const titles = {uz:"❓ Ko'p so'raladigan savollar", ru:"❓ Часто задаваемые вопросы", ko:"❓ 자주 묻는 질문"};
+  const titleEl = document.getElementById('faqPageTitle');
+  if(titleEl) titleEl.textContent = titles[lang]||titles.uz;
+  const content = document.getElementById('faqPageContent');
+  if(!content) return;
+  if(faqs.length===0){
+    content.innerHTML='<p style="text-align:center;color:var(--muted);padding:2rem">Hali savol qoʻshilmagan</p>';
+    return;
+  }
+  content.innerHTML = faqs.map(function(f){
+    return '<div class="faq-page-item" onclick="this.classList.toggle(&#39;open&#39;)">'+
+      '<div class="faq-page-q">'+esc(f.q)+' <span class="faq-arrow">&#9660;</span></div>'+
+      '<div class="faq-page-a">'+esc(f.a)+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+// Dark mode
+function toggleDark(){
+  document.body.classList.toggle('dark');
+  const btn=document.getElementById('darkBtn');
+  btn.textContent=document.body.classList.contains('dark')?'☀️':'🌙';
+  localStorage.setItem('dona_dark', document.body.classList.contains('dark')?'1':'0');
+}
+// Dark mode — body allaqachon DOM da mavjud, bu xavfsiz
+if(localStorage.getItem('dona_dark')==='1'){
+  document.body.classList.add('dark');
+}
+// darkBtn initApp ichida set qilinadi, chunki navbar DOM da keyin bo'lishi mumkin
+
+
+
+// FAQ
+function toggleFaq(el){el.classList.toggle('open');}
+
+// Rasm zoom - disabled
+function openZoom(src){}
+function closeZoom(){}
+
+// PWA Install
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  setTimeout(()=>document.getElementById('pwaBanner').classList.add('show'),3000);
+});
+const _pwaBtn=document.getElementById('pwaInstallBtn');
+if(_pwaBtn) _pwaBtn.addEventListener('click',async()=>{
+  if(!deferredPrompt)return;
+  deferredPrompt.prompt();
+  const r=await deferredPrompt.userChoice;
+  deferredPrompt=null;
+  document.getElementById('pwaBanner').classList.remove('show');
+});
+window.addEventListener('appinstalled',()=>{
+  document.getElementById('pwaBanner').classList.remove('show');
+});
+
+// Ulashish
+function shareApp(){
+  const url="https://mr-ilyosbek98.github.io/dona-website/";
+  const txt="O'zbek taomlari Koreyada!";
+  if(navigator.share){
+    navigator.share({title:"DONA Uzbek Frozen Food",text:txt,url:url});
+  } else {
+    navigator.clipboard.writeText(url).then(()=>alert("Link nusxalandi!"));
+  }
+}
+
+// Ish vaqti (Seoul vaqti = UTC+9)
+function checkWorkTime(){
+  const now=new Date();
+  const seoul=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
+  const h=seoul.getHours();
+  const ws=SETT.workStart||9; const we=SETT.workEnd||22; const isOpen=h>=ws&&h<we;
+  const el=document.getElementById('workStatus');
+  if(el){
+    el.className='work-status '+(isOpen?'open':'closed');
+    el.innerHTML=`<span class="work-dot"></span>${isOpen?'Ochiq':'Yopiq'}`;
+  }
+}
+// checkWorkTime initApp ichida chaqiriladi
+setInterval(checkWorkTime,60000);
+
+// Auto-sync disabled
+
+function showFaqLang(l,btn){
+  document.querySelectorAll('#atab-faq .alang-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('#atab-faq .alang-c').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('faqEditor'+l.charAt(0).toUpperCase()+l.slice(1)).classList.add('active');
+}
+
+function addFaq(l){
+  if(!FAQ_DATA[l]) FAQ_DATA[l]=[];
+  FAQ_DATA[l].push({q:'', a:''});
+  renderFaqEditor();
+}
+
+function delFaq(l,i){
+  FAQ_DATA[l].splice(i,1);
+  localStorage.setItem('dona_faq', JSON.stringify(FAQ_DATA));
+  renderFaqEditor();
+  renderFaq();
+}
+
+function saveFaqFromEditor(){
+  ['uz','ru','ko'].forEach(l=>{
+    const faqs = FAQ_DATA[l]||[];
+    faqs.forEach((f,i)=>{
+      const q = document.getElementById('faq_q_'+l+'_'+i);
+      const a = document.getElementById('faq_a_'+l+'_'+i);
+      if(q) f.q = q.value;
+      if(a) f.a = a.value;
+    });
+    FAQ_DATA[l] = faqs.filter(f=>f.q.trim());
+  });
+  localStorage.setItem('dona_faq', JSON.stringify(FAQ_DATA));
+  renderFaq();
+}
+
+// FAQ data - ko'p tilli
+
+
+function renderFaq(){
+  const faqs = FAQ_DATA[lang]||FAQ_DATA.uz;
+  const titles = {uz:"❓ Ko'p so'raladigan savollar", ru:"❓ Часто задаваемые вопросы", ko:"❓ 자주 묻는 질문"};
+  const el = document.getElementById('faqTitle');
+  if(el) el.textContent = titles[lang]||titles.uz;
+  const list = document.getElementById('faqList');
+  if(list) list.innerHTML = faqs.map(function(f){
+    return '<div class="faq-item" onclick="toggleFaq(this)">'+
+      '<div class="faq-q">'+esc(f.q)+' <span class="faq-arrow">&#9660;</span></div>'+
+      '<div class="faq-a">'+esc(f.a)+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+
+
+
+// ─────────────────────────────────────────
+// PROMO KOD ADMIN TIZIMI
+// ─────────────────────────────────────────
+// PROMO_CODES va activePromo yuqorida STATE bo'limiga ko'chirildi
+
+function applyPromo(){
+  const code = document.getElementById('promoInp').value.trim().toUpperCase();
+  const result = document.getElementById('promoResult');
+  const discRow = document.getElementById('discountRow');
+  if(!code){result.textContent=''; return;}
+  
+  // Barcha kodlar: admin kodlari + spin yutgan kod
+  let allCodes = [...PROMO_CODES];
+  const spinWon = localStorage.getItem('dona_spin_promo');
+  if(spinWon){
+    try{
+      const sp = JSON.parse(spinWon);
+      allCodes.push({code:sp.code, discount:sp.discount, type:sp.type, limit:1, expiry:'', used:0, active:true});
+    }catch(e){}
+  }
+  
+  const found = allCodes.find(c => c.code === code);
+  
+  if(!found || !found.active){
+    activePromo = null;
+    result.innerHTML = '<span class="promo-fail">&#10060; Promo kod noto&#39;g&#39;ri yoki faol emas</span>';
+    discRow.style.display = 'none';
+    renderCartItems();
+    return;
+  }
+  
+  // Muddat tekshirish
+  if(found.expiry){
+    const today = new Date().toISOString().slice(0,10);
+    if(today > found.expiry){
+      activePromo = null;
+      result.innerHTML = '<span class="promo-fail">&#10060; Promo kod muddati o&#39;tgan</span>';
+      discRow.style.display = 'none';
+      renderCartItems();
+      return;
+    }
+  }
+  
+  // Limit tekshirish
+  if(found.limit !== null && found.limit !== '' && found.used >= parseInt(found.limit)){
+    activePromo = null;
+    result.innerHTML = '<span class="promo-fail">❌ Promo kod limiti tugagan</span>';
+    discRow.style.display = 'none';
+    renderCartItems();
+    return;
+  }
+  
+  // Hammasi yaxshi
+  const label = found.type === 'percent' ? found.discount + '% chegirma' : found.discount.toLocaleString() + '₩ chegirma';
+  activePromo = {...found};
+  result.innerHTML = '<span class="promo-ok">&#9989; ' + label + ' qo&#39;llandi!</span>';
+  discRow.style.display = 'flex';
+  renderCartItems();
+}
+
+function calcDiscount(total){
+  if(!activePromo) return 0;
+  if(activePromo.type === 'percent') return Math.round(total * activePromo.discount / 100);
+  if(activePromo.type === 'fixed') return Math.min(activePromo.discount, total);
+  return 0;
+}
+
+// ─────────────────────────────────────────
+// SPIN & WIN
+// ─────────────────────────────────────────
+const SPIN_PRIZES = [
+  {label:'5%', color:'#e74c3c', discount:5, type:'percent'},
+  {label:'꽝!', color:'#95a5a6', discount:0, type:'none'},
+  {label:'10%', color:'#8B1A1A', discount:10, type:'percent'},
+  {label:'꽝!', color:'#bdc3c7', discount:0, type:'none'},
+  {label:'15%', color:'#C8922A', discount:15, type:'percent'},
+  {label:'꽝!', color:'#95a5a6', discount:0, type:'none'},
+  {label:'3000₩', color:'#27ae60', discount:3000, type:'fixed'},
+  {label:'꽝!', color:'#bdc3c7', discount:0, type:'none'},
+];
+
+let spinAngle = 0;
+let spinning = false;
+
+function drawWheel(){
+  const canvas = document.getElementById('wheelCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const cx = 100, cy = 100, r = 95;
+  const arc = (2 * Math.PI) / SPIN_PRIZES.length;
+  SPIN_PRIZES.forEach((p, i) => {
+    const start = spinAngle + i * arc;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, start, start + arc);
+    ctx.closePath();
+    ctx.fillStyle = p.color;
+    ctx.fill();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    // Text
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(start + arc / 2);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 13px Inter, sans-serif';
+    ctx.fillText(p.label, r - 8, 5);
+    ctx.restore();
+  });
+  // Center circle
+  ctx.beginPath();
+  ctx.arc(cx, cy, 12, 0, 2 * Math.PI);
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+}
+
+function openSpin(){
+  // Har 24 soatda 1 marta — sessionStorage VA localStorage ikkovini tekshir
+  // localStorage.clear() dan himoya uchun sessionStorage ham ishlatiladi
+  var now = Date.now();
+  var lastLS = parseInt(localStorage.getItem('dona_spin_last')||'0');
+  var lastSS = parseInt(sessionStorage.getItem('dona_spin_last')||'0');
+  var last = Math.max(lastLS, lastSS); // ikkovidan kattasini ol
+  if(last && now - last < 24*60*60*1000){
+    var h = Math.ceil((24*60*60*1000 - (now - last)) / 3600000);
+    alert(lang==='ko'?h+'\uc2dc\uac04 \ud6c4 \ub2e4\uc2dc \uac00\ub2a5\ud569\ub2c8\ub2e4.':lang==='ru'?'\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0439 \u0441\u043f\u0438\u043d \u0447\u0435\u0440\u0435\u0437 '+h+' \u0447.':'Keyingi spin '+h+' soatdan keyin!');
+    return;
+  }
+  document.getElementById('spinOverlay').classList.add('show');
+  document.body.style.overflow='hidden';
+  document.getElementById('spinResult').textContent='';
+  var spinBtn = document.getElementById('spinBtn');
+  spinBtn.disabled=false;
+  spinBtn.textContent='\ud83c\udfa1 Aylantirish!';
+  spinBtn.onclick=doSpin;
+  spinAngle = 0;
+  drawWheel();
+  history.pushState({modal:'spin'},'');
+}
+
+function closeSpin(){
+  document.getElementById('spinOverlay').classList.remove('show');
+  document.body.style.overflow='';
+}
+
+function doSpin(){
+  if(spinning) return;
+  spinning = true;
+  const btn = document.getElementById('spinBtn');
+  btn.disabled = true;
+
+  const prizeIdx = Math.floor(Math.random() * SPIN_PRIZES.length);
+  const arc = (2 * Math.PI) / SPIN_PRIZES.length;
+  // Pointer tepada (3*PI/2), shuning uchun tanlanagan prize pointer ostida turishi uchun:
+  const targetAngle = (2*Math.PI*5) + (2*Math.PI - (prizeIdx * arc + arc/2)) - (3*Math.PI/2 - Math.PI/2);
+  const totalRotation = targetAngle;
+  const duration = 4000;
+  const start = performance.now();
+  const startAngle = spinAngle;
+
+  function animate(now){
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 4);
+    spinAngle = startAngle + totalRotation * ease;
+    drawWheel();
+    if(progress < 1){
+      requestAnimationFrame(animate);
+    } else {
+      spinning = false;
+      const prize = SPIN_PRIZES[prizeIdx];
+      const resultEl = document.getElementById('spinResult');
+      if(prize.discount > 0){
+        const code = 'SPIN' + Date.now().toString().slice(-4);
+        const promoObj = {discount: prize.discount, type: prize.type, label: prize.label + ' (Spin)', code};
+        localStorage.setItem('dona_spin_promo', JSON.stringify(promoObj));
+        localStorage.setItem('dona_spin_last', Date.now().toString());
+        sessionStorage.setItem('dona_spin_last', Date.now().toString()); // localStorage.clear() dan himoya
+        resultEl.innerHTML = '🎉 ' + prize.label + '<br><small style="font-size:0.72rem;color:var(--muted)">Kod: <b>' + code + '</b> — Savatchada ishlating!</small>';
+      } else {
+        localStorage.setItem('dona_spin_last', Date.now().toString());
+        sessionStorage.setItem('dona_spin_last', Date.now().toString()); // localStorage.clear() dan himoya
+        resultEl.innerHTML = lang==='ko'?'😢 다음에는 행운이 있을 거예요!':lang==='ru'?'😢 Не повезло, попробуйте завтра!':'😢 Omad kelmadi, ertaga yana urining!';
+        btn.textContent = lang==='ko'?'닫기':lang==='ru'?'Закрыть':'Yopish';
+        btn.disabled = false;
+        btn.onclick = closeSpin;
+      }
+    }
+  }
+  requestAnimationFrame(animate);
+}
+
+// Spin modal popstate asosiy handleriga qo'shildi
+
+// Android "Orqaga" tugmasi modalni yopadi
+window.addEventListener('popstate', function(e){
+  var modalMap = {
+    'pm': {id:'pmOverlay', close: closePM},
+    'cart': {id:'cartOverlay', close: closeCart},
+    'admin': {id:'adminOverlay', close: closeAdmin},
+    'prodEdit': {id:'prodEditOverlay', close: closeProdEdit},
+    'profile': {id:'profileOverlay', close: closeProfile},
+    'faq': {id:'faqPageOverlay', close: closeFaqPage},
+    'spin': {id:'spinOverlay', close: closeSpin},
+    'delivery': {id:'deliveryOverlay', close: closeDelivery},
+    'delivery': {id:'deliveryOverlay', close: closeDelivery},
+  };
+  // State bo'yicha to'g'ri modalni yop
+  if(e.state && e.state.modal && modalMap[e.state.modal]){
+    var m = modalMap[e.state.modal];
+    var el = document.getElementById(m.id);
+    if(el && el.classList.contains('show')){
+      el.classList.remove('show');
+      document.body.style.overflow='';
+      return;
+    }
+  }
+  // Fallback: ochiq bo'lgan birinchi modalni yop
+  var ids = ['prodEditOverlay','pmOverlay','cartOverlay','adminOverlay','profileOverlay','faqPageOverlay'];
+  for(var i=0; i<ids.length; i++){
+    var el = document.getElementById(ids[i]);
+    if(el && el.classList && el.classList.contains('show')){
+      el.classList.remove('show');
+      document.body.style.overflow='';
+      return;
+    }
+  }
+});
+
+</script>
+<!-- PROFILE PAGE -->
+<div class="profile-overlay" id="profileOverlay">
+  <div class="faq-page">
+    <div class="pm-topbar">
+      <button class="pm-back-btn" onclick="closeProfile()">← Orqaga</button>
+      <span style="font-weight:700;font-size:0.95rem;"><span id="profTitle">👤 Mening Profilim</span>
+      <span></span>
+    </div>
+    <div style="padding:1rem;">
+      <div class="afield"><label id="profLabelName">Ismingiz</label><input id="profName" placeholder="Ism Familiya"></div>
+      <div class="afield"><label id="profLabelPhone">Telefon raqam</label><input id="profPhone" type="tel" placeholder="+82 10-XXXX-XXXX"></div>
+      <div class="afield"><label id="profLabelAddr">Manzil</label><textarea id="profAddr" placeholder="To'liq manzil" rows="2"></textarea></div>
+      <div class="afield"><label id="profLabelNote">Izoh (ixtiyoriy)</label><input id="profNote" placeholder="Maxsus xohish..."></div>
+      <button class="asave" style="width:100%;margin-top:0.5rem" onclick="saveProfile()">💾 <span id="profSaveBtn">Saqlash</span></button>
+      <div id="profStatus" style="text-align:center;margin-top:0.5rem;font-size:0.82rem;color:green;"></div>
+
+      <!-- TELEGRAM ULASH BLOKI -->
+      <div id="tgLinkBlock" style="margin-top:1rem;background:#f0f8ff;border:1.5px solid #2196F3;border-radius:12px;padding:1rem;">
+        <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem">&#128241; Telegram Ulash</div>
+        <div id="tgLinkStatus" style="font-size:0.82rem;color:var(--muted);margin-bottom:0.7rem">Botga ulanib buyurtma holatini Telegramda oling</div>
+        <button id="tgLinkBtn" class="asave" style="margin:0;background:#0088cc" onclick="linkTelegram()">&#128279; Telegramga ulash</button>
+        <div id="tgLinkedInfo" style="display:none;margin-top:0.5rem;font-size:0.8rem;color:#27ae60;font-weight:600"></div>
+      </div>
+
+      <div style="margin-top:1.5rem;padding:1rem;background:var(--bg);border-radius:12px;border:1.5px solid var(--border);">
+        <div style="font-weight:700;font-size:0.85rem;margin-bottom:0.8rem;"><span id="profPayTitle">💳 To&#39;lov ma&#39;lumotlari</span></div>
+        <div id="payInfoBlock"></div>
+        <div style="margin-top:0.8rem;font-size:0.78rem;color:var(--muted);">
+          <span id="profPayNote">To'lov qilgandan so'ng chekni</span> <a id="sellerTgLink" href="https://t.me/mr_yigitaliev" target="_blank" style="color:var(--red);font-weight:700;">@mr_yigitaliev</a> <span id="profPayNote2">ga yuboring</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUYURTMALAR TARIXI -->
+    <div style="padding:1rem 1rem 0.5rem;border-top:1px solid var(--border)">
+      <div style="font-weight:700;font-size:0.92rem;margin-bottom:0.8rem">&#128203; Buyurtmalar Tarixi</div>
+      <div id="orderHistoryList">
+        <p style="color:var(--muted);font-size:0.82rem;text-align:center;padding:0.5rem">Hali buyurtma yo&#39;q</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- SPIN & WIN MODAL -->
+<div class="spin-overlay" id="spinOverlay">
+  <div class="spin-box">
+    <div class="spin-header">
+      <h3>🎡 Spin & Win</h3>
+      <p>Aylantiring va chegirma yuting!</p>
+    </div>
+    <div class="spin-content">
+      <div class="wheel-wrap">
+        <div class="wheel-pointer">▼</div>
+        <canvas id="wheelCanvas" width="200" height="200"></canvas>
+      </div>
+      <div class="spin-result" id="spinResult"></div>
+      <button class="spin-btn" id="spinBtn" onclick="doSpin()">🎡 Aylantirish!</button>
+      <button class="spin-close" onclick="closeSpin()">✕ Yopish</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
